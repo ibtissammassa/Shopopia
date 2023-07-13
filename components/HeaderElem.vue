@@ -2,7 +2,7 @@
   <header class="flex items-center px-5 py-2 justify-between">
     <div v-if="showLogo">
         <nuxt-link to="/">
-            <img :src="logo_src" class="h-20 w-42">
+            <img :src="logo_src" class="h-16 w-44">
         </nuxt-link>
     </div>
     <div v-if="showMenu" class="flex justify-between w-3/12">
