@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>{{ phone }}</div>
+    <headerTop/>
   </div>
 </template>
 
