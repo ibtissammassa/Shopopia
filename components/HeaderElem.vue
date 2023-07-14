@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center px-5 py-2 justify-between">
+  <header class="flex items-center px-10 py-2 justify-between">
     <div v-if="showLogo">
         <nuxt-link to="/">
             <img :src="logo_src" class="h-16 w-44">
