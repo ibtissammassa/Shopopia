@@ -1,0 +1,447 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0YWQ0OGVhNTNlNTc0MjJkZmVhMWYwYSIsImZpcnN0bmFtZSI6ImlidGlzc2FtIiwibGFzdG5hbWUiOiJtYXNzYSIsInBvc2l0aW9uIjoiQ0xJRU5UIiwiZW1haWwiOiJpYnRpc3NhbW1hc3NhMTZAZ21haWwuY29tIiwiYWRkcmVzcyI6bnVsbH0sImNvbXBhbnkiOnsiX2lkIjoiNjI1NDNiNDM1YWY3OGYwMDQ0YjU3YzdjIiwibmFtZSI6InNvdTlpbm8iLCJzdGF0dXMiOiJVTkNPTVBMRVRFRCJ9LCJzdG9yZSI6eyJfaWQiOiI2NGFkNDg1MTUzZTU3NDIyZGZlYTFlY2IiLCJuYW1lIjoiaWJ0aXNzYW0iLCJzdWJkb21haW4iOiJpYnRpc3NhbS5zdG9yZWluby53b3JsZCJ9LCJ0b2tlbklkIjoiNjg5Mjc3SVRVR0NIMjIyOTc5U0hOVlRCIiwiaWF0IjoxNjg5MDc4MDQ2LCJleHAiOjE2ODk5NDIwNDZ9.loS6PvAyT5tjDFwgzJyByGmfSz_1H6nAQOE8VCvLuuU
+
+###
+GET https://admin.storeino.world/stores/api/themes/search?name=Ibtissam's
+X-Auth-Token: {{token}}
+
+###
+POST https://admin.storeino.world/stores/api/themes/update?name=Ibtissam's
+Content-Type: application/json
+X-Auth-Token: {{token}}
+
+{
+
+    "config": {
+        "schema": {
+        "fields": {
+          "products": [],
+          "collections": [],
+          "images": [],
+          "menus": [],
+          "pages": [],
+          "brands": []
+        },
+        "ids": {
+          "collections": [],
+          "products": [],
+          "images": [],
+          "menus": [],
+          "pages": [],
+          "brands": []
+        }
+      },
+      "settings": {
+        "tabs": [
+          {
+            "name": "Global",
+            "sections": [
+              {
+                "name": "header_top",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "header_color",
+                    "values": [
+                      {
+                        "name": "background",
+                        "note": "",
+                        "path": "header_top.header_color.background",
+                        "type": "tc_gradient",
+                        "translatable": false,
+                        "value": [
+                          "#003d29"
+                        ],
+                        "notes": "003d29"
+                      },
+                      {
+                        "name": "color",
+                        "note": "",
+                        "path": "header_top.header_color.color",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#ffffff"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "phone",
+                    "values": [
+                      {
+                        "name": "phone",
+                        "note": "",
+                        "path": "header_top.phone",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "001234567890",
+                        "inputType": "number"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "message",
+                    "values": [
+                      {
+                        "name": "message",
+                        "note": "",
+                        "path": "header_top.message",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Free Shipping for all Order of $99",
+                        "translate": "Free Shipping for all Order of $99"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "enabled disabled",
+                    "values": [
+                      {
+                        "name": "show phone",
+                        "note": "",
+                        "path": "header_top.show.phone",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show message",
+                        "note": "",
+                        "path": "header_top.show.message",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show language",
+                        "note": "",
+                        "path": "header_top.show.language",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show currency",
+                        "note": "",
+                        "path": "header_top.show.currency",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "header",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "logo",
+                    "values": [
+                      {
+                        "name": "logo",
+                        "note": "",
+                        "path": "header.logo",
+                        "type": "tc_image",
+                        "translatable": false,
+                        "value": "64af021ce81e2618cd1f217f"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "menu",
+                    "values": [
+                      {
+                        "name": "header menu",
+                        "note": "",
+                        "path": "header.menu.header_menu",
+                        "type": "tc_menu",
+                        "translatable": false,
+                        "value": "64af0fe4e81e2618cd1f2185"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Search",
+                    "values": [
+                      {
+                        "name": "search placeholder",
+                        "note": "",
+                        "path": "header.search_placeholder",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Search"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "enabled disabled",
+                    "values": [
+                      {
+                        "name": "show logo",
+                        "note": "",
+                        "path": "header.show.logo",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show menu",
+                        "note": "",
+                        "path": "header.show.menu",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show search",
+                        "note": "",
+                        "path": "header.show.search",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "account icon",
+                        "note": "",
+                        "path": "header.show.account",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "cart icon",
+                        "note": "",
+                        "path": "header.show.cart",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Colors",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "primary color",
+                    "values": [
+                      {
+                        "name": "primaryColor",
+                        "note": "",
+                        "path": "colors.primaryColor",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#003d29",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "name": "secondary color",
+                    "values": [
+                      {
+                        "name": "secondary color",
+                        "note": "",
+                        "path": "colors.secondaryColor",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#786b5e",
+                        "notes": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Home",
+            "sections": [
+              {
+                "name": "main section",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.main.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Shopping And Department Store."
+                      }
+                    ]
+                  },
+                  {
+                    "name": "description",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.main.description",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance."
+                      }
+                    ]
+                  },
+                  {
+                    "name": "background",
+                    "values": [
+                      {
+                        "name": "background image",
+                        "note": "",
+                        "path": "home.main.background.image",
+                        "type": "tc_image",
+                        "translatable": false,
+                        "value": "64aff050e81e2618cd1f24dd"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Categories",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "collections",
+                    "values": [
+                      {
+                        "name": "collections",
+                        "note": "",
+                        "path": "home.categories.collections",
+                        "type": "tc_collection",
+                        "value": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Title",
+                    "values": [
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "home.categories.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Shop Our Top Categories"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "enabled disabled",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "show",
+                    "values": [
+                      {
+                        "name": "main section",
+                        "note": "",
+                        "path": "home.show.main",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "categories section",
+                        "note": "",
+                        "path": "home.show.categories",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "current": {
+        "translates": [
+          {
+            "language": "FR",
+            "properties": [
+              {
+                "name": "header_top.message",
+                "value": "qsdfsdfsdqfqsd"
+              }
+            ]
+          },
+          {
+            "language": "AR",
+            "properties": [
+              {
+                "name": "header_top.message",
+                "value": "بلسيبسيلبيس بليبس"
+              }
+            ]
+          }
+        ],
+        "header_top": {
+          "header_color": {
+            "background": [
+              "#003d29"
+            ],
+            "color": "#ffffff"
+          },
+          "phone": "001234567890",
+          "message": "Free Shipping for all Order of $99",
+          "show": {
+            "phone": true,
+            "message": true,
+            "language": true,
+            "currency": true
+          }
+        },
+        "header": {
+          "logo": "64af021ce81e2618cd1f217f",
+          "menu": {
+            "header_menu": "64af0fe4e81e2618cd1f2185"
+          },
+          "search_placeholder": "Search",
+          "show": {
+            "logo": true,
+            "menu": true,
+            "search": true,
+            "account": true,
+            "cart": true
+          }
+        },
+        "colors": {
+          "primaryColor": "#003d29",
+          "secondaryColor": "#786b5e"
+        },
+        "home": {
+          "main": {
+            "title": "Shopping And Department Store.",
+            "description": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.",
+            "background": {
+              "image": "64aff050e81e2618cd1f24dd"
+            }
+          },
+          "categories": {
+            "collections": [],
+            "title": "Shop Our Top Categories"
+          },
+          "show": {
+            "main": true,
+            "categories": true
+          }
+        }
+      }
+    }
+}
+
+
+
+  

@@ -9,6 +9,7 @@
     <headerTop/>
     <HeaderElem/>
     <BannerHome/>
+    <HomeCategories/>
   </div>
 </template>
 

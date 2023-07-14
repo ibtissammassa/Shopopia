@@ -8,7 +8,7 @@
         </button>
         <div v-if="toggle" class="absolute right-0 z-10 mt-2 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
           <div v-for="elem in allelements" :key="elem.code" class="py-1" role="none">
-            <a href="#" class="text-gray-700 block px-4 py-2 hover:bg-gray-100" role="menuitem" tabindex="-1">{{ elem.code }}</a>
+            <a :href="lang ? `?lang=${elem.code}` : `?cur=${elem.code}` " class="text-gray-700 block px-4 py-2 hover:bg-gray-100" role="menuitem" tabindex="-1">{{ elem.code }}</a>
           </div>
         </div>
   </div>
@@ -16,9 +16,7 @@
 
 <script>
 export default {
-    props:['element','toggle','allelements'],
-    methods:{
-    }
+    props:['element','toggle','allelements','lang','textColor','backgroundColor'],
 }
 </script>
 
