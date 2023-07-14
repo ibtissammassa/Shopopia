@@ -2,7 +2,8 @@
   <div>
     <component :is="'style'">
             :root{ 
-              --primaryColor: {{ primaryColor }}
+              --primaryColor: {{ primaryColor }};
+              --secondaryColor: {{ secondaryColor }};
             }
     </component>
     <headerTop/>
@@ -16,6 +17,7 @@
     data(){
         return{
             primaryColor: this.$settings.colors.primaryColor,
+            secondaryColor: this.$settings.colors.secondaryColor,
         }
     }
 }
@@ -30,6 +32,16 @@
     }
     
   .bg-primary{
-        background-color: var(--primaryColor);
+    background-color: var(--primaryColor);
   }
+  .text-primary{
+    color: var(--primaryColor);
+  }
+  .hover-bg-secondary:hover{
+    background-color: var(--secondaryColor);
+  }
+  .text-secondary{
+    color: var(--secondaryColor);
+  }
+
 </style>
