@@ -253,7 +253,148 @@ X-Auth-Token: {{token}}
                     ]
                   }
                 ]
-              }
+              },
+              {
+                  "name": "footer",
+                  "icon": "select_all",
+                  "blocks": [
+                    {
+                      "name": "description",
+                      "values": [
+                        {
+                          "name": "description",
+                          "note": "",
+                          "path": "footer.description",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Payments",
+                      "values": [
+                        {
+                          "name": "Visa",
+                          "note": "",
+                          "path": "footer.payment.visa",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        },
+                        {
+                          "name": "Mastercard",
+                          "note": "",
+                          "path": "footer.payment.mastercard",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        },
+                        {
+                          "name": "Paypal",
+                          "note": "",
+                          "path": "footer.payment.paypal",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        },
+                        {
+                          "name": "Apple Pay",
+                          "note": "",
+                          "path": "footer.payment.applepay",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        },
+                        {
+                          "name": "Amazon Pay",
+                          "note": "",
+                          "path": "footer.payment.amazonpay",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        },
+                        {
+                          "name": "Google Pay",
+                          "note": "",
+                          "path": "footer.payment.googlepay",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        },
+                        {
+                          "name": "title",
+                          "note": "",
+                          "path": "footer.payment.title",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "Accepted Payments"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "social media",
+                      "values": [
+                        {
+                          "name": "title",
+                          "note": "",
+                          "path": "footer.socialmedia.title",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "Follow Us"
+                        },
+                        {
+                          "name": "Facebook URL",
+                          "note": "",
+                          "path": "footer.socialmedia.url.facebook",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "https://www.facebook.com/"
+                        },
+                        {
+                          "name": "Instagram URL",
+                          "note": "",
+                          "path": "footer.socialmedia.url.instagram",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "https://www.instagram.com/"
+                        },
+                        {
+                          "name": "Twitter URL",
+                          "note": "",
+                          "path": "footer.socialmedia.url.twitter",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "https://twitter.com/"
+                        },
+                        {
+                          "name": "Youtube URL",
+                          "note": "",
+                          "path": "footer.socialmedia.url.youtube",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "https://www.youtube.com/"
+                        },
+                        {
+                          "name": "Linkedin URL",
+                          "note": "",
+                          "path": "footer.socialmedia.url.linkedin",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "https://www.linkedin.com/"
+                        },
+                        {
+                          "name": "Whatsapp URL",
+                          "note": "",
+                          "path": "footer.socialmedia.url.whatsapp",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "https://web.whatsapp.com/"
+                        }
+                      ]
+                    }
+                  ]
+                }
             ]
           },
           {
@@ -357,11 +498,78 @@ X-Auth-Token: {{token}}
                         "type": "tc_checkbox",
                         "translatable": false,
                         "value": true
-                      }
+                      },
+                        {
+                          "name": "products section 1",
+                          "note": "",
+                          "path": "home.show.products1",
+                          "type": "tc_checkbox",
+                          "translatable": false,
+                          "value": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Products section 1",
+                  "icon": "select_all",
+                  "blocks": [
+                    {
+                      "name": "title",
+                      "values": [
+                        {
+                          "name": "text",
+                          "note": "",
+                          "path": "home.products1.title",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "Today's Best Deals For You!"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "products",
+                      "values": [
+                        {
+                          "name": "products",
+                          "note": "",
+                          "path": "home.products1.products",
+                          "type": "tc_product",
+                          "translatable": false,
+                          "value": []
+                        }
                     ]
                   }
                 ]
-              }
+              },
+              {
+                  "name": "Products section 2",
+                  "icon": "select_all",
+                  "blocks": [
+                    {
+                      "name": "title",
+                      "values": [
+                        {
+                          "name": "text",
+                          "note": "",
+                          "path": "home.products2.title",
+                          "type": "tc_input",
+                          "translatable": false,
+                          "value": "Weekly Popular Products"
+                        },
+                        {
+                          "name": "products",
+                          "note": "",
+                          "path": "home.products2.products",
+                          "type": "tc_product",
+                          "translatable": false,
+                          "value": []
+                        }
+                      ]
+                    }
+                  ]
+                }
             ]
           }
         ]
@@ -421,6 +629,29 @@ X-Auth-Token: {{token}}
           "primaryColor": "#003d29",
           "secondaryColor": "#786b5e"
         },
+          "footer": {
+            "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+            "payment": {
+              "visa": true,
+              "mastercard": true,
+              "paypal": true,
+              "applepay": true,
+              "amazonpay": true,
+              "googlepay": true,
+              "title": "Accepted Payments"
+            },
+            "socialmedia": {
+              "title": "Follow Us",
+              "url": {
+                "facebook": "https://www.facebook.com/",
+                "instagram": "https://www.instagram.com/",
+                "twitter": "https://twitter.com/",
+                "youtube": "https://www.youtube.com/",
+                "linkedin": "https://www.linkedin.com/",
+                "whatsapp": "https://web.whatsapp.com/"
+              }
+            }
+          },
         "home": {
           "main": {
             "title": "Shopping And Department Store.",
@@ -436,7 +667,15 @@ X-Auth-Token: {{token}}
           "show": {
             "main": true,
             "categories": true
-          }
+          },
+          "products1": {
+              "title": "Today's Best Deals For You!",
+              "products": []
+            },
+            "products2": {
+              "title": "Weekly Popular Products",
+              "products": []
+            }
         }
       }
     }

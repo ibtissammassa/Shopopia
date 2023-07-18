@@ -3,9 +3,9 @@
     <div class="w-2/4 gap-y-5 flex flex-col">
       <h1 class="text-6xl font-bold leading-title">{{ title }}</h1>
       <p class="py-5 text-gray-800 text-xl leading-9">{{ description }}</p>
-      <button class="w-40 bg-primary hover-bg-secondary text-white font-bold py-4 px-8 rounded-full">
-          Shop now
-      </button>
+      <nuxt-link to="/products" class="w-40 bg-primary hover-bg-secondary text-white font-bold py-4 px-8 rounded-full text-center">
+        Shop now
+      </nuxt-link>
     </div>
   </div>
 </template>

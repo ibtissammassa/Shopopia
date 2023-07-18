@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center px-10 py-2 justify-between">
+  <header class="border-slate-200 border-b flex items-center px-10 py-2 justify-between">
     <div v-if="showLogo">
         <nuxt-link to="/">
             <img :src="logo_src" class="h-16 w-44">
@@ -30,9 +30,9 @@
 
 <script>
 export default {
+    props:['logo_src'],
     data(){
         return{
-            logo_src: this.$settings.header.logo.src,
             showLogo: this.$settings.header.show.logo,
             showMenu: this.$settings.header.show.menu,
             menu: this.$settings.header.menu.header_menu.items,

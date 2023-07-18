@@ -1,15 +1,9 @@
 <template>
   <div>
-    <component :is="'style'">
-            :root{ 
-              --primaryColor: {{ primaryColor }};
-              --secondaryColor: {{ secondaryColor }};
-            }
-    </component>
-    <headerTop/>
-    <HeaderElem/>
     <BannerHome/>
     <HomeCategories/>
+    <HomeProducts v-if="showProducts1" :title="title1" :items="items1"/>
+    <HomeProducts v-if="showProducts2" :title="title2" :items="items2"/>
   </div>
 </template>
 
@@ -17,32 +11,41 @@
   export default {
     data(){
         return{
-            primaryColor: this.$settings.colors.primaryColor,
-            secondaryColor: this.$settings.colors.secondaryColor,
+            showProducts1: this.$settings.home.show.products1,
+            title1: this.$settings.home.products1.title,
+            showProducts2: this.$settings.home.products2.title,
+            title2: this.$settings.home.products2.title,
+            items1:[],
+            items2:[],
         }
+    },
+    async fetch(){
+      const filter = { status: 'PUBLISH',limit: 3 };
+        if(this.$settings.home.products1.products.length > 0){
+            this.items1 = this.$settings.home.products1.products;
+        }else{
+            this.items1 = await this.getProducts(filter);
+        }
+
+        if(this.$settings.home.products2.products.length > 0){
+          this.items2 = this.$settings.home.products2.products;
+        }else{
+          this.items2 = await this.getProducts(filter);
+        }
+    },
+    methods: {
+        async getProducts(filter){
+          try{
+            const { data } = await this.$storeino.products.search(filter)
+            return data.results
+          }catch(e){
+            console.log({e});
+          }
+        },
     }
 }
 </script>
 
 <style>
-  *{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    transition: .2s linear;
-    }
-    
-  .bg-primary{
-    background-color: var(--primaryColor);
-  }
-  .text-primary{
-    color: var(--primaryColor);
-  }
-  .hover-bg-secondary:hover{
-    background-color: var(--secondaryColor);
-  }
-  .text-secondary{
-    color: var(--secondaryColor);
-  }
-
+  
 </style>
