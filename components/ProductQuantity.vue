@@ -1,5 +1,10 @@
 <template>
-    <div class="flex items-center justify-center w-full">
+    <div>
+        <button></button>
+        <div></div>
+        <button></button>
+    </div>
+    <!-- <div class="flex items-center justify-center w-full">
         <button @click="inc(-1)" class="border-b border-t border-l border-black rounded-bl-full rounded-tl-full py-2 px-4" >-</button>
         <div class="flex">
             <label class="relative border-black border-t  border-b py-2 h-full">
@@ -8,7 +13,7 @@
             </label>
         </div>
         <button @click="inc(1)" class="border-b border-t border-r border-black rounded-br-full rounded-tr-full py-2 px-4 " >+</button>
-    </div>
+    </div> -->
 </template>
 
 <script>
