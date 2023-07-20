@@ -18,11 +18,6 @@
 <script>
 export default {
     props:['item'],
-    data(){
-        return{
-            
-        }
-    }
 }
 </script>
 
