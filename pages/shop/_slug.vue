@@ -9,6 +9,11 @@
         <p class="text-xl text-gray-800">No Product In This Category</p>
         <p class="text-sm text-gray-600">Comming Soon ...</p>
     </div>
+    <div class="flex justify-center">
+        <nuxt-link :to="`/products`" class=" text-center zoom ease-in duration-300 w-28  font-semibold border-gray-300 text-sm py-3 px-1 border rounded-full mb-4 bg-gray-200 text-gray-600">
+            All Products
+        </nuxt-link>
+    </div>
   </div>
 </template>
 
@@ -50,6 +55,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .zoom:hover{
+        transform: scale(1.1);
+    }
 </style>
