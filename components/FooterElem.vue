@@ -17,7 +17,7 @@
         </div>
         <div class="gap-y-3 flex flex-col">
             <h3>Categories</h3>
-            <nuxt-link class="hover-color-primary transform" :to="`/store/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
+            <nuxt-link class="hover-color-primary transform" :to="`/shop/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
         </div>
         <div class="gap-y-3 flex flex-col">
             <h3>{{ titlemedia }}</h3>
