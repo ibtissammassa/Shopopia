@@ -1,5 +1,5 @@
 <template>
-    <div class="flex w-full gap-x-4 items-center">
+    <div class="flex items-center" :class="showItemsLeft ? 'w-full gap-x-4' : ''">
         <div class="flex items-center text-center ">
             <button @click="inc(-1)" class="border-b border-t border-l border-primary rounded-bl-full rounded-tl-full py-2 px-4">-</button>
             <div class="flex">
@@ -19,11 +19,10 @@
 
 <script>
 export default {
-    props:['quantity'],
+    props:['quantity','showItemsLeft'],
     data(){
         return{
             value: this.quantity.value || this.quantity.default || 1,
-            showItemsLeft: this.$settings.product.show.leftItems,
             itemsLeftColor: this.$settings.product.itemsLeft.color,
         }
     },

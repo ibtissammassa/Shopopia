@@ -11,13 +11,13 @@
         <hr>
         <h3 class="font-bold text-5xl">{{ item.price.salePrice }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         <hr>
-        <ProductQuantity v-if="showAddToCart || showBuyNow" @quantitySelected="quantitySelected" :quantity="quantity"/>
+        <ProductQuantity :showItemsLeft="showItemsLeft" v-if="showAddToCart || showBuyNow" @quantitySelected="quantitySelected" :quantity="quantity"/>
         <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">
           <button v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
                   {{ buyNow }}
           </button>
-          <button v-if="showAddToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-base py-2 px-2.5 border-2 rounded-full">
-                  {{ addToCart }}
+          <button @click.stop="addToCart" v-if="showAddToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-base py-2 px-2.5 border-2 rounded-full">
+                  {{ addToCartText }}
           </button>
         </div>
         <div v-if="showFreeDelivery || showReturnDelivery" class="rounded-xl border-slate-200 border-2">
@@ -49,7 +49,7 @@ export default {
             item: null,
             quantity: {},
             showAddToCart: this.$settings.product.show.addToCart,
-            addToCart: this.$settings.product.addToCart.text,
+            addToCartText: this.$settings.product.addToCart.text,
             showBuyNow: this.$settings.product.show.buyNow,
             buyNow: this.$settings.product.buyNow.text,
             showRelated: this.$settings.product.show.related,
@@ -79,6 +79,14 @@ export default {
     methods: {
       quantitySelected(quantity){
             this.item.quantity.value = quantity;
+        },
+        addToCart(){
+            let item = {
+                _id: this.item._id,
+                quantity: this.item.quantity.value ? this.item.quantity.value : this.item.quantity.default,
+                price: this.item.price.salePrice,
+            }
+            this.$tools.call('ADD_TO_CART', item);
         }
     },
 
