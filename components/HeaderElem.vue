@@ -3,10 +3,10 @@
         <div class="border-slate-200 border-b flex items-center px-10 py-2 justify-between">
             <div v-if="showLogo">
                 <nuxt-link to="/">
-                    <img :src="logo_src" class="h-16 w-44">
+                    <img :src="logo_src" class="h-14 w-36 lg:h-16 lg:w-44">
                 </nuxt-link>
             </div>
-            <div v-if="showMenu" class="flex justify-between w-3/12">
+            <div v-if="showMenu" class="justify-between w-3/12 hidden lg:flex">
                 <button @click="toggleCategories" v-if="showCategories" class="flex justify-center items-center hover:border-b-2 hover:border-blue-500 py-2" :class="categories?'border-b-2 border-blue-500':''">
                     <div>Categories</div>
                     <svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -17,7 +17,10 @@
                     <nuxt-link :to="item.url">{{item.text}}</nuxt-link>
                 </div>
             </div>
-            <SearchBar v-if="showSearch" :search_placeholder="search_placeholder"/>
+            <div>
+                
+            </div>
+            <SearchBar class="hidden lg:block" v-if="showSearch" :search_placeholder="search_placeholder"/>
             <div v-if="showWishlist || showCart" class="gap-x-6 flex">
                 <div v-if="showWishlist">
                     <nuxt-link to="/wishlist" class="flex items-center justify-center gap-x-1 hover:border-b-2 hover:border-blue-500 py-2">
