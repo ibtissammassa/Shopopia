@@ -1,5 +1,5 @@
 <template>
-    <header class="relative">
+    <header class="relative" v-click-outside="toggleCategories">
         <div class="border-slate-200 border-b flex items-center px-10 py-2 justify-between">
             <div v-if="showLogo">
                 <nuxt-link to="/">
@@ -59,6 +59,7 @@ export default {
     methods:{
         toggleCategories(){
             this.categories = !this.categories;
+            console.log(this.categories);
         }
     }
 }

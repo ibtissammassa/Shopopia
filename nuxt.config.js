@@ -27,6 +27,7 @@ export default {
   //Storeino customization
   plugins:[
     ...plugins,
+    { src: '~/plugins/click-outside.js', mode: 'client' }
   ],
   serverMiddleware: ['~/template-core/server'],
 

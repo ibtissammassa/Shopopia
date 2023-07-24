@@ -4,7 +4,7 @@
         <h2 class="text-2xl font-bold pl-6 mt-5">{{ title }}</h2>
         <div class="grid grid-cols-4">
             <productCard v-for="item in products" :key="item.id" :item="item"/>
-        </div>
+        </div>{{ $store.state.cart }}
     </div>
   
 </template>
