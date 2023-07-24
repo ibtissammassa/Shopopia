@@ -36,13 +36,14 @@ export default {
         }
     },
     methodes:{
-        totalPrice(price){
-            this.total += price; 
+        totalPrice(){
+            this.total = this.items.reduce((total, item) => total + (item.price * item.quantity.value), 0); 
         },
+        
     },
     watch:{
-        totalPrice(price){
-            this.total += price; 
+        async "$store.state.cart.length"(){
+           this.$fetch();
         },
         
     },
@@ -50,8 +51,24 @@ export default {
          const ids = this.$store.state.cart.map(item => item._id);
             if(ids.length > 0){
                     try{
+                        this.items = []
                         const {data} = await this.$storeino.products.search({ '_id-in': ids});
-                        this.items = data.results;
+                        const products = data.results;
+                        for(const item of this.$store.state.cart){
+                            const cartItem = {};
+                            const product = products.find(p => p._id === item._id);
+                            cartItem._id = product._id;
+                            cartItem.slug = product.slug;
+                            cartItem.name = product.name;
+                            cartItem.price = product.price.salePrice;
+                            cartItem.description = product.description;
+                            cartItem.quantity = product.quantity;
+                            cartItem.quantity.value = item.quantity;
+                            cartItem.image = product.images.length > 0 ? product.images[0].src : '';
+                            cartItem.total = cartItem.price * cartItem.quantity.value;
+                            this.items.push(cartItem);
+                        }
+                        this.totalPrice();
                     }catch(e){
                         console.log({e});
                     }

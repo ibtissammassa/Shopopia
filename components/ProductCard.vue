@@ -15,7 +15,7 @@
         <button v-if="!addedToCart" @click.stop="addToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-28 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
                 Add to cart
         </button>
-        <button v-else-if="addedToCart" @click.stop="removeFromCart" class="hover-color-primary my-2 bg-secondary ease-in duration-400 w-28 text-white font-bold text-sm py-2 px-2.5 border-2 rounded-full border-secondary hover:bg-slate-300">
+        <button v-if="addedToCart" @click.stop="removeFromCart" class="hover-color-primary my-2 bg-secondary ease-in duration-400 w-28 text-white font-bold text-sm py-2 px-2.5 border-2 rounded-full border-secondary hover:bg-slate-300">
                In cart !
         </button>
     </div>
@@ -30,6 +30,15 @@ export default {
             cartItem: null
         }
     },
+    watch:{
+        async "$store.state.cart.length"(){
+            for(const item of this.$store.state.cart){
+                if(item._id === this.item._id)this.addedToCart=true;
+                else this.addedToCart=false;
+            }
+        },
+        
+    },
     methods:{
         addToWishlist(){
             this.$tools.call('ADD_TO_WISHLIST', this.item);
@@ -38,17 +47,17 @@ export default {
             this.$tools.call('REMOVE_FROM_WISHLIST', this.item);
         },
         addToCart(){
-            this.cartItem = {
-                _id: this.item._id,
-                quantity: this.item.quantity.value ? this.item.quantity.value : this.item.quantity.default,
-                price: this.item.price.salePrice,
+            let item ={
+                _id : this.item._id,
+                quantity : this.item.quantity.value ? this.item.quantity.value : this.item.quantity.default,
+                price : this.item.price.salePrice,
             }
-            this.$tools.call('ADD_TO_CART', this.cartItem);
-            this.addedToCart = true;
+            this.$tools.call('ADD_TO_CART', item);
+            // this.addedToCart = true;
         },
         removeFromCart(){
-            this.$tools.call('REMOVE_FROM_CART', this.cartItem);
-            this.addedToCart = false;
+            this.$tools.call('REMOVE_FROM_CART', this.item);
+            // this.addedToCart = false;
         }
         
     }

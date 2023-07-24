@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-between">
         <div class="flex items-center justify-center gap-x-5">
-            <img width="90" height="80" class="rounded-xl border bg-slate-100" :src="item.images.length > 0 ? item.images[0].src : null" alt="">
+            <img width="90" height="80" class="rounded-xl border bg-slate-100" :src="item.image" alt="">
             <div>
                 <h4 class="font-medium text-xl">{{ item.name }}</h4>
                 <p class="text-gray-700 text-sm">{{ item.description }}</p>
@@ -10,7 +10,7 @@
         <div class="flex items-center gap-x-10">
            <ProductQuantity :showItemsLeft="showItemsLeft" @quantitySelected="quantitySelected" :quantity="item.quantity"/>
             <div class="flex flex-col justify-center items-center">
-                <h3>{{ value }} x {{ item.price.salePrice }} {{ $store.state.currency.symbol }}</h3>
+                <h3>{{ value }} x {{ item.price }} {{ $store.state.currency.symbol }}</h3>
                 <h2 class="font-bold text-red-600 text-lg">{{ totalPrice }}{{ $store.state.currency.symbol }}</h2>
             </div> 
             <div>
@@ -26,7 +26,7 @@ export default {
     data(){
         return{
             showItemsLeft: false,
-            totalPrice: this.item.price.salePrice,
+            totalPrice: this.item.total,
             value: this.item.quantity.value || this.item.quantity.default || 1,
         }
     },
@@ -35,7 +35,6 @@ export default {
             this.item.quantity.value = quantity;
             this.value = quantity;
             this.totalPrice = this.item.price.salePrice * quantity;
-            this.$emit('totalPrice',this.totalPrice);
             let item = this.$store.state.cart.find(i => i._id == this.item._id && this.item )
             this.$tools.call('ADD_TO_CART', { ...item, quantity: quantity });
         },
