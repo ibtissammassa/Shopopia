@@ -13,12 +13,16 @@
         <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="showAddToCart || showBuyNow" @quantitySelected="quantitySelected" :quantity="quantity"/>
         <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">
-          <button v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
+          <button @click.stop="buyNow" v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
                   {{ buyNow }}
           </button>
-          <button @click.stop="addToCart" v-if="showAddToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-base py-2 px-2.5 border-2 rounded-full">
+          <button @click.stop="addToCart" v-if="showAddToCart && !addedToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-base py-2 px-2.5 border-2 rounded-full">
                   {{ addToCartText }}
           </button>
+          <button @click.stop="removeFromCart" v-else-if="showAddToCart && addedToCart" class="my-2 hover:bg-slate-300 hover-color-primary ease-in duration-400 w-32 text-white font-bold border-secondary bg-secondary text-base py-2 px-2.5 border-2 rounded-full">
+                  In Cart!
+          </button>
+
         </div>
         <div v-if="showFreeDelivery || showReturnDelivery" class="rounded-xl border-slate-200 border-2">
           <div v-if="showFreeDelivery" class="border-b flex flex-col py-4 px-3 gap-y-0">
@@ -61,6 +65,8 @@ export default {
             returnDelivery: this.$settings.product.returnDelivery.text,
             freeDeliveryDescription: this.$settings.product.freeDelivery.description,
             returnDeliveryDescription: this.$settings.product.returnDelivery.description,
+            addedToCart: false,
+            cartItem:null
         }
     },
     async fetch() {
@@ -81,13 +87,25 @@ export default {
             this.item.quantity.value = quantity;
         },
         addToCart(){
-            let item = {
+            this.cartItem = {
                 _id: this.item._id,
                 quantity: this.item.quantity.value ? this.item.quantity.value : this.item.quantity.default,
                 price: this.item.price.salePrice,
             }
-            this.$tools.call('ADD_TO_CART', item);
-        }
+            this.$tools.call('ADD_TO_CART',this.cartItem);
+            this.addedToCart = true;
+        },
+        removeFromCart(){
+            this.$tools.call('REMOVE_FROM_CART', this.cartItem);
+            this.addedToCart = false;
+        },
+        buyNow() {
+            // Add to cart and redirect to checkout
+            this.addToCart();
+            setTimeout(() => {
+                window.location.href = '/checkout';
+            }, 500);
+        },
     },
 
 }

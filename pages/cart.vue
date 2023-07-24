@@ -36,14 +36,15 @@ export default {
         }
     },
     methodes:{
-        totalPrice(){
-            this.total = this.items.reduce((total, item) => total + (item.price.salePrice * item.quantity.value), 0);
+        totalPrice(price){
+            this.total += price; 
         },
     },
     watch:{
-        async "$store.state.cart.length"(){
-            this.totalPrice();
+        totalPrice(price){
+            this.total += price; 
         },
+        
     },
     async fetch(){
          const ids = this.$store.state.cart.map(item => item._id);
@@ -51,7 +52,6 @@ export default {
                     try{
                         const {data} = await this.$storeino.products.search({ '_id-in': ids});
                         this.items = data.results;
-                        this.totalPrice();
                     }catch(e){
                         console.log({e});
                     }

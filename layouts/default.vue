@@ -37,6 +37,9 @@ export default {
   .bg-primary{
     background-color: var(--primaryColor);
   }
+  .bg-secondary{
+    background-color: var(--secondaryColor);
+  }
   .text-primary{
     color: var(--primaryColor);
   }
@@ -48,6 +51,9 @@ export default {
   }
   .border-primary{
     border-color: var(--primaryColor);
+  }
+  .border-secondary{
+    border-color: var(--secondaryColor);
   }
   .zoom:hover{
         transform: scale(1.2);

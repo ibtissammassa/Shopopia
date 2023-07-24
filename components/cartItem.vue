@@ -35,6 +35,7 @@ export default {
             this.item.quantity.value = quantity;
             this.value = quantity;
             this.totalPrice = this.item.price.salePrice * quantity;
+            this.$emit('totalPrice',this.totalPrice);
             let item = this.$store.state.cart.find(i => i._id == this.item._id && this.item )
             this.$tools.call('ADD_TO_CART', { ...item, quantity: quantity });
         },
