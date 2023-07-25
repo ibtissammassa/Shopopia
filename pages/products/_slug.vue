@@ -1,11 +1,11 @@
 <template>
   <div class="py-6 px-10 gap-y-5 flex flex-col" v-if="item">
     <h4 class="pl-9 text-sm text-gray-500"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
-    <div class="flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7">
-      <div class=" w-3/6 bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
+    <div class="md:px-20 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7">
+      <div class="w-full lg:w-3/6 bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
         <img class="w-full zoom" :src="item.images[0].src" alt="">
       </div>
-      <div class="flex flex-col gap-y-6 justify-center lg:w-2/5">
+      <div class="flex flex-col gap-y-6 justify-center lg:w-2/5 w-full">
         <h2 class="font-bold text-2xl lg:text-4xl">{{ item.name }}</h2>
         <p class="text-gray-700 text-sm">{{ item.seo.description }}</p>
         <hr>

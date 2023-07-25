@@ -10,7 +10,7 @@
             </div>
             <button @click="inc(1)" class="border-b border-t border-r border-primary rounded-br-full rounded-tr-full py-2 px-4 ">+</button>
         </div>
-        <div v-if="showItemsLeft">
+        <div v-if="showItemsLeft" class="text-sm md:text-base">
             Only <span :style="`color:${itemsLeftColor}`">{{ quantity.instock }} items</span> left! Don't miss it.
         </div>
     </div>
