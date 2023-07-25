@@ -13,7 +13,7 @@
         <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="showAddToCart || showBuyNow" @quantitySelected="quantitySelected" :quantity="quantity"/>
         <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">
-          <button @click.stop="buyNow" v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
+          <button @click.stop="buy" v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
                   {{ buyNow }}
           </button>
           <button @click.stop="addToCart" v-if="showAddToCart && !addedToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-base py-2 px-2.5 border-2 rounded-full">
@@ -66,7 +66,7 @@ export default {
             freeDeliveryDescription: this.$settings.product.freeDelivery.description,
             returnDeliveryDescription: this.$settings.product.returnDelivery.description,
             addedToCart: false,
-            cartItem:null
+            
         }
     },
     async fetch() {
@@ -77,29 +77,38 @@ export default {
             this.quantity = this.item.quantity;
             // Set default quantity
             this.quantitySelected(this.quantity.default);
+            for(const item of this.$store.state.cart){
+                if(item._id === this.item._id)this.addedToCart=true;
+            }
         }catch(e){
             // Redirect to error page if product not exists
             this.$nuxt.error({ statusCode: 404, message: 'product_not_found' })
         }
+    },
+    watch:{
+        async "$store.state.cart.length"(){
+            this.$fetch();
+        },
     },
     methods: {
       quantitySelected(quantity){
             this.item.quantity.value = quantity;
         },
         addToCart(){
-            this.cartItem = {
+            let cartItem={}
+            cartItem = {
                 _id: this.item._id,
                 quantity: this.item.quantity.value ? this.item.quantity.value : this.item.quantity.default,
                 price: this.item.price.salePrice,
             }
-            this.$tools.call('ADD_TO_CART',this.cartItem);
-            this.addedToCart = true;
+            this.$tools.call('ADD_TO_CART',cartItem);
+            this.$fetch()
         },
         removeFromCart(){
-            this.$tools.call('REMOVE_FROM_CART', this.cartItem);
+            this.$tools.call('REMOVE_FROM_CART', this.item);
             this.addedToCart = false;
         },
-        buyNow() {
+        buy() {
             // Add to cart and redirect to checkout
             this.addToCart();
             setTimeout(() => {
