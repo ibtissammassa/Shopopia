@@ -11,7 +11,7 @@
         <hr>
         <h3 class="font-bold text-5xl">{{ item.price.salePrice }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         <hr>
-        <ProductQuantity :showItemsLeft="showItemsLeft" v-if="showAddToCart || showBuyNow" @quantitySelected="quantitySelected" :quantity="quantity"/>
+        <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
         <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">
           <button @click.stop="buy" v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
                   {{ buyNow }}
@@ -76,8 +76,6 @@ export default {
             const { data } = await this.$storeino.products.get({ slug })
             this.item = data;
             this.quantity = this.item.quantity;
-            // Set default quantity
-            this.quantitySelected(this.quantity.default);
             for(const item of this.$store.state.cart){
                 if(item._id === this.item._id)this.addedToCart=true;
             }
