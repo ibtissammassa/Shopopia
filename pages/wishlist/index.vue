@@ -2,9 +2,10 @@
   <div class="px-16 py-8 flex flex-col">
     <h3 class="text-2xl pb-3 font-bold">My Wishlist</h3>
     <hr>
-    <div class="grid grid-cols-4">
+    <div class="grid grid-cols-4" v-if="items.length">
         <productCard v-for="item in items" :key="item.id" :item="item"/>
     </div>
+    <loading v-else/>
   </div>
 </template>
 

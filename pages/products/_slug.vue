@@ -1,5 +1,5 @@
 <template>
-  <div class="py-6 px-10 gap-y-7 flex flex-col">
+  <div class="py-6 px-10 gap-y-7 flex flex-col" v-if="item">
     <h4 class="pl-9 text-sm text-gray-500"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
     <div class="flex flex-row gap-x-14 rounded-xl items-center justify-center">
       <div class="w-3/6 bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
@@ -44,6 +44,7 @@
     </div>
     <RelatedProducts :item="item" v-if="showRelated"/>
   </div>
+  <loading v-else/>
 </template>
 
 <script>
