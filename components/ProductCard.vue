@@ -30,12 +30,14 @@ export default {
             cartItem: null
         }
     },
+    fetch(){
+        for(const item of this.$store.state.cart){
+                if(item._id === this.item._id)this.addedToCart=true;
+            }
+    },
     watch:{
         async "$store.state.cart.length"(){
-            for(const item of this.$store.state.cart){
-                if(item._id === this.item._id)this.addedToCart=true;
-                else this.addedToCart=false;
-            }
+            this.$fetch();
         },
         
     },
@@ -53,11 +55,11 @@ export default {
                 price : this.item.price.salePrice,
             }
             this.$tools.call('ADD_TO_CART', item);
-            // this.addedToCart = true;
+            this.$fetch();
         },
         removeFromCart(){
             this.$tools.call('REMOVE_FROM_CART', this.item);
-            // this.addedToCart = false;
+            this.addedToCart = false;
         }
         
     }
