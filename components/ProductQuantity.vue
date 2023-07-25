@@ -4,8 +4,8 @@
             <button @click="inc(-1)" class="border-b border-t border-l border-primary rounded-bl-full rounded-tl-full py-2 px-4">-</button>
             <div class="flex">
                 <label class="relative border-primary border-t  border-b py-2 h-full">
-                    <span class="px-5 py-4 text-center ">{{ value }}</span>
-                    <input :min="quantity.min" :max="quantity.instock" class="px-2 text-center absolute outline-none inset-0 bg-opacity-0 w-full h-full" v-model="value" type="number">
+                    <span class="md:px-5 md:py-4 px-4 py-1 text-xs text-center ">{{ value }}</span>
+                    <input :min="quantity.min" :max="quantity.instock" class="md:px-2 text-center absolute outline-none inset-0 bg-opacity-0 w-full h-full" v-model="value" type="number">
                 </label>
             </div>
             <button @click="inc(1)" class="border-b border-t border-r border-primary rounded-br-full rounded-tr-full py-2 px-4 ">+</button>
