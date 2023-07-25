@@ -79,7 +79,10 @@ export default {
                     }catch(e){
                         console.log({e});
                     }
+            }else{
+                this.items = [];
             }
+            
     },
    
 }
