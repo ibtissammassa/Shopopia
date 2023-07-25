@@ -35,17 +35,21 @@ export default {
             total:0,
         }
     },
-    methodes:{
+    methods:{
         totalPrice(){
             this.total = this.items.reduce((total, item) => total + (item.price * item.quantity.value), 0); 
         },
-        
     },
     watch:{
         async "$store.state.cart.length"(){
            this.$fetch();
         },
-        
+        items:{
+            deep: true,
+            handler(){
+                this.totalPrice();
+            }
+        }
     },
     async fetch(){
          const ids = this.$store.state.cart.map(item => item._id);
