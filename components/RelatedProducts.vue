@@ -1,7 +1,7 @@
 <template>
   <div class="my-14">
     <h2 class="text-2xl font-bold mb-2 pl-8">Related Products</h2>
-    <div class="grid grid-cols-4">
+    <div class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
         <ProductCard v-for="item in items" :key="item.id" :item="item"/> 
     </div>
   </div>

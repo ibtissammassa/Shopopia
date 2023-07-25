@@ -1,15 +1,15 @@
 <template>
-  <div class="py-6 px-10 gap-y-7 flex flex-col" v-if="item">
+  <div class="py-6 px-10 gap-y-5 flex flex-col" v-if="item">
     <h4 class="pl-9 text-sm text-gray-500"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
-    <div class="flex flex-row gap-x-14 rounded-xl items-center justify-center">
-      <div class="w-3/6 bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
+    <div class="flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7">
+      <div class=" w-3/6 bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
         <img class="w-full zoom" :src="item.images[0].src" alt="">
       </div>
-      <div class="flex flex-col gap-y-6 justify-center w-2/5">
-        <h2 class="font-bold text-4xl">{{ item.name }}</h2>
+      <div class="flex flex-col gap-y-6 justify-center lg:w-2/5">
+        <h2 class="font-bold text-2xl lg:text-4xl">{{ item.name }}</h2>
         <p class="text-gray-700 text-sm">{{ item.seo.description }}</p>
         <hr>
-        <h3 class="font-bold text-5xl">{{ item.price.salePrice }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
+        <h3 class="font-bold text-3xl md:text-5xl">{{ item.price.salePrice }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
         <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">

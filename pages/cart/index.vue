@@ -1,6 +1,6 @@
 <template>
   <div class="px-16 py-8 flex flex-col">
-    <h3 class="text-2xl pb-3 font-bold">Shopping Cart</h3>
+    <h3 class="text-2xl pb-3 font-bold">{{ title }}</h3>
     <hr>
     <div v-if="items">
         <div v-if="items.length>0" class="mt-5 flex flex-col">
@@ -11,19 +11,19 @@
             </div>
         </div>
         <div v-else class="flex justify-center items-center flex-col py-16">
-            <p class="text-2xl text-gray-800">Your cart is empty!</p>
+            <p class="text-2xl text-gray-800">{{ empty }}</p>
         </div>
     </div>
     <loading v-else/>
     <div class="flex justify-between">
-        <nuxt-link to="/products">
+        <nuxt-link v-if="showBackToShop" to="/products">
             <button class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
-                Back To Shop
+                {{ backToShop }}
             </button>
         </nuxt-link>
         <nuxt-link v-if="items && items.length>0" to="/checkout">
             <button class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-sm py-2.5 px-2.5 border-2 rounded-full bg-primary">
-                Checkout
+                {{ checkout }}
             </button>
         </nuxt-link>
     </div>
@@ -36,6 +36,11 @@ export default {
         return{
             items: null,
             total:0,
+            title: this.$settings.cart.text.title,
+            empty: this.$settings.cart.text.empty,
+            backToShop: this.$settings.cart.text.backToShop,
+            checkout: this.$settings.cart.text.checkout,
+            showBackToShop: this.$settings.cart.show.backToShop
         }
     },
     methods:{

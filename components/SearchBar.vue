@@ -1,6 +1,6 @@
 <template>
-  <div class="relative text-gray-600 ">
-      <input autocomplete="off" v-model="search" @input="searchData" class="w-96 border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
+  <div class="relative text-gray-600 w-1/3">
+      <input autocomplete="off" v-model="search" @input="searchData" class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
             type="search" name="search" :placeholder="search_placeholder">
           <button type="submit" class="absolute right-0 top-0 mt-3 mr-5">
             <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
