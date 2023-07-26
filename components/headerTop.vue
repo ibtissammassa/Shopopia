@@ -7,7 +7,7 @@
     <div v-if="showMessage">
       <p>{{ message }}</p>
     </div>
-    <div v-if="showLanguage || showCurrency" class="flex gap-x-2 py-0.5 text-xs">
+    <div v-if="showLanguage || showCurrency" class="flex gap-x-2 py-0.5 text-xs" v-click-outside="onClickOutside">
       <toggleButton @toggle="togglelang" v-if="showLanguage" :element="language" :allelements="allLanguages" :toggle="lang" :lang="lang" :textColor="textColor" :backgroundColor="backgroundColor"/>
       <toggleButton @toggle="togglecurr" v-if="showCurrency" :element="currency" :allelements="allCurrencies" :toggle="curr"/>
     </div>
@@ -40,6 +40,10 @@ export default {
       },
       togglecurr(){
         this.curr=!this.curr;
+      },
+      onClickOutside(){
+        this.curr = false;
+        this.lang = false;
       }
     },
     computed:{
