@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 py-7 gap-y-5 flex flex-col justify-center">
+  <div class="px-10 py-7 gap-y-7 flex flex-col justify-center">
     <h2 class="text-2xl md:text-3xl font-bold">Our Posts</h2>
     <div class="grid lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1">
         <PostCart v-for="item in items" :key="item.id" :item="item"/>
