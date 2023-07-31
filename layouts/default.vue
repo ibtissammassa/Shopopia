@@ -73,4 +73,7 @@ export default {
   .hover-border-primary:hover{
     border-color: var(--primaryColor);
   }
+  .focus-bg-primary:focus{
+    background-color: var(--primaryColor);
+  }
 </style>

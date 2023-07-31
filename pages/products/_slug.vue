@@ -42,6 +42,18 @@
         </div>
       </div>
     </div>
+    <div class="flex justify-center gap-x-2">
+      <button @click="showDescription" :class="description ? 'text-white bg-primary' : '' " class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
+          Description
+      </button>
+      <button @click="showReviews" :class="reviews ? 'text-white bg-primary' : '' " class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
+          Reviews
+      </button>
+    </div>
+    <div>
+      <ProductDescription :product="item" v-if="description"/>
+      <ProductReviews :product="item" v-if="reviews"/>
+    </div>
     <RelatedProducts :item="item" v-if="showRelated"/>
   </div>
   <loading v-else/>
@@ -67,7 +79,8 @@ export default {
             freeDeliveryDescription: this.$settings.product.freeDelivery.description,
             returnDeliveryDescription: this.$settings.product.returnDelivery.description,
             addedToCart: false,
-            
+            description: false,
+            reviews: true
         }
     },
     async fetch() {
@@ -114,6 +127,14 @@ export default {
                 window.location.href = '/checkout';
             }, 500);
         },
+        showDescription(){
+          this.description = true;
+          this.reviews = false;
+        },
+        showReviews(){
+          this.reviews = true;
+          this.description = false;
+        }
     },
 
 }
@@ -122,5 +143,8 @@ export default {
 <style scoped>
   .zoom:hover{
     transform: scale(1.1);
+  }
+  .text-white{
+    color: white;
   }
 </style>
