@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid gap-cols-2 md:gap-cols-3 lg:grid-cols-4 gap-4">
         <div v-for="item in reviews" :key="item.id" class="rounded-xl border-slate-300 border-2 p-3 flex flex-col gap-y-3">
             <div class="flex gap-x-5 items-center">
                 <img class="h-16 w-18 rounded-xl border-slate-200 bg-slate-200" v-for="(image, i) in item.images" :key="i" :src="image" alt="">
