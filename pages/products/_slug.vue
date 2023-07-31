@@ -51,7 +51,12 @@
       </button>
     </div>
     <div>
-      <ProductDescription :product="item" v-if="description"/>
+      <div v-if="description">
+        <div v-if="item.html.length>0" class="text-gray-900 rounded-md text-base gap-y-2 flex flex-col" v-html="item.html"></div>
+        <div v-else class="flex justify-center items-center flex-col py-7">
+            <p class="text-xl text-gray-800">No Description</p>
+        </div>
+      </div>
       <ProductReviews :product="item" v-if="reviews"/>
     </div>
     <RelatedProducts :item="item" v-if="showRelated"/>
@@ -79,8 +84,8 @@ export default {
             freeDeliveryDescription: this.$settings.product.freeDelivery.description,
             returnDeliveryDescription: this.$settings.product.returnDelivery.description,
             addedToCart: false,
-            description: false,
-            reviews: true
+            description: true,
+            reviews: false
         }
     },
     async fetch() {
