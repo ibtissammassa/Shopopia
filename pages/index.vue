@@ -4,6 +4,7 @@
     <HomeCategories/>
     <HomeProducts v-if="showProducts1" :title="title1" :items="items1"/>
     <HomeProducts v-if="showProducts2" :title="title2" :items="items2"/>
+    <HomePosts :items="posts" />
   </div>
 </template>
 
@@ -17,6 +18,7 @@
             title2: this.$settings.home.products2.title,
             items1:[],
             items2:[],
+            posts:[]
         }
     },
     async fetch(){
@@ -32,6 +34,8 @@
         }else{
           this.items2 = await this.getProducts(filter);
         }
+
+        this.posts = await this.getPosts();
     },
     methods: {
         async getProducts(filter){
@@ -42,6 +46,14 @@
             console.log({e});
           }
         },
+        async getPosts(){
+          try{
+            const { data } = await this.$storeino.pages.search({type: 'POST', limit: 3});
+            return data.results;
+          }catch(e){
+            console.log({e});
+          }
+        }
     }
 }
 </script>
