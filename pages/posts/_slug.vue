@@ -1,12 +1,40 @@
 <template>
-  <div class="px-16 py-8 flex flex-col items-center">
-    <h2 class="md:text-2xl text-lg font-bold">{{ title }}</h2>
+  <div v-if="item">
+    <div class="px-9 gap-y-5 py-8 flex flex-col">
+      <h2 class="md:text-3xl text-lg font-bold text-center">{{ item.title }}</h2>
+      <div class="w-full overflow-hidden rounded-xl h-1/4">
+        <img class="object-cover w-full h-full" :src="item.image.url" alt="">
+      </div>
+      <div class="flex flex-col gap-y-4">
+        <p class="text-gray-700 text-base">{{ item.excerpt }}</p>
+        <div class="" v-html="item.content"></div>
+        <div class="flex flex-col gap-y-1">
+          <p class="font-bold">by: {{ item.publisher.firstname }} {{ item.publisher.lastname }}</p>
+          <p class="italic">{{ item.createdAt.slice(0, 10) }}</p>
+        </div>
+      </div>
+    </div>
+    <relatedPosts :item="item"/>
   </div>
+  <loading v-else/>
 </template>
 
 <script>
 export default {
-
+  data(){
+    return{
+      item: null
+    }
+  },
+  async fetch(){
+    try {
+      const { slug } = this.$route.params;
+      const { data } = await this.$storeino.pages.get({ slug, type: 'POST' })
+      this.item = data;
+    } catch (e) {
+      console.log({e});
+    }
+  }
 }
 </script>
 
