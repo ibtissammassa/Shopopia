@@ -8,13 +8,13 @@
       <div class="flex flex-col gap-y-4">
         <p class="text-gray-700 text-base">{{ item.excerpt }}</p>
         <div class="flex flex-col gap-y-4" v-html="item.content"></div>
-        <div class="flex flex-col gap-y-1">
-          <p class="font-bold">by: {{ item.publisher.firstname }} {{ item.publisher.lastname }}</p>
-          <p class="italic">{{ item.createdAt.slice(0, 10) }}</p>
+        <div v-if="showCreator && showCreatedDate" class="flex flex-col gap-y-1">
+          <p v-if="showCreator" class="font-bold">{{ creatorTitle }} {{ item.publisher.firstname }} {{ item.publisher.lastname }}</p>
+          <p v-if="showCreatedDate" class="italic">{{ item.createdAt.slice(0, 10) }}</p>
         </div>
       </div>
     </div>
-    <relatedPosts :item="item"/>
+    <relatedPosts v-if="showRelated" :item="item"/>
   </div>
   <loading v-else/>
 </template>
@@ -23,7 +23,11 @@
 export default {
   data(){
     return{
-      item: null
+      item: null,
+      showRelated: this.$settings.post.show.related,
+      showCreator: this.$settings.post.show.creator,
+      showCreatedDate: this.$settings.post.show.date,
+      creatorTitle: this.$settings.post.creator.title
     }
   },
   async fetch(){
