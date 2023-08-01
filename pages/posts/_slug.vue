@@ -7,7 +7,7 @@
       </div>
       <div class="flex flex-col gap-y-4">
         <p class="text-gray-700 text-base">{{ item.excerpt }}</p>
-        <div class="" v-html="item.content"></div>
+        <div class="flex flex-col gap-y-4" v-html="item.content"></div>
         <div class="flex flex-col gap-y-1">
           <p class="font-bold">by: {{ item.publisher.firstname }} {{ item.publisher.lastname }}</p>
           <p class="italic">{{ item.createdAt.slice(0, 10) }}</p>

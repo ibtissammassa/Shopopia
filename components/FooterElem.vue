@@ -1,33 +1,38 @@
 <template>
-  <footer >
-    <div class="px-16 py-12 flex w-full justify-between border-t bg-slate-50 border-slate-50">
-        <div class="gap-y-6 w-1/2 flex flex-col">
-            <img class="h-16 w-44" :src="logo_src" alt="">
-            <p class="text-sm text-gray-700">{{ description }}</p>
-            <div>
-                <h3>{{ title }}</h3>
-                <div class="grid grid-cols-3 w-2/3 h-24 mt-4 gap-3">
-                    <div v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
-                        <div v-if="item.show">
-                            <img class="" :src="item.img">
+    <div>
+        <AppLoader placement="BEFORE_FOOTER"></AppLoader>
+        <footer >
+            <div class="px-16 py-12 flex w-full justify-between border-t bg-slate-50 border-slate-50">
+                <div class="gap-y-6 w-1/2 flex flex-col">
+                    <img class="h-16 w-44" :src="logo_src" alt="">
+                    <p class="text-sm text-gray-700">{{ description }}</p>
+                    <div>
+                        <h3>{{ title }}</h3>
+                        <div class="grid grid-cols-3 w-2/3 h-24 mt-4 gap-3">
+                            <div v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
+                                <div v-if="item.show">
+                                    <img class="" :src="item.img">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="gap-y-3 flex flex-col">
+                    <h3>Categories</h3>
+                    <nuxt-link class="hover-color-primary transform" :to="`/shop/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
+                </div>
+                <div class="gap-y-3 flex flex-col">
+                    <h3>{{ titlemedia }}</h3>
+                    <div v-for="item in socials" :key="item.name" class="hover-color-primary transform flex">
+                        <a class="" :href="item.url">{{ item.name }}</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="gap-y-3 flex flex-col">
-            <h3>Categories</h3>
-            <nuxt-link class="hover-color-primary transform" :to="`/shop/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
-        </div>
-        <div class="gap-y-3 flex flex-col">
-            <h3>{{ titlemedia }}</h3>
-            <div v-for="item in socials" :key="item.name" class="hover-color-primary transform flex">
-                <a class="" :href="item.url">{{ item.name }}</a>
-            </div>
-        </div>
+            <div class="bg-primary text-white text-center py-3">Copyright © 2023. All rights reserved. storeino.com</div>
+        </footer>
+        <AppLoader placement="AFTER_FOOTER"></AppLoader>
     </div>
-    <div class="bg-primary text-white text-center py-3">Copyright © 2023. All rights reserved. storeino.com</div>
-  </footer>
+  
 </template>
 
 <script>

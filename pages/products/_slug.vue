@@ -17,6 +17,7 @@
         <h3 class="font-bold text-3xl md:text-5xl">{{ item.price.salePrice }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
+        <AppLoader placement="BEFORE_ADD_TO_CART"></AppLoader>
         <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">
           <button @click.stop="buy" v-if="showBuyNow" class="my-2 hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
                   {{ buyNow }}
@@ -27,7 +28,6 @@
           <button @click.stop="removeFromCart" v-else-if="showAddToCart && addedToCart" class="my-2 hover:bg-slate-300 hover-color-primary ease-in duration-400 w-32 text-white font-bold border-secondary bg-secondary text-base py-2 px-2.5 border-2 rounded-full">
                   In Cart!
           </button>
-
         </div>
         <div v-if="showFreeDelivery || showReturnDelivery" class="rounded-xl border-slate-200 border-2">
           <div v-if="showFreeDelivery" class="border-b flex flex-col py-4 px-3 gap-y-0">
@@ -61,9 +61,12 @@
         <div v-else class="flex justify-center items-center flex-col py-7">
             <p class="text-xl text-gray-800">No Description</p>
         </div>
+        <AppLoader placement="AFTER_DESCRIPTION"></AppLoader>
       </div>
       <ProductReviews :product="item" v-if="reviews"/>
     </div>
+    <AppLoader placement="AFTER_ADD_TO_CART"/>
+    <AppLoader placement="REPLACE_BUYNOW"/>
     <RelatedProducts :item="item" v-if="showRelated"/>
   </div>
   <loading v-else/>
