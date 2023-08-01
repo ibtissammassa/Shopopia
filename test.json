@@ -1,0 +1,2700 @@
+[
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Selfie mode and selfie mirror, Macro mode",
+            "title": "Instax Mini 11"
+        },
+        "price": {
+            "buyingPrice": 89,
+            "salePrice": 89,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [
+                "64c7b7b2f90b961af3df340d",
+                "64c7b7e0f90b961af3df3411",
+                "64c7b81cf90b961af3df3416"
+            ],
+            "rating": 2.6666666666666665
+        },
+        "source": "owner",
+        "type": "variable",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b6659244c69b1916a4c3ea",
+        "description": "Selfie mode and selfie mirror, Macro mode",
+        "slug": "instax-mini-11",
+        "reference": "LQM9N1129803084655",
+        "collections": [
+            {
+                "_id": "64b11e99e81e2618cd1f283d",
+                "name": "travel",
+                "slug": "travel"
+            },
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Instax Mini 11",
+        "options": [
+            {
+                "style": "",
+                "values": [
+                    {
+                        "value1": "Red",
+                        "value2": "#ff0000",
+                        "_id": "64c0de2e4eb53819ca0022d1"
+                    },
+                    {
+                        "value1": "Green",
+                        "value2": "#00ff00",
+                        "_id": "64c0de2e4eb53819ca0022d3"
+                    },
+                    {
+                        "value1": "Blue",
+                        "value2": "#0000ff",
+                        "_id": "64c0de2e4eb53819ca0022d5"
+                    }
+                ],
+                "_id": "64c0de2e4eb53819ca0022d0",
+                "key": "color",
+                "name": "Color"
+            }
+        ],
+        "variants": [
+            {
+                "option1": {
+                    "option": "64c0de2e4eb53819ca0022d0",
+                    "value": "64c0de2e4eb53819ca0022d1"
+                },
+                "price": {
+                    "buyingPrice": 0,
+                    "salePrice": 0,
+                    "comparePrice": 0
+                },
+                "quantity": {
+                    "instock": 10000,
+                    "transporting": 0
+                },
+                "sizes": {
+                    "weight": {
+                        "value": 0,
+                        "unite": "kg"
+                    },
+                    "volume": {
+                        "value": 0,
+                        "unite": "ml"
+                    },
+                    "dimensions": {
+                        "width": 0,
+                        "height": 0,
+                        "depth": 0,
+                        "unite": "cm"
+                    }
+                },
+                "unavailable": false,
+                "translates": [],
+                "_id": "64c0de2e4eb53819ca0022d2",
+                "name": "Color : Red"
+            },
+            {
+                "option1": {
+                    "option": "64c0de2e4eb53819ca0022d0",
+                    "value": "64c0de2e4eb53819ca0022d3"
+                },
+                "price": {
+                    "buyingPrice": 0,
+                    "salePrice": 0,
+                    "comparePrice": 0
+                },
+                "quantity": {
+                    "instock": 10000,
+                    "transporting": 0
+                },
+                "sizes": {
+                    "weight": {
+                        "value": 0,
+                        "unite": "kg"
+                    },
+                    "volume": {
+                        "value": 0,
+                        "unite": "ml"
+                    },
+                    "dimensions": {
+                        "width": 0,
+                        "height": 0,
+                        "depth": 0,
+                        "unite": "cm"
+                    }
+                },
+                "unavailable": false,
+                "translates": [],
+                "_id": "64c0de2e4eb53819ca0022d4",
+                "name": "Color : Green"
+            },
+            {
+                "option1": {
+                    "option": "64c0de2e4eb53819ca0022d0",
+                    "value": "64c0de2e4eb53819ca0022d5"
+                },
+                "price": {
+                    "buyingPrice": 0,
+                    "salePrice": 0,
+                    "comparePrice": 0
+                },
+                "quantity": {
+                    "instock": 10000,
+                    "transporting": 0
+                },
+                "sizes": {
+                    "weight": {
+                        "value": 0,
+                        "unite": "kg"
+                    },
+                    "volume": {
+                        "value": 0,
+                        "unite": "ml"
+                    },
+                    "dimensions": {
+                        "width": 0,
+                        "height": 0,
+                        "depth": 0,
+                        "unite": "cm"
+                    }
+                },
+                "unavailable": false,
+                "translates": [],
+                "_id": "64c0de2e4eb53819ca0022d6",
+                "name": "Color : Blue"
+            }
+        ],
+        "images": [
+            {
+                "title": "63e8c4e6eaf85336ce58cf03_instax mini 11-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b6657944c69b1916a4c3e8",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689675129047.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "updatedAt": "2023-07-31T14:37:57.559Z",
+                "createdAt": "2023-07-31T14:37:57.559Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [
+                    {
+                        "_id": "64c7c74511cfd31b23b494f6",
+                        "name": "variants.0.name",
+                        "value": "Color : Red"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494f7",
+                        "name": "variants.1.name",
+                        "value": "Color : Green"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494f8",
+                        "name": "variants.2.name",
+                        "value": "Color : Blue"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494f9",
+                        "name": "options.0.name",
+                        "value": "Color"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494fa",
+                        "name": "options.0.values.0.value1",
+                        "value": "Red"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494fb",
+                        "name": "options.0.values.1.value1",
+                        "value": "Green"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494fc",
+                        "name": "options.0.values.2.value1",
+                        "value": "Blue"
+                    }
+                ],
+                "_id": "64c7c74511cfd31b23b494f5",
+                "language": "AR"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64c7c74511cfd31b23b494fe",
+                        "name": "variants.0.name",
+                        "value": "Color : Red"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494ff",
+                        "name": "variants.1.name",
+                        "value": "Color : Green"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b49500",
+                        "name": "variants.2.name",
+                        "value": "Color : Blue"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b49501",
+                        "name": "options.0.name",
+                        "value": "Color"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b49502",
+                        "name": "options.0.values.0.value1",
+                        "value": "Red"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b49503",
+                        "name": "options.0.values.1.value1",
+                        "value": "Green"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b49504",
+                        "name": "options.0.values.2.value1",
+                        "value": "Blue"
+                    }
+                ],
+                "_id": "64c7c74511cfd31b23b494fd",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64c7c74511cfd31b23b494ee",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494ef",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494f0",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64c7c74511cfd31b23b494ed",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64c7c74511cfd31b23b494f2",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494f3",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64c7c74511cfd31b23b494f4",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64c7c74511cfd31b23b494f1",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-18T10:12:34.618Z",
+        "updatedAt": "2023-07-31T14:37:57.559Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Table with air purifier, stained veneer/black",
+            "title": "Ipad Mini"
+        },
+        "price": {
+            "buyingPrice": 539,
+            "salePrice": 539,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b6652344c69b1916a4c3d6",
+        "description": "Table with air purifier, stained veneer/black",
+        "slug": "ipad-mini",
+        "reference": "2GFHF1129802983024",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Ipad Mini",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e64bd907adafd35b46_ipad mini-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b6651944c69b1916a4c3d4",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689675033738.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-18T10:10:43.878Z",
+                "updatedAt": "2023-07-18T10:10:43.878Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b6652344c69b1916a4c3d8",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b6652344c69b1916a4c3d9",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b6652344c69b1916a4c3db",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6652344c69b1916a4c3dc",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6652344c69b1916a4c3dd",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b6652344c69b1916a4c3da",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b6652344c69b1916a4c3df",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6652344c69b1916a4c3e0",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6652344c69b1916a4c3e1",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b6652344c69b1916a4c3de",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-18T10:10:43.872Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Organic Cotton, fairtrade certified",
+            "title": "Laptop sleeve MacBook"
+        },
+        "price": {
+            "buyingPrice": 59,
+            "salePrice": 59,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b664e444c69b1916a4c3b7",
+        "description": "Organic Cotton, fairtrade certified",
+        "slug": "laptop-sleeve-macbook-1689674980017",
+        "reference": "NONQ31129802917480",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            },
+            {
+                "_id": "64b11e99e81e2618cd1f283d",
+                "name": "travel",
+                "slug": "travel"
+            }
+        ],
+        "name": "Laptop sleeve MacBook",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e563db5560c31bbfce_leptop sleeve macbook-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b664cc44c69b1916a4c3b5",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689674956496.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-18T10:09:40.030Z",
+                "updatedAt": "2023-07-18T10:09:40.030Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b664e444c69b1916a4c3b9",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b664e444c69b1916a4c3ba",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b664e444c69b1916a4c3bc",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b664e444c69b1916a4c3bd",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b664e444c69b1916a4c3be",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b664e444c69b1916a4c3bb",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b664e444c69b1916a4c3c0",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b664e444c69b1916a4c3c1",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b664e444c69b1916a4c3c2",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b664e444c69b1916a4c3bf",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-18T10:09:40.023Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Table with air purifier, stained veneer/black",
+            "title": "Supreme Water Bottle"
+        },
+        "price": {
+            "buyingPrice": 19,
+            "salePrice": 19,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b6649c44c69b1916a4c39f",
+        "description": "Table with air purifier, stained veneer/black",
+        "slug": "supreme-water-bottle",
+        "reference": "3LOHE1129802822960",
+        "collections": [
+            {
+                "_id": "64b11e99e81e2618cd1f283d",
+                "name": "travel",
+                "slug": "travel"
+            }
+        ],
+        "name": "Supreme Water Bottle",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e78b497e3a5646b82f_water pot-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b6647744c69b1916a4c39b",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689674871643.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-18T10:08:28.684Z",
+                "updatedAt": "2023-07-18T10:08:28.684Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b6649c44c69b1916a4c3a1",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b6649c44c69b1916a4c3a2",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b6649c44c69b1916a4c3a4",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6649c44c69b1916a4c3a5",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6649c44c69b1916a4c3a6",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b6649c44c69b1916a4c3a3",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b6649c44c69b1916a4c3a8",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6649c44c69b1916a4c3a9",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6649c44c69b1916a4c3aa",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b6649c44c69b1916a4c3a7",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-18T10:08:28.678Z",
+        "updatedAt": "2023-07-21T08:22:51.291Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Table with air purifier, stained veneer/black",
+            "title": "Tomford Watch"
+        },
+        "price": {
+            "buyingPrice": 39,
+            "salePrice": 39,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b6643a44c69b1916a4c382",
+        "description": "Table with air purifier, stained veneer/black",
+        "slug": "tomford-watch",
+        "reference": "2XS3J1129802737269",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Tomford Watch",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e74b769109fd2f245a_tomford watch-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b6641a44c69b1916a4c37c",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689674778379.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-18T10:06:50.354Z",
+                "updatedAt": "2023-07-18T10:06:50.354Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b6643a44c69b1916a4c384",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b6643a44c69b1916a4c385",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b6643a44c69b1916a4c387",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6643a44c69b1916a4c388",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6643a44c69b1916a4c389",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b6643a44c69b1916a4c386",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b6643a44c69b1916a4c38b",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6643a44c69b1916a4c38c",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b6643a44c69b1916a4c38d",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b6643a44c69b1916a4c38a",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-18T10:06:50.342Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Table with air purifier, stained veneer/black",
+            "title": "Base Camp Duffel"
+        },
+        "price": {
+            "buyingPrice": 159,
+            "salePrice": 159,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b663ec44c69b1916a4c35f",
+        "description": "Table with air purifier, stained veneer/black",
+        "slug": "base-camp-duffel",
+        "reference": "9XYOL1129802656560",
+        "collections": [
+            {
+                "_id": "64b11e99e81e2618cd1f283d",
+                "name": "travel",
+                "slug": "travel"
+            }
+        ],
+        "name": "Base Camp Duffel",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e48b497e63cc46b800_base camp duffel 02-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b663c044c69b1916a4c359",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689674688588.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-18T10:05:32.748Z",
+                "updatedAt": "2023-07-18T10:05:32.748Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b663ec44c69b1916a4c361",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b663ec44c69b1916a4c362",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b663ec44c69b1916a4c364",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b663ec44c69b1916a4c365",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b663ec44c69b1916a4c366",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b663ec44c69b1916a4c363",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b663ec44c69b1916a4c368",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b663ec44c69b1916a4c369",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b663ec44c69b1916a4c36a",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b663ec44c69b1916a4c367",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-18T10:05:32.738Z",
+        "updatedAt": "2023-07-26T08:43:24.827Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Table with air purifier, stained veneer/black",
+            "title": "HomePod mini"
+        },
+        "price": {
+            "buyingPrice": 290,
+            "salePrice": 290,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50e4c44c69b1916a4c010",
+        "description": "Table with air purifier, stained veneer/black",
+        "slug": "homepod-mini",
+        "reference": "A64YW1129715240639",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "HomePod mini",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e563db5507951bbfbe_homepad-mini-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50e4744c69b1916a4c00e",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689587271364.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "updatedAt": "2023-07-17T09:48:03.701Z",
+                "createdAt": "2023-07-17T09:48:03.701Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50e5344c69b1916a4c028",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50e5344c69b1916a4c029",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50e5344c69b1916a4c021",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e5344c69b1916a4c022",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e5344c69b1916a4c023",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50e5344c69b1916a4c020",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50e5344c69b1916a4c025",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e5344c69b1916a4c026",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e5344c69b1916a4c027",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50e5344c69b1916a4c024",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:47:56.809Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "256, 8 core GPU, 8 GB",
+            "title": "Macbook pro 13\""
+        },
+        "price": {
+            "buyingPrice": 1099,
+            "salePrice": 1099,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50e1944c69b1916a4bffb",
+        "description": "256, 8 core GPU, 8 GB",
+        "slug": "macbook-pro-13-",
+        "reference": "UIIV91129715190112",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Macbook pro 13\"",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e61eb4ad4af6e75689_macbook 13-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50e1444c69b1916a4bff9",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689587220474.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-17T09:47:05.088Z",
+                "updatedAt": "2023-07-17T09:47:05.088Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50e1944c69b1916a4bffd",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50e1944c69b1916a4bffe",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50e1944c69b1916a4c000",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e1944c69b1916a4c001",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e1944c69b1916a4c002",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50e1944c69b1916a4bfff",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50e1944c69b1916a4c004",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e1944c69b1916a4c005",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50e1944c69b1916a4c006",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50e1944c69b1916a4c003",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:47:05.079Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "x Sean Wotherspoon Superstar sneakers",
+            "title": "adidas Sneakers"
+        },
+        "price": {
+            "buyingPrice": 159,
+            "salePrice": 159,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50de144c69b1916a4bfd2",
+        "description": "x Sean Wotherspoon Superstar sneakers",
+        "slug": "adidas-sneakers",
+        "reference": "ZR6MZ1129715130704",
+        "collections": [
+            {
+                "_id": "64b11e81e81e2618cd1f2836",
+                "name": "sneakers",
+                "slug": "sneakers"
+            }
+        ],
+        "name": "adidas Sneakers",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e4037f3ba53bcf2021_adidas sneakers-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50dd744c69b1916a4bfcc",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689587159027.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-17T09:46:09.973Z",
+                "updatedAt": "2023-07-17T09:46:09.973Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50de144c69b1916a4bfd4",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50de144c69b1916a4bfd5",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50de144c69b1916a4bfd7",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50de144c69b1916a4bfd8",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50de144c69b1916a4bfd9",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50de144c69b1916a4bfd6",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50de144c69b1916a4bfdb",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50de144c69b1916a4bfdc",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50de144c69b1916a4bfdd",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50de144c69b1916a4bfda",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:46:09.959Z",
+        "updatedAt": "2023-07-21T08:23:03.046Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "15 in. x 10 in. -Flap top closure",
+            "title": "Flower Laptop Sleeve"
+        },
+        "price": {
+            "buyingPrice": 39,
+            "salePrice": 39,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50d9e44c69b1916a4bfad",
+        "description": "15 in. x 10 in. -Flap top closure",
+        "slug": "flower-laptop-sleeve",
+        "reference": "FS5WF1129715045844",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Flower Laptop Sleeve",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e55cc9361a8ecce6d4_flower leptop sleeve-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50d9744c69b1916a4bfab",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689587095396.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-17T09:45:02.771Z",
+                "updatedAt": "2023-07-17T09:45:02.771Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50d9e44c69b1916a4bfaf",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50d9e44c69b1916a4bfb0",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50d9e44c69b1916a4bfb2",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d9e44c69b1916a4bfb3",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d9e44c69b1916a4bfb4",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50d9e44c69b1916a4bfb1",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50d9e44c69b1916a4bfb6",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d9e44c69b1916a4bfb7",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d9e44c69b1916a4bfb8",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50d9e44c69b1916a4bfb5",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:45:02.757Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "A perfect balance of high-fidelity audio",
+            "title": "AirPods Max"
+        },
+        "price": {
+            "buyingPrice": 559,
+            "salePrice": 559,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50d6244c69b1916a4bf98",
+        "description": "A perfect balance of high-fidelity audio",
+        "slug": "airpods-max",
+        "reference": "TCO441129714995861",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "AirPods Max",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e4aed3c6720e446aa1_airpod max-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50d5a44c69b1916a4bf96",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689587034069.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-17T09:44:02.426Z",
+                "updatedAt": "2023-07-17T09:44:02.426Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50d6244c69b1916a4bf9a",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50d6244c69b1916a4bf9b",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50d6244c69b1916a4bf9d",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d6244c69b1916a4bf9e",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d6244c69b1916a4bf9f",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50d6244c69b1916a4bf9c",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50d6244c69b1916a4bfa1",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d6244c69b1916a4bfa2",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d6244c69b1916a4bfa3",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50d6244c69b1916a4bfa0",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:44:02.421Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Organic Cotton, fairtrade certified",
+            "title": "Laptop sleeve MacBook"
+        },
+        "price": {
+            "buyingPrice": 59,
+            "salePrice": 59,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50d2344c69b1916a4bf7e",
+        "description": "Organic Cotton, fairtrade certified",
+        "slug": "laptop-sleeve-macbook",
+        "reference": "44L791129714933325",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Laptop sleeve MacBook",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e68b497e229146b818_leptop sleeve-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50d1a44c69b1916a4bf7c",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689586970666.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-17T09:42:59.203Z",
+                "updatedAt": "2023-07-17T09:42:59.203Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50d2344c69b1916a4bf80",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50d2344c69b1916a4bf81",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50d2344c69b1916a4bf83",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d2344c69b1916a4bf84",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d2344c69b1916a4bf85",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50d2344c69b1916a4bf82",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50d2344c69b1916a4bf87",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d2344c69b1916a4bf88",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50d2344c69b1916a4bf89",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50d2344c69b1916a4bf86",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:42:59.194Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Stainless steel, Food safe, Hand wash",
+            "title": "Water Bottle"
+        },
+        "price": {
+            "buyingPrice": 89,
+            "salePrice": 89,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50ceb44c69b1916a4bf5a",
+        "description": "Stainless steel, Food safe, Hand wash",
+        "slug": "water-bottle",
+        "reference": "N48NC1129714874495",
+        "collections": [
+            {
+                "_id": "64b11e99e81e2618cd1f283d",
+                "name": "travel",
+                "slug": "travel"
+            }
+        ],
+        "name": "Water Bottle",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e65cc936826acce6d9_pendleton water bottle-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50ce144c69b1916a4bf58",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689586912925.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "updatedAt": "2023-07-17T09:42:06.781Z",
+                "createdAt": "2023-07-17T09:42:06.781Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50cee44c69b1916a4bf72",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50cee44c69b1916a4bf73",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50cee44c69b1916a4bf6b",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cee44c69b1916a4bf6c",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cee44c69b1916a4bf6d",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50cee44c69b1916a4bf6a",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50cee44c69b1916a4bf6f",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cee44c69b1916a4bf70",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cee44c69b1916a4bf71",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50cee44c69b1916a4bf6e",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:42:03.281Z",
+        "updatedAt": "2023-07-21T08:22:51.291Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "canvas, full grain leather",
+            "title": "Tote medium"
+        },
+        "price": {
+            "buyingPrice": 239,
+            "salePrice": 239,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50cb244c69b1916a4bf39",
+        "description": "canvas, full grain leather",
+        "slug": "tote-medium-1689586866161",
+        "reference": "VNNU71129714821447",
+        "collections": [
+            {
+                "_id": "64b11d3de81e2618cd1f2821",
+                "name": "Hand bag",
+                "slug": "hand-bag"
+            }
+        ],
+        "name": "Tote medium",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e7e006821d3b04db74_Tote Medium-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50c3444c69b1916a4bf13",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689586740481.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "updatedAt": "2023-07-17T09:41:11.146Z",
+                "createdAt": "2023-07-17T09:41:11.146Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50cb744c69b1916a4bf51",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50cb744c69b1916a4bf52",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50cb744c69b1916a4bf4a",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cb744c69b1916a4bf4b",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cb744c69b1916a4bf4c",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50cb744c69b1916a4bf49",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50cb744c69b1916a4bf4e",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cb744c69b1916a4bf4f",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50cb744c69b1916a4bf50",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50cb744c69b1916a4bf4d",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:41:06.166Z",
+        "updatedAt": "2023-07-21T08:23:30.910Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Table with air purifier, stained veneer/black",
+            "title": "Gaming headphone"
+        },
+        "price": {
+            "buyingPrice": 239,
+            "salePrice": 239,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50c3d44c69b1916a4bf15",
+        "description": "Table with air purifier, stained veneer/black",
+        "slug": "tote-medium",
+        "reference": "PAAXB1129714702908",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Gaming headphone",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e54b76914b262f2448_headphone-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50c6c44c69b1916a4bf25",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689586796486.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "updatedAt": "2023-07-17T09:40:12.986Z",
+                "createdAt": "2023-07-17T09:40:12.986Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50c7c44c69b1916a4bf2f",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50c7c44c69b1916a4bf30",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50c7c44c69b1916a4bf28",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c7c44c69b1916a4bf29",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c7c44c69b1916a4bf2a",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50c7c44c69b1916a4bf27",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50c7c44c69b1916a4bf2c",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c7c44c69b1916a4bf2d",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c7c44c69b1916a4bf2e",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50c7c44c69b1916a4bf2b",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:39:09.815Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Selfie mode and selfie mirror, Macro mode",
+            "title": "Instax Mini 9"
+        },
+        "price": {
+            "buyingPrice": 99,
+            "salePrice": 99,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50c0544c69b1916a4befd",
+        "description": "Selfie mode and selfie mirror, Macro mode",
+        "slug": "instax-mini-9",
+        "reference": "5SDXY1129714619060",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Instax Mini 9",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e563db5537881bbfcf_instax mini 9-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50bf844c69b1916a4befb",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689586680466.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "createdAt": "2023-07-17T09:38:13.729Z",
+                "updatedAt": "2023-07-17T09:38:13.729Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50c0544c69b1916a4beff",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50c0544c69b1916a4bf00",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50c0544c69b1916a4bf02",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c0544c69b1916a4bf03",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c0544c69b1916a4bf04",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50c0544c69b1916a4bf01",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50c0544c69b1916a4bf06",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c0544c69b1916a4bf07",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50c0544c69b1916a4bf08",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50c0544c69b1916a4bf05",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:38:13.724Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    },
+    {
+        "user": {
+            "_id": "64ad48ea53e57422dfea1f0a",
+            "firstname": "ibtissam",
+            "lastname": "massa"
+        },
+        "seo": {
+            "hide": false,
+            "keywords": [],
+            "description": "Citizen 650M, W-69g",
+            "title": "Hand Watch"
+        },
+        "price": {
+            "buyingPrice": 59,
+            "salePrice": 59,
+            "comparePrice": 0
+        },
+        "quantity": {
+            "instock": 10000,
+            "transporting": 0,
+            "unit": "",
+            "increment": 1,
+            "default": 1,
+            "min": 1
+        },
+        "outStock": {
+            "hide": false,
+            "disabled": true
+        },
+        "sizes": {
+            "weight": {
+                "value": 0,
+                "unit": "kg"
+            },
+            "volume": {
+                "value": 0,
+                "unit": "ml"
+            },
+            "dimensions": {
+                "width": 0,
+                "height": 0,
+                "depth": 0,
+                "unit": "cm"
+            }
+        },
+        "shipping": {
+            "active": false,
+            "price": 0,
+            "zones": []
+        },
+        "review": {
+            "reviews": [],
+            "rating": 0
+        },
+        "source": "owner",
+        "type": "simple",
+        "tags": [],
+        "status": "PUBLISH",
+        "_id": "64b50ba944c69b1916a4becc",
+        "description": "Citizen 650M, W-69g",
+        "slug": "hand-watch",
+        "reference": "FHAYD1129714531813",
+        "collections": [
+            {
+                "_id": "64b11e5be81e2618cd1f282f",
+                "name": "tech",
+                "slug": "tech"
+            }
+        ],
+        "name": "Hand Watch",
+        "options": [],
+        "variants": [],
+        "images": [
+            {
+                "title": "63e8c4e74b76916e072f2466_watch-min",
+                "width": 0,
+                "height": 0,
+                "_id": "64b50ba444c69b1916a4beca",
+                "src": "https://storeno.b-cdn.net/stores/7-2023/1689586596243.png",
+                "storeId": "64ad485153e57422dfea1ecb",
+                "updatedAt": "2023-07-17T09:36:56.078Z",
+                "createdAt": "2023-07-17T09:36:56.078Z"
+            }
+        ],
+        "files": [],
+        "translates": [
+            {
+                "properties": [],
+                "_id": "64b50bb844c69b1916a4bef1",
+                "language": "AR"
+            },
+            {
+                "properties": [],
+                "_id": "64b50bb844c69b1916a4bef2",
+                "language": "FR"
+            }
+        ],
+        "currencies": [
+            {
+                "properties": [
+                    {
+                        "_id": "64b50bb844c69b1916a4beea",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50bb844c69b1916a4beeb",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50bb844c69b1916a4beec",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50bb844c69b1916a4bee9",
+                "currency": "CAD"
+            },
+            {
+                "properties": [
+                    {
+                        "_id": "64b50bb844c69b1916a4beee",
+                        "name": "price.buyingPrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50bb844c69b1916a4beef",
+                        "name": "price.salePrice",
+                        "value": "0"
+                    },
+                    {
+                        "_id": "64b50bb844c69b1916a4bef0",
+                        "name": "price.comparePrice",
+                        "value": "0"
+                    }
+                ],
+                "_id": "64b50bb844c69b1916a4beed",
+                "currency": "EUR"
+            }
+        ],
+        "storeId": "64ad485153e57422dfea1ecb",
+        "createdAt": "2023-07-17T09:36:41.613Z",
+        "updatedAt": "2023-07-21T08:23:11.087Z",
+        "__v": 0
+    }
+]

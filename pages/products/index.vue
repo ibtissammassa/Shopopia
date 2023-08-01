@@ -1,7 +1,7 @@
 <template>
     <div class="px-16 py-8 flex flex-col items-center">
         <collectionsBar/>
-        <h2 class="md:text-2xl text-lg font-bold pl-6 mt-5">{{ title }}</h2>
+        <h2 class="md:text-2xl text-lg font-bold pl-6 mt-5">{{ title }}</h2>{{ products }}
         <div v-if="products.length" class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
             <productCard v-for="item in products" :key="item.id" :item="item"/>
         </div>
