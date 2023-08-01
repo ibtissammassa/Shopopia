@@ -12,7 +12,12 @@
         </div>
         <nuxt-link :to="`/products/${item.slug}`" class="flex justify-between font-bold relative">
             <h3>{{ item.name }}</h3>
-            <h3>{{ item.price.salePrice }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
+            <div class="flex flex-col items-center">
+                <h3>{{ Math.floor(item.price.salePrice) }}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
+                <span class="text-xs text-red-600 line-through" v-if="item.price.comparePrice != item.price.salePrice">
+                    {{ item.price.comparePrice }}{{ $store.state.currency.symbol }}
+                </span>
+            </div>
         </nuxt-link>
         <p class="text-gray-700 text-xs">{{ item.seo.description }}</p>
         <button v-if="!addedToCart" @click.stop="addToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-28 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
@@ -38,6 +43,17 @@ export default {
         for(const item of this.$store.state.cart){
                 if(item._id === this.item._id)this.addedToCart=true;
             }
+        if(this.discount){
+            if(this.item.type == 'simple'){
+                if(this.discount.type == 'percentage'){
+                        this.item.price.salePrice = this.item.price.salePrice - (this.item.price.salePrice * this.discount.value / 100)
+                        this.item.price.comparePrice = this.item.price.comparePrice
+                }else{
+                    this.item.price.salePrice = this.item.price.salePrice - this.discount.value
+                    this.item.price.comparePrice = this.item.price.comparePrice
+                }
+            }
+        }
     },
     watch:{
         async "$store.state.cart.length"(){
