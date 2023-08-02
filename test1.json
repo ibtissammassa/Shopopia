@@ -1,0 +1,300 @@
+{
+    "user": {
+        "_id": "64ad48ea53e57422dfea1f0a",
+        "firstname": "ibtissam",
+        "lastname": "massa"
+    },
+    "seo": {
+        "hide": false,
+        "keywords": [],
+        "description": "A perfect balance of high-fidelity audio",
+        "title": "AirPods Max"
+    },
+    "price": {
+        "buyingPrice": 559,
+        "salePrice": 559,
+        "comparePrice": 559
+    },
+    "quantity": {
+        "instock": 10000,
+        "transporting": 0,
+        "unit": "",
+        "increment": 1,
+        "default": 1,
+        "min": 1
+    },
+    "outStock": {
+        "hide": false,
+        "disabled": true
+    },
+    "sizes": {
+        "weight": {
+            "value": 0,
+            "unit": "kg"
+        },
+        "volume": {
+            "value": 0,
+            "unit": "ml"
+        },
+        "dimensions": {
+            "width": 0,
+            "height": 0,
+            "depth": 0,
+            "unit": "cm"
+        }
+    },
+    "shipping": {
+        "active": false,
+        "price": 0,
+        "zones": []
+    },
+    "review": {
+        "reviews": [],
+        "rating": 0
+    },
+    "html": "<p>the ultimate wireless headphones that redefine the audio experience. Meticulously designed with cutting-edge technology and luxurious comfort in mind, AirPods Max deliver an immersive and high-fidelity sound that takes your music, movies, and calls to a whole new level.</p>\n<p><strong>Key Features:</strong></p>\n<ol>\n<li>\n<p><strong>High-Fidelity Audio:</strong> Equipped with custom-designed dynamic drivers, AirPods Max produce rich, balanced sound with deep bass and crisp highs, ensuring an authentic and immersive listening experience.</p>\n</li>\n<li>\n<p><strong>Active Noise Cancellation:</strong> Immerse yourself in your music or focus on calls without distractions. The advanced active noise cancellation technology blocks out external noise, creating a serene listening environment.</p>\n</li>\n<li>\n<p><strong>Transparency Mode:</strong> Stay aware of your surroundings while enjoying your favorite tunes. The Transparency mode lets you hear ambient sounds, making it easy to have conversations without removing your headphones.</p>\n</li>\n<li>\n<p><strong>Spatial Audio:</strong> Experience audio like never before with Spatial Audio. This cutting-edge feature creates a 3D soundstage, placing sound all around you for a cinematic listening experience.</p>\n</li>\n<li>\n<p><strong>Adaptive EQ:</strong> AirPods Max automatically adjust the sound to suit the shape of your ears, delivering a personalized audio experience that optimizes the sound quality for your unique hearing profile.</p>\n</li>\n<li>\n<p><strong>Seamless Device Switching:</strong> Effortlessly switch between your Apple devices. Whether you're listening to music on your iPhone, watching a movie on your iPad, or taking a call on your Mac, AirPods Max automatically connects and switches with ease.</p>\n</li>\n<li>\n<p><strong>Intuitive Controls:</strong> Control your music and calls with intuitive touch controls on the ear cups. Adjust the volume, skip tracks, and activate Siri with a simple tap or swipe.</p>\n</li>\n<li>\n<p><strong>Comfortable Design:</strong> With a breathable knit mesh canopy, memory foam ear cushions, and a stainless steel frame, AirPods Max are designed for extended wear, providing comfort and style throughout the day.</p>\n</li>\n</ol>\n<p><strong>Battery Life:</strong></p>\n<ul>\n<li>Up to 20 hours of listening time on a single charge with active noise cancellation and spatial audio enabled.</li>\n</ul>\n<p><strong>Compatibility:</strong></p>\n<ul>\n<li>AirPods Max are compatible with iPhone, iPad, Mac, and Apple Watch models running the latest software versions.</li>\n</ul>\n<p><strong>Package Includes:</strong></p>\n<ul>\n<li>AirPods Max Headphones</li>\n<li>Smart Case</li>\n<li>Lightning to USB-C Cable</li>\n<li>Documentation</li>\n</ul>",
+    "source": "owner",
+    "type": 559,
+    "tags": [],
+    "status": "PUBLISH",
+    "_id": "64b50d6244c69b1916a4bf98",
+    "description": "A perfect balance of high-fidelity audio",
+    "slug": "airpods-max",
+    "reference": "TCO441129714995861",
+    "collections": [
+        {
+            "_id": "64b11e5be81e2618cd1f282f",
+            "name": "tech",
+            "slug": "tech"
+        }
+    ],
+    "name": "AirPods Max",
+    "options": [
+        {
+            "style": "",
+            "values": [
+                {
+                    "value1": "Black",
+                    "value2": "#000000",
+                    "_id": "64ca705d9cfa4a1b3ca17579"
+                },
+                {
+                    "value1": "White",
+                    "value2": "#ffffff",
+                    "_id": "64ca71ad9cfa4a1b3ca175c8"
+                },
+                {
+                    "value1": "Green",
+                    "value2": "#00ff00",
+                    "_id": "64ca72119cfa4a1b3ca1778e"
+                }
+            ],
+            "_id": "64ca705d9cfa4a1b3ca17578",
+            "name": "Color",
+            "key": "color",
+            "position": 1
+        }
+    ],
+    "variants": [
+        {
+            "option1": {
+                "option": "64ca705d9cfa4a1b3ca17578",
+                "value": "64ca705d9cfa4a1b3ca17579"
+            },
+            "price": {
+                "buyingPrice": 0,
+                "salePrice": 0,
+                "comparePrice": 0
+            },
+            "quantity": {
+                "instock": 10000,
+                "transporting": 0
+            },
+            "sizes": {
+                "weight": {
+                    "value": 0,
+                    "unite": "kg"
+                },
+                "volume": {
+                    "value": 0,
+                    "unite": "ml"
+                },
+                "dimensions": {
+                    "width": 0,
+                    "height": 0,
+                    "depth": 0,
+                    "unite": "cm"
+                }
+            },
+            "unavailable": false,
+            "translates": [],
+            "_id": "64ca705d9cfa4a1b3ca1757a",
+            "name": "Color : Black",
+            "imageId": "64ca70649cfa4a1b3ca17589"
+        },
+        {
+            "option1": {
+                "option": "64ca705d9cfa4a1b3ca17578",
+                "value": "64ca71ad9cfa4a1b3ca175c8"
+            },
+            "price": {
+                "buyingPrice": 0,
+                "salePrice": 0,
+                "comparePrice": 0
+            },
+            "quantity": {
+                "instock": 10000,
+                "transporting": 0
+            },
+            "sizes": {
+                "weight": {
+                    "value": 0,
+                    "unite": "kg"
+                },
+                "volume": {
+                    "value": 0,
+                    "unite": "ml"
+                },
+                "dimensions": {
+                    "width": 0,
+                    "height": 0,
+                    "depth": 0,
+                    "unite": "cm"
+                }
+            },
+            "unavailable": false,
+            "translates": [],
+            "_id": "64ca71ad9cfa4a1b3ca175c9",
+            "name": "Color : White",
+            "imageId": "64ca71b39cfa4a1b3ca175da"
+        },
+        {
+            "option1": {
+                "option": "64ca705d9cfa4a1b3ca17578",
+                "value": "64ca72119cfa4a1b3ca1778e"
+            },
+            "price": {
+                "buyingPrice": 0,
+                "salePrice": 0,
+                "comparePrice": 0
+            },
+            "quantity": {
+                "instock": 10000,
+                "transporting": 0
+            },
+            "sizes": {
+                "weight": {
+                    "value": 0,
+                    "unite": "kg"
+                },
+                "volume": {
+                    "value": 0,
+                    "unite": "ml"
+                },
+                "dimensions": {
+                    "width": 0,
+                    "height": 0,
+                    "depth": 0,
+                    "unite": "cm"
+                }
+            },
+            "unavailable": false,
+            "translates": [],
+            "_id": "64ca72119cfa4a1b3ca1778f",
+            "name": "Color : Green",
+            "imageId": "64ca72169cfa4a1b3ca177a2"
+        }
+    ],
+    "images": [
+        {
+            "title": "63e8c4e4aed3c6720e446aa1_airpod max-min",
+            "width": 0,
+            "height": 0,
+            "_id": "64b50d5a44c69b1916a4bf96",
+            "src": "https://storeno.b-cdn.net/stores/7-2023/1689587034069.png",
+            "storeId": "64ad485153e57422dfea1ecb"
+        },
+        {
+            "title": "Airpods-Max-Space-Gray_Main-1",
+            "width": 0,
+            "height": 0,
+            "_id": "64ca70649cfa4a1b3ca17589",
+            "src": "https://storeno.b-cdn.net/stores/8-2023/1690988644544.png",
+            "storeId": "64ad485153e57422dfea1ecb"
+        },
+        {
+            "title": "airpods-max-select-silver-202011",
+            "width": 0,
+            "height": 0,
+            "_id": "64ca71b39cfa4a1b3ca175da",
+            "src": "https://storeno.b-cdn.net/stores/8-2023/1690988979587.png",
+            "storeId": "64ad485153e57422dfea1ecb"
+        },
+        {
+            "title": "airpods-max-select-green-202011",
+            "width": 0,
+            "height": 0,
+            "_id": "64ca72169cfa4a1b3ca177a2",
+            "src": "https://storeno.b-cdn.net/stores/8-2023/1690989078544.webp",
+            "storeId": "64ad485153e57422dfea1ecb"
+        }
+    ],
+    "files": [],
+    "translates": [
+        {
+            "properties": [],
+            "_id": "64ca721a9cfa4a1b3ca177ac",
+            "language": "AR"
+        },
+        {
+            "properties": [],
+            "_id": "64ca721a9cfa4a1b3ca177ad",
+            "language": "FR"
+        }
+    ],
+    "currencies": [
+        {
+            "properties": [
+                {
+                    "_id": "64ca721a9cfa4a1b3ca177a5",
+                    "name": "price.buyingPrice",
+                    "value": "0"
+                },
+                {
+                    "_id": "64ca721a9cfa4a1b3ca177a6",
+                    "name": "price.salePrice",
+                    "value": "0"
+                },
+                {
+                    "_id": "64ca721a9cfa4a1b3ca177a7",
+                    "name": "price.comparePrice",
+                    "value": "0"
+                }
+            ],
+            "_id": "64ca721a9cfa4a1b3ca177a4",
+            "currency": "CAD"
+        },
+        {
+            "properties": [
+                {
+                    "_id": "64ca721a9cfa4a1b3ca177a9",
+                    "name": "price.buyingPrice",
+                    "value": "0"
+                },
+                {
+                    "_id": "64ca721a9cfa4a1b3ca177aa",
+                    "name": "price.salePrice",
+                    "value": "0"
+                },
+                {
+                    "_id": "64ca721a9cfa4a1b3ca177ab",
+                    "name": "price.comparePrice",
+                    "value": "0"
+                }
+            ],
+            "_id": "64ca721a9cfa4a1b3ca177a8",
+            "currency": "EUR"
+        }
+    ],
+    "storeId": "64ad485153e57422dfea1ecb"
+}

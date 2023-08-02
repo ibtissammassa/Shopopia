@@ -4,15 +4,15 @@
     
     <div class=" flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7 w-full">
       
-      <div class="lg:w-full flex gap-x-5">
-        <div class="flex flex-col gap-y-3 w-2/12">
-          <div @click="setImage(i)" class="rounded-xl border-slate-100 border shadow-md bg-slate-100 cursor-pointer" v-for="(image,i) in item.images" :key="i">
-            <img class="w-full" :src="image.src" alt="">
+      <div class="lg:w-full flex flex-col-reverse lg:flex-row gap-x-5 gap-y-3">
+        <div class="flex lg:flex-col gap-y-3 gap-x-3 w-auto lg:w-2/12">
+          <div @click="setImage(i)" class="rounded-xl border-slate-100 border shadow-md bg-slate-100 cursor-pointer w-2/12 lg:w-auto" v-for="(image,i) in item.images" :key="i">
+            <img class="w-full px-1" :src="image.src" alt="">
           </div>
         </div>
-        
+
         <div class="w-full bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
-          <img class="w-full zoom" :src="image ? image.src : item.images[0].src" alt="">
+          <img class="w-full zoom px-8" :src="image ? image.src : item.images[0].src" alt="">
         </div>
       </div>
 
@@ -29,8 +29,8 @@
         <hr>
         <h3 class="font-bold text-3xl md:text-5xl">{{ item.type='simple' ? item.price.salePrice : variant.price.salePrice}}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         
-        <hr>
-        <productVariants v-if="item.type=='variable'" :options="item.options" :variants="item.variants"/>
+        <hr>{{ item }}
+        <productVariants v-if="item.type=='variable'" :options="item.options" :variants="item.variants" @selected="variantSelected"/>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
         
         <AppLoader placement="BEFORE_ADD_TO_CART"></AppLoader>
