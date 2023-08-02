@@ -1,14 +1,13 @@
 <template>
   <div>
-    <div v-for="(option, i) in options" :key="i" :class="option.key" class="bg-gray-50 border">
-        <h4>{{ option.name }}</h4>
-        <div>
-            <div v-for="(val, ii) in option.values" :key="ii" class="option mx-1">
-                <button class="text-5xl font-bold" :class="selected[`option${i+1}`] && selected[`option${i+1}`].value == val._id ? 'active': ''" @click="setVariant(i+1, val._id)" :id="val._id" :style="`${option.key == 'color' ? `background-color:${val.value2}` : ''}`"><small>{{ val.value1 }}</small></button>
+    <div v-for="(option, i) in options" :key="i" class="flex gap-y-2 flex-col">
+        <h4 class="font-bold text-lg">{{ option.name }} :</h4>
+        <div class="flex flex-row gap-x-2">
+            <div v-for="(val, ii) in option.values" :key="ii" >
+                <button class="rounded-full p-3.5" :class="selected[`option${i+1}`] && selected[`option${i+1}`].value == val._id ? 'border-2 border-primary p-2': ''" @click="setVariant(i+1, val._id)" :id="val._id" :style="`${option.key == 'color' ? `background-color:${val.value2}` : ''}`"><small></small></button>
             </div>
         </div>
     </div>
-    <div>{{ selected.price }}</div>
   </div>
 </template>
 
@@ -40,6 +39,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+    
 </style>

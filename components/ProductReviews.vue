@@ -2,7 +2,7 @@
     <div>
         <div v-if="reviews">
             <div v-if="reviews.length>0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div v-for="item in reviews" :key="item.id" class="rounded-xl border-slate-300 border-2 p-3 flex flex-col gap-y-3">
+                <div v-for="item in reviews" :key="item.id" class="rounded-xl border-slate-300 border shadow-lg p-3 flex flex-col gap-y-3">
                     <div class="flex gap-x-5 items-center">
                         <img class="h-16 w-18 rounded-xl border-slate-200 bg-slate-200" v-for="(image, i) in item.images" :key="i" :src="image" alt="">
                         <div class="flex flex-col gap-y-2">
@@ -14,7 +14,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-700 text-sm">{{ item.content }}</p>
+                    <p class="text-gray-900 text-sm">{{ item.content }}</p>
                 </div>
             </div>
             <div v-else class="flex justify-center items-center flex-col py-7">

@@ -2,21 +2,21 @@
   <div class="py-6 px-10 gap-y-4 flex flex-col" v-if="item">
     <h4 class="pl-9 text-sm text-gray-500 py-3"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
     
-    <div class=" flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7 w-full">
+    <div class="pl-9 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7 w-full px-6">
       
-      <div class="lg:w-full flex flex-col-reverse lg:flex-row gap-x-5 gap-y-3">
-        <div class="flex lg:flex-col gap-y-3 gap-x-3 w-auto lg:w-2/12">
-          <div @click="setImage(i)" class="rounded-xl border-slate-100 border shadow-md bg-slate-100 cursor-pointer w-2/12 lg:w-auto" v-for="(image,i) in item.images" :key="i">
-            <img class="w-full px-1" :src="image.src" alt="">
+      <div class="flex flex-col-reverse gap-x-4 gap-y-3 w-7/12">
+        <div class="flex gap-y-3 gap-x-3 ">
+          <div @click="setImage(i)" :class="image.src == img.src ? 'border-slate-200 bg-slate-200' : 'opacity-70 bg-slate-100'" class="rounded-xl border shadow-lg bg-slate-100 cursor-pointer w-2/12 " v-for="(img,i) in item.images" :key="i">
+            <img class="w-full px-1" :src="img.src" alt="">
           </div>
         </div>
 
-        <div class="w-full bg-slate-100 rounded-xl border-slate-100 border shadow-md cursor-zoom-in">
-          <img class="w-full zoom px-8" :src="image ? image.src : item.images[0].src" alt="">
+        <div class="w-full bg-slate-200 rounded-xl border-slate-200 border shadow-lg cursor-zoom-in p-8">
+          <img class="w-full zoom" :src="image ? image.src : item.images[0].src" alt="">
         </div>
       </div>
 
-      <div class="flex flex-col gap-y-4 justify-center lg:w-3/5 w-full">
+      <div class="flex flex-col gap-y-4 justify-center lg:w-1/2 w-full">
         
         <h2 class="font-bold text-2xl lg:text-4xl">{{ item.name }}</h2>
         <p class="text-gray-700 text-sm">{{ item.seo.description }}</p>
@@ -25,23 +25,24 @@
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-5 h-5 translate"><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" class=""></path></svg>
             </span>
         </div>
+      
+        <hr>
+        <h3 class="font-bold text-3xl md:text-5xl">{{ !variant ? item.price.salePrice : variant.price.salePrice}}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         
         <hr>
-        <h3 class="font-bold text-3xl md:text-5xl">{{ item.type='simple' ? item.price.salePrice : variant.price.salePrice}}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
-        
-        <hr>{{ item }}
-        <productVariants v-if="item.type=='variable'" :options="item.options" :variants="item.variants" @selected="variantSelected"/>
+        <productVariants :options="item.options" :variants="item.variants" @selected="variantSelected"/>
+        <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
         
         <AppLoader placement="BEFORE_ADD_TO_CART"></AppLoader>
-        <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4">
-          <button @click.stop="buy" v-if="showBuyNow" class=" hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2.5 px-2.5 border-2 rounded-full bg-primary">
+        <div v-if="showAddToCart || showBuyNow" class="flex flex-row gap-x-4 ">
+          <button @click.stop="buy" v-if="showBuyNow" class=" hover-bg-secondary ease-in duration-400 w-32 text-white font-bold border-white text-base py-2 px-2.5 border-2 rounded-full bg-primary">
                   {{ buyNow }}
           </button>
           <button @click.stop="addToCart" v-if="showAddToCart && !addedToCart" class=" hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-base py-2 px-2.5 border-2 rounded-full">
                   {{ addToCartText }}
           </button>
-          <button @click.stop="removeFromCart" v-else-if="showAddToCart && addedToCart" class="my-2 hover:bg-slate-300 hover-color-primary ease-in duration-400 w-32 text-white font-bold border-secondary bg-secondary text-base py-2 px-2.5 border-2 rounded-full">
+          <button @click.stop="removeFromCart" v-else-if="showAddToCart && addedToCart" class="hover:bg-slate-300 hover-color-primary ease-in duration-400 w-32 text-white font-bold border-secondary bg-secondary text-base py-2 px-2.5 border-2 rounded-full">
                   In Cart!
           </button>
         </div>
