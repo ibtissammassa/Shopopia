@@ -5,10 +5,13 @@
     <div class="pl-9 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7 w-full px-6">
       
       <div class="flex flex-col-reverse gap-x-4 gap-y-3 w-7/12">
-        <div class="flex gap-y-3 gap-x-3 ">
+        <div v-if="variant" class="flex gap-y-3 gap-x-3 ">
           <div @click="setImage(i)" :class="image.src == img.src ? 'border-slate-200 bg-slate-200' : 'opacity-70 bg-slate-100'" class="rounded-xl border shadow-lg bg-slate-100 cursor-pointer w-2/12 " v-for="(img,i) in item.images" :key="i">
             <img class="w-full px-1" :src="img.src" alt="">
           </div>
+        </div>
+        <div v-else  class="rounded-xl border shadow-lg bg-slate-100 cursor-pointer w-2/12 ">
+          <img class="w-full px-1" :src="item.images[0].src" alt="">
         </div>
 
         <div class="w-full bg-slate-200 rounded-xl border-slate-200 border shadow-lg cursor-zoom-in p-8">
@@ -30,7 +33,7 @@
         <h3 class="font-bold text-3xl md:text-5xl">{{ !variant ? item.price.salePrice : variant.price.salePrice}}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         
         <hr>
-        <productVariants :options="item.options" :variants="item.variants" @selected="variantSelected"/>
+        <productVariants v-if="variant" :options="item.options" :variants="item.variants" @selected="variantSelected"/>
         <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
         
@@ -118,9 +121,12 @@ export default {
         try{
             const { data } = await this.$storeino.products.get({ slug })
             this.item = data;
+            console.log("----------------------------")
+            console.log(this.item)
+            console.log("----------------------------")
             this.quantity = this.item.quantity;
             // Set default variant if exists
-            if(this.item.type == 'variable' && this.item.variants.length > 0) this.variantSelected(this.item.variants[0]);
+            if(this.item.variants.length > 0) this.variantSelected(this.item.variants[0]);
             for(const item of this.$store.state.cart){
                 if(item._id === this.item._id)this.addedToCart=true;
             }
@@ -181,6 +187,7 @@ export default {
                 this.image = this.item.images[0];
             }
             this.quantitySelected(this.item.quantity.value);
+            this.instock = variant.instock;
         },
     },
 

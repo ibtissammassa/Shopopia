@@ -1,10 +1,15 @@
 <template>
-  <div>
+  <div class="flex gap-y-4 flex-col">
     <div v-for="(option, i) in options" :key="i" class="flex gap-y-2 flex-col">
         <h4 class="font-bold text-lg">{{ option.name }} :</h4>
-        <div class="flex flex-row gap-x-2">
+        <div v-if="option.key == 'color'" class="flex flex-row gap-x-2">
             <div v-for="(val, ii) in option.values" :key="ii" >
-                <button class="rounded-full p-3.5" :class="selected[`option${i+1}`] && selected[`option${i+1}`].value == val._id ? 'border-2 border-primary p-2': ''" @click="setVariant(i+1, val._id)" :id="val._id" :style="`${option.key == 'color' ? `background-color:${val.value2}` : ''}`"><small></small></button>
+                <button class="rounded-full p-3.5" :class="selected[`option${i+1}`] && selected[`option${i+1}`].value == val._id ? 'border-2 border-primary p-2': ''" @click="setVariant(i+1, val._id)" :id="val._id" :style="`background-color:${val.value2}`"><small></small></button>
+            </div>
+        </div>
+        <div v-else class="flex flex-row gap-x-2">
+            <div v-for="(val, ii) in option.values" :key="ii" >
+                <button class="rounded-full px-3 py-1 text-base" :class="selected[`option${i+1}`] && selected[`option${i+1}`].value == val._id ? 'border-2 border-primary': 'border'" @click="setVariant(i+1, val._id)" :id="val._id"><small>{{ val.value2 }}</small></button>
             </div>
         </div>
     </div>

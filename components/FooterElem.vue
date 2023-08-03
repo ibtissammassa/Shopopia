@@ -2,29 +2,35 @@
     <div>
         <AppLoader placement="BEFORE_FOOTER"></AppLoader>
         <footer >
-            <div class="px-16 py-12 flex w-full justify-between border-t bg-slate-50 border-slate-50">
-                <div class="gap-y-6 w-1/2 flex flex-col">
+            <div class="md:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col">
+                <div class="gap-y-6 w-full md:w-1/2 flex flex-col">
                     <img class="h-16 w-44" :src="logo_src" alt="">
                     <p class="text-sm text-gray-700">{{ description }}</p>
                     <div>
                         <h3>{{ title }}</h3>
                         <div class="grid grid-cols-3 w-2/3 h-24 mt-4 gap-3">
-                            <div v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
-                                <div v-if="item.show">
+                            <div :class="item.show ? 'block' : 'hidden'" v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
+                                <div>
                                     <img class="" :src="item.img">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="gap-y-3 flex flex-col">
+                        <h3 @click="toggleMenu" class="flex gap-x-1 items-center cursor-pointer">Categories<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                        </svg></h3>
+                        <nuxt-link v-if="showmenu" class="hover-color-primary transform md:block" :to="`/shop/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
+                    </div>
                 </div>
-                <div class="gap-y-3 flex flex-col">
-                    <h3>Categories</h3>
-                    <nuxt-link class="hover-color-primary transform" :to="`/shop/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
-                </div>
-                <div class="gap-y-3 flex flex-col">
+                <div class="gap-y-2 flex flex-col items-center">
                     <h3>{{ titlemedia }}</h3>
-                    <div v-for="item in socials" :key="item.name" class="hover-color-primary transform flex">
-                        <a class="" :href="item.url">{{ item.name }}</a>
+                    <div class="flex justify-start gap-x-2">
+                        <div v-for="item in socials" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="7" height="7" :class="!item.url.length>0 ? 'hidden' : ''">
+                            <nuxt-link class="w-full" :to="item.url">
+                                <img class="p-2" :src="item.img">
+                            </nuxt-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,6 +47,7 @@ export default {
     data(){
         return{
             description : this.$settings.footer.description,
+            showmenu: false,
             title: this.$settings.footer.payment.title,
             collections:[],
             titlemedia: this.$settings.footer.socialmedia.title,
@@ -80,29 +87,39 @@ export default {
                 {
                     name: 'facebook',
                     url:this.$settings.footer.socialmedia.url.facebook,
-                    
+                    img:'https://storeno.b-cdn.net/stores/8-2023/1691061174889.png'
                 },
                 {
                     name: 'twitter',
-                    url:this.$settings.footer.socialmedia.url.twitter
+                    url:this.$settings.footer.socialmedia.url.twitter,
+                    img: 'https://storeno.b-cdn.net/stores/8-2023/1691061174798.png'
                 },
                 {
                     name: 'instagram',
-                    url:this.$settings.footer.socialmedia.url.instagram
+                    url:this.$settings.footer.socialmedia.url.instagram,
+                    img: 'https://storeno.b-cdn.net/stores/8-2023/1691061174820.png'
                 },
                 {
                     name: 'youtube',
-                    url:this.$settings.footer.socialmedia.url.youtube
+                    url:this.$settings.footer.socialmedia.url.youtube,
+                    img: 'https://storeno.b-cdn.net/stores/8-2023/1691061242202.png'
                 },
                 {
                     name: 'whatsapp',
-                    url:this.$settings.footer.socialmedia.url.whatsapp
+                    url:this.$settings.footer.socialmedia.url.whatsapp,
+                    img: 'https://storeno.b-cdn.net/stores/8-2023/1691061174902.png'
                 },
                 {
                     name: 'linkedin',
-                    url:this.$settings.footer.socialmedia.url.linkedin
+                    url:this.$settings.footer.socialmedia.url.linkedin,
+                    img: 'https://storeno.b-cdn.net/stores/8-2023/1691061174914.png'
                 }
             ]
+        }
+    },
+    methods:{
+        toggleMenu(){
+            this.showmenu = !this.showmenu;
         }
     },
     async fetch(){
