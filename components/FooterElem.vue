@@ -2,25 +2,27 @@
     <div>
         <AppLoader placement="BEFORE_FOOTER"></AppLoader>
         <footer >
-            <div class="md:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col">
-                <div class="gap-y-6 w-full md:w-1/2 flex flex-col">
-                    <img class="h-16 w-44" :src="logo_src" alt="">
-                    <p class="text-sm text-gray-700">{{ description }}</p>
-                    <div>
-                        <h3>{{ title }}</h3>
-                        <div class="grid grid-cols-3 w-2/3 h-24 mt-4 gap-3">
-                            <div :class="item.show ? 'block' : 'hidden'" v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
-                                <div>
-                                    <img class="" :src="item.img">
+            <div class="lg:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col gap-y-3">
+                <div :class="$store.state.language.code=='AR' ? 'md:flex-row-reverse' : 'md:flex-row'" class="flex gap-y-4 w-full gap-x-10 flex-col">
+                    <div class="flex flex-col gap-y-6 pt-6 md:w-2/5">
+                        <h1 class="font-bold text-primary text-4xl">{{ $settings.footer.title }}</h1>
+                        <p class="text-sm text-gray-700">{{ description }}</p>
+                        <div class="flex flex-col gap-y-4" :class="$store.state.language.code=='AR' ? 'items-end' : ''">
+                            <h3>{{ title }}</h3>
+                            <div class="grid grid-cols-3 w-2/3 h-24 mt-4 gap-3">
+                                <div :class="item.show ? 'block' : 'hidden'" v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
+                                    <div>
+                                        <img class="" :src="item.img">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="gap-y-3 flex flex-col">
-                        <h3 @click="toggleMenu" class="flex gap-x-1 items-center cursor-pointer">Categories<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <div class="gap-y-3 flex flex-col pt-8">
+                        <h3 @click="toggleMenu" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                         </svg></h3>
-                        <nuxt-link v-if="showmenu" class="hover-color-primary transform md:block" :to="`/shop/${item.slug}`" v-for="item in collections" :key="item.id">{{ item.name }}</nuxt-link>
+                        <nuxt-link v-if="showmenu" class="hover-color-primary transform md:block" :to="item.url" v-for="item in $settings.footer.menu.menu.items" :key="item.id">{{ item.text }}</nuxt-link>
                     </div>
                 </div>
                 <div class="gap-y-2 flex flex-col items-center">
@@ -34,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-primary text-white text-center py-3">Copyright © 2023. All rights reserved. storeino.com</div>
+            <div class="bg-primary text-white text-center py-3 text-sm">Copyright © 2023. All rights reserved. storeino.com</div>
         </footer>
         <AppLoader placement="AFTER_FOOTER"></AppLoader>
     </div>
@@ -43,13 +45,11 @@
 
 <script>
 export default {
-    props:['logo_src'],
     data(){
         return{
             description : this.$settings.footer.description,
             showmenu: false,
             title: this.$settings.footer.payment.title,
-            collections:[],
             titlemedia: this.$settings.footer.socialmedia.title,
             payments:[
                 {
@@ -122,15 +122,7 @@ export default {
             this.showmenu = !this.showmenu;
         }
     },
-    async fetch(){
-      try{
-        const filter = {};
-        const { data } = await this.$storeino.collections.search(filter)
-        this.collections = data.results;
-      }catch(e){
-        console.log({e});
-      }
-  },
+    
 }
 </script>
 

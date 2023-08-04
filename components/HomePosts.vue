@@ -6,7 +6,7 @@
     </div>
     <div class="flex justify-center">
         <nuxt-link :to="`/blog`" class=" text-center zoom ease-in duration-300 w-28  font-semibold border-gray-300 text-sm py-1 px-1 border rounded-full mb-4 bg-gray-200 text-gray-600">
-            More Posts
+            {{ $settings.home.posts.buttonText }}
         </nuxt-link>
     </div>
   </div>

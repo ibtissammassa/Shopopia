@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="$store.state.language.code=='AR' ? 'text-right' : ''">
         <component :is="'style'">
             :root{ 
               --primaryColor: {{ primaryColor }};
@@ -9,7 +9,7 @@
         <headerTop/>
         <HeaderElem :logo_src="logo_src"/>
         <Nuxt keep-alive/>
-        <FooterElem :logo_src="logo_src"/>
+        <FooterElem/>
     </div>
 </template>
 
