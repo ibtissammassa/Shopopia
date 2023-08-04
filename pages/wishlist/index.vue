@@ -1,5 +1,5 @@
 <template>
-  <div class="px-16 py-8 flex flex-col">
+  <div class="lg:px-16 px-7 py-8 flex flex-col">
     <h3 class="text-2xl pb-3 font-bold">{{ title }}</h3>
     <hr>
     <div v-if="items">

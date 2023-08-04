@@ -1,8 +1,8 @@
 <template>
-  <div class="px-10 py-8">
-    <h3 class="text-2xl pb-3 font-bold">{{ title }}</h3>
+  <div class="lg:px-10 py-8">
+    <h3 class="text-2xl pb-3 px-10 font-bold">{{ title }}</h3>
     <hr>
-    <div v-if="items">
+    <div v-if="items" class="px-10">
         <div v-if="items.length>0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-6">
             <postCart v-for="item in items" :key="item.id" :item="item"/>
         </div>

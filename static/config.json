@@ -1,0 +1,1864 @@
+{
+
+    "config": {
+      "schema": {
+        "fields": {
+          "products": [
+            "name",
+            "slug",
+            "images",
+            "price",
+            "variants",
+            "outStock",
+            "type",
+            "quantity",
+            "tags",
+            "collections.name",
+            "collections.slug",
+            "collections.image",
+            "translates"
+          ],
+          "collections": [
+            "name",
+            "slug",
+            "image",
+            "translates",
+            "childrens"
+          ],
+          "images": [
+            "src",
+            "title"
+          ],
+          "menus": [],
+          "pages": [],
+          "brands": []
+        },
+        "ids": {
+          "collections": [
+            "64b11e99e81e2618cd1f283d",
+            "64b11e81e81e2618cd1f2836",
+            "64b11e5be81e2618cd1f282f",
+            "64b11e3fe81e2618cd1f2828",
+            "64b11d3de81e2618cd1f2821",
+            "64b11cffe81e2618cd1f281a"
+          ],
+          "products": [
+            "64b50c0544c69b1916a4befd",
+            "64b50ba944c69b1916a4becc",
+            "64b50d9e44c69b1916a4bfad"
+          ],
+          "images": [
+            "64af021ce81e2618cd1f217f",
+            "64aff050e81e2618cd1f24dd"
+          ],
+          "menus": [
+            "64af0fe4e81e2618cd1f2185",
+            "64ccd1f88589fc1baa1425fd",
+            "64ccc94e8589fc1baa1425bd"
+          ],
+          "pages": [],
+          "brands": []
+        }
+      },
+      "settings": {
+        "tabs": [
+          {
+            "name": "Global",
+            "sections": [
+              {
+                "name": "header_top",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "header_color",
+                    "values": [
+                      {
+                        "name": "background",
+                        "note": "",
+                        "path": "header_top.header_color.background",
+                        "type": "tc_gradient",
+                        "translatable": false,
+                        "value": [
+                          "#003d29"
+                        ],
+                        "notes": "003d29"
+                      },
+                      {
+                        "name": "color",
+                        "note": "",
+                        "path": "header_top.header_color.color",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#ffffff"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "phone",
+                    "values": [
+                      {
+                        "name": "phone",
+                        "note": "",
+                        "path": "header_top.phone",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "001234567890",
+                        "inputType": "number"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "message",
+                    "values": [
+                      {
+                        "name": "message",
+                        "note": "",
+                        "path": "header_top.message",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Free Shipping for all Order of $99",
+                        "translate": "Free Shipping for all Order of $99"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "enabled disabled",
+                    "values": [
+                      {
+                        "name": "show phone",
+                        "note": "",
+                        "path": "header_top.show.phone",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show message",
+                        "note": "",
+                        "path": "header_top.show.message",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show language",
+                        "note": "",
+                        "path": "header_top.show.language",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show currency",
+                        "note": "",
+                        "path": "header_top.show.currency",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "header",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "logo",
+                    "values": [
+                      {
+                        "name": "logo",
+                        "note": "",
+                        "path": "header.logo",
+                        "type": "tc_image",
+                        "translatable": false,
+                        "value": "64af021ce81e2618cd1f217f"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "menu",
+                    "values": [
+                      {
+                        "name": "header menu",
+                        "note": "",
+                        "path": "header.menu.header_menu",
+                        "type": "tc_menu",
+                        "translatable": false,
+                        "value": "64af0fe4e81e2618cd1f2185"
+                      },
+                      {
+                        "name": "mobile menu",
+                        "note": "",
+                        "path": "header.menu.mobile_menu",
+                        "type": "tc_menu",
+                        "translatable": false,
+                        "value": "64ccd1f88589fc1baa1425fd"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Search",
+                    "values": [
+                      {
+                        "name": "search placeholder",
+                        "note": "",
+                        "path": "header.search_placeholder",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Search",
+                        "translate": "Search"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "enabled disabled",
+                    "values": [
+                      {
+                        "name": "show menu",
+                        "note": "",
+                        "path": "header.show.menu",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show search",
+                        "note": "",
+                        "path": "header.show.search",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "cart",
+                        "note": "",
+                        "path": "header.show.cart",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "name": "header color",
+                    "values": [
+                      {
+                        "name": "background color",
+                        "note": "",
+                        "path": "header.color.background",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": ""
+                      },
+                      {
+                        "name": "text color",
+                        "note": "",
+                        "path": "header.color.text",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#000000"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Categories",
+                    "values": [
+                      {
+                        "name": "show categories",
+                        "note": "",
+                        "path": "header.show.categoriesMenu",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "categories",
+                        "note": "",
+                        "path": "header.collections",
+                        "type": "tc_collection",
+                        "translatable": false,
+                        "value": []
+                      },
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "header.categories.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Our Categories",
+                        "translate": "Our Categories"
+                      },
+                      {
+                        "name": "button",
+                        "note": "",
+                        "path": "header.categories.buttonText",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Categories",
+                        "translate": "Categories"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "whishlist",
+                    "values": [
+                      {
+                        "name": "show wishlist",
+                        "note": "",
+                        "path": "header.show.wishlist",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "header.wishlist.text",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "wishlist",
+                        "translate": "wishlist"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Cart",
+                    "values": [
+                      {
+                        "name": "show cart",
+                        "note": "",
+                        "path": "header.show.cart",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "header.cart.text",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Cart",
+                        "translate": "Cart"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Colors",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "primary color",
+                    "values": [
+                      {
+                        "name": "primaryColor",
+                        "note": "",
+                        "path": "colors.primaryColor",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#003d29",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "name": "secondary color",
+                    "values": [
+                      {
+                        "name": "secondary color",
+                        "note": "",
+                        "path": "colors.secondaryColor",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#786b5e",
+                        "notes": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "footer",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "description",
+                    "values": [
+                      {
+                        "name": "description",
+                        "note": "",
+                        "path": "footer.description",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+                        "translate": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Payments",
+                    "values": [
+                      {
+                        "name": "Visa",
+                        "note": "",
+                        "path": "footer.payment.visa",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "Mastercard",
+                        "note": "",
+                        "path": "footer.payment.mastercard",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "Paypal",
+                        "note": "",
+                        "path": "footer.payment.paypal",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "Apple Pay",
+                        "note": "",
+                        "path": "footer.payment.applepay",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "Amazon Pay",
+                        "note": "",
+                        "path": "footer.payment.amazonpay",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "Google Pay",
+                        "note": "",
+                        "path": "footer.payment.googlepay",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "payments title",
+                        "note": "",
+                        "path": "footer.payment.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Accepted Payments",
+                        "translate": "Accepted Payments"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "social media",
+                    "values": [
+                      {
+                        "name": "social media title",
+                        "note": "",
+                        "path": "footer.socialmedia.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Follow Us",
+                        "translate": "Follow Us"
+                      },
+                      {
+                        "name": "Facebook",
+                        "note": "",
+                        "path": "footer.socialmedia.url.facebook",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": ""
+                      },
+                      {
+                        "name": "Instagram",
+                        "note": "",
+                        "path": "footer.socialmedia.url.instagram",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "https://www.instagram.com/"
+                      },
+                      {
+                        "name": "Twitter",
+                        "note": "",
+                        "path": "footer.socialmedia.url.twitter",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "https://twitter.com/"
+                      },
+                      {
+                        "name": "Youtube",
+                        "note": "",
+                        "path": "footer.socialmedia.url.youtube",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "https://www.youtube.com/"
+                      },
+                      {
+                        "name": "Linkedin",
+                        "note": "",
+                        "path": "footer.socialmedia.url.linkedin",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "https://www.linkedin.com/"
+                      },
+                      {
+                        "name": "Whatsapp",
+                        "note": "",
+                        "path": "footer.socialmedia.url.whatsapp",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "https://web.whatsapp.com/"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Footer Menu",
+                    "values": [
+                      {
+                        "name": "Footer Menu",
+                        "note": "",
+                        "path": "footer.menu.menu",
+                        "type": "tc_menu",
+                        "translatable": false,
+                        "value": "64ccc94e8589fc1baa1425bd"
+                      },
+                      {
+                        "name": "menu title",
+                        "note": "",
+                        "path": "footer.menu.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Categories",
+                        "translate": "Categories"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "footer.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Shopopia"
+                      }
+                    ]
+                  }
+                ],
+                "pushable": false
+              }
+            ]
+          },
+          {
+            "name": "Home",
+            "sections": [
+              {
+                "name": "main section",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.main.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Shopping And Department Store.",
+                        "translate": "Shopping And Department Store."
+                      }
+                    ]
+                  },
+                  {
+                    "name": "description",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.main.description",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.",
+                        "translate": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance."
+                      }
+                    ]
+                  },
+                  {
+                    "name": "background",
+                    "values": [
+                      {
+                        "name": "background image",
+                        "note": "",
+                        "path": "home.main.background.image",
+                        "type": "tc_image",
+                        "translatable": false,
+                        "value": "64aff050e81e2618cd1f24dd"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "button",
+                    "values": [
+                      {
+                        "name": "button text",
+                        "note": "",
+                        "path": "home.main.shopNow",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Shop now",
+                        "translate": "Shop now"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show main section",
+                    "values": [
+                      {
+                        "name": "show main section",
+                        "note": "",
+                        "path": "home.show.main",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Categories",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "collections",
+                    "values": [
+                      {
+                        "name": "collections",
+                        "note": "",
+                        "path": "home.categories.collections",
+                        "type": "tc_collection",
+                        "value": [
+                          "64b11e99e81e2618cd1f283d",
+                          "64b11e81e81e2618cd1f2836",
+                          "64b11e5be81e2618cd1f282f",
+                          "64b11e3fe81e2618cd1f2828",
+                          "64b11d3de81e2618cd1f2821",
+                          "64b11cffe81e2618cd1f281a"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Title",
+                    "values": [
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "home.categories.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Shop Our Top Categories",
+                        "translate": "Shop Our Top Categories"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "text color",
+                    "values": [
+                      {
+                        "name": "color",
+                        "note": "",
+                        "path": "home.categories.textColor",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": ""
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show categories section",
+                    "values": [
+                      {
+                        "name": "show categories",
+                        "note": "",
+                        "path": "home.show.categories",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Products section 1",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.products1.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Today's Best Deals For You!",
+                        "translate": "Today's Best Deals For You!"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "products",
+                    "values": [
+                      {
+                        "name": "products",
+                        "note": "",
+                        "path": "home.products1.products",
+                        "type": "tc_product",
+                        "translatable": false,
+                        "value": [
+                          "64b50c0544c69b1916a4befd",
+                          "64b50ba944c69b1916a4becc",
+                          "64b50d9e44c69b1916a4bfad"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show products section 1",
+                    "values": [
+                      {
+                        "name": "products section 1",
+                        "note": "",
+                        "path": "home.show.products1",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Products section 2",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.products2.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Weekly Popular Products",
+                        "translate": "Weekly Popular Products"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "products",
+                    "values": [
+                      {
+                        "name": "products",
+                        "note": "",
+                        "path": "home.products2.products",
+                        "type": "tc_product",
+                        "translatable": false,
+                        "value": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show products section 2",
+                    "values": [
+                      {
+                        "name": "products section 2",
+                        "note": "",
+                        "path": "home.show.products2",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Posts section",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.posts.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Our Posts",
+                        "translate": "Our Posts"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show posts section",
+                    "values": [
+                      {
+                        "name": "posts section",
+                        "note": "",
+                        "path": "home.show.posts",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "name": "button",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.posts.buttonText",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "more posts",
+                        "translate": "more posts"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Products section 3",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.products3.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Most Selling Products",
+                        "translate": "Most Selling Products"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "products",
+                    "values": [
+                      {
+                        "name": "products",
+                        "note": "",
+                        "path": "home.products3.products",
+                        "type": "tc_product",
+                        "translatable": false,
+                        "value": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show products section 3",
+                    "values": [
+                      {
+                        "name": "products section 3",
+                        "note": "",
+                        "path": "home.show.products3",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Products section 4",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "home.products4.title",
+                        "type": "tc_input",
+                        "translatable": true,
+                        "value": "Featured products",
+                        "translate": "Featured products"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "products",
+                    "values": [
+                      {
+                        "name": "products",
+                        "note": "",
+                        "path": "home.products4.products",
+                        "type": "tc_product",
+                        "translatable": false,
+                        "value": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "show products section 4",
+                    "values": [
+                      {
+                        "name": "products section 4",
+                        "note": "",
+                        "path": "home.show.products4",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "shop",
+            "sections": [
+              {
+                "name": "title",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "title",
+                    "values": [
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "shop.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Our Best Products For You !"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "product page",
+            "sections": [
+              {
+                "name": "Product Page Details",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Add To Cart",
+                    "values": [
+                      {
+                        "name": "show",
+                        "note": "",
+                        "path": "product.show.addToCart",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "product.addToCart.text",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Add To Cart"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Buy Now",
+                    "values": [
+                      {
+                        "name": "show",
+                        "note": "",
+                        "path": "product.show.buyNow",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "text",
+                        "note": "",
+                        "path": "product.buyNow.text",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Buy Now"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Related Products",
+                    "values": [
+                      {
+                        "name": "show",
+                        "note": "",
+                        "path": "product.show.related",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Items left",
+                    "values": [
+                      {
+                        "name": "show",
+                        "note": "",
+                        "path": "product.show.leftItems",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "color",
+                        "note": "",
+                        "path": "product.itemsLeft.color",
+                        "type": "tc_color",
+                        "translatable": false,
+                        "value": "#ea580c",
+                        "notes": ""
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Delivery",
+                    "values": [
+                      {
+                        "name": "show Free Delivery",
+                        "note": "",
+                        "path": "product.show.freeDelivery",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show Return Delivery",
+                        "note": "",
+                        "path": "product.show.returnDelivery",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "Free Delivery text",
+                        "note": "",
+                        "path": "product.freeDelivery.text",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Free Delivery"
+                      },
+                      {
+                        "name": "Return Delivery text",
+                        "note": "",
+                        "path": "product.returnDelivery.text",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Return Delivery"
+                      },
+                      {
+                        "name": "Free Delivery description",
+                        "note": "",
+                        "path": "product.freeDelivery.description",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Free 30 days Delivery Return"
+                      },
+                      {
+                        "name": "Return Delivery description",
+                        "note": "",
+                        "path": "product.returnDelivery.description",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Free 30 days Delivery Return"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "404 page",
+            "sections": [
+              {
+                "name": "404 page",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "text",
+                    "values": [
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "error.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Page not found :/"
+                      },
+                      {
+                        "name": "description",
+                        "note": "",
+                        "path": "error.description",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "We are sorry, but the page you requested was not found"
+                      },
+                      {
+                        "name": "home button",
+                        "note": "",
+                        "path": "error.homeButton",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Back Home"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "picture",
+                    "values": [
+                      {
+                        "name": "customize 404 picture ?",
+                        "note": "",
+                        "path": "error.customPicture",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": false
+                      },
+                      {
+                        "name": "if yes , your 404 picture :",
+                        "note": "",
+                        "path": "error.picture",
+                        "type": "tc_image",
+                        "translatable": false,
+                        "value": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "cart page",
+            "sections": [
+              {
+                "name": "Cart",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Text",
+                    "values": [
+                      {
+                        "name": "Title",
+                        "note": "",
+                        "path": "cart.text.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Shopping Cart"
+                      },
+                      {
+                        "name": "Empty text",
+                        "note": "",
+                        "path": "cart.text.empty",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Your cart is empty!"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Buttons",
+                    "values": [
+                      {
+                        "name": "back to shop",
+                        "note": "",
+                        "path": "cart.text.backToShop",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Back To Shop"
+                      },
+                      {
+                        "name": "checkout",
+                        "note": "",
+                        "path": "cart.text.checkout",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Checkout"
+                      },
+                      {
+                        "name": "Show back to shop",
+                        "note": "",
+                        "path": "cart.show.backToShop",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "wishlist page",
+            "sections": [
+              {
+                "name": "wishlist",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Text",
+                    "values": [
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "wishlist.text.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "My Wishlist"
+                      },
+                      {
+                        "name": "empty text",
+                        "note": "",
+                        "path": "wishlist.text.empty",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Your wishlist is empty!"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "buttons",
+                    "values": [
+                      {
+                        "name": "back to shop",
+                        "note": "",
+                        "path": "wishlist.text.backToShop",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Back To Shop"
+                      },
+                      {
+                        "name": "show back to shop",
+                        "note": "",
+                        "path": "wishlist.show.backToShop",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "add to cart",
+                        "note": "",
+                        "path": "wishlist.text.addToCart",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "All To Cart"
+                      },
+                      {
+                        "name": "show add to cart",
+                        "note": "",
+                        "path": "wishlist.show.addToCart",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "thank you page",
+            "sections": [
+              {
+                "name": "Thanks Text",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Thanks Text",
+                    "values": [
+                      {
+                        "name": "Title",
+                        "note": "",
+                        "path": "thanks.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Thanks"
+                      },
+                      {
+                        "name": "Description",
+                        "note": "",
+                        "path": "thanks.description",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Thank you for your order"
+                      },
+                      {
+                        "name": "Back to Shop Text",
+                        "note": "",
+                        "path": "thanks.backToShop",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Back to shop"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Post Page",
+            "sections": [
+              {
+                "name": "Post Details",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Related Posts",
+                    "values": [
+                      {
+                        "name": "Show related posts",
+                        "note": "",
+                        "path": "post.show.related",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "post.related.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Related posts"
+                      },
+                      {
+                        "name": "All posts text",
+                        "note": "",
+                        "path": "post.related.allPosts",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "All Posts"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Creator details",
+                    "values": [
+                      {
+                        "name": "show creator",
+                        "note": "",
+                        "path": "post.show.creator",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "show created date",
+                        "note": "",
+                        "path": "post.show.date",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "post.creator.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "by:"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Blog Page",
+            "sections": [
+              {
+                "name": "Blog details",
+                "icon": "select_all",
+                "blocks": [
+                  {
+                    "name": "Posts",
+                    "values": [
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "blog.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "Our latest posts"
+                      },
+                      {
+                        "name": "Empty Text",
+                        "note": "",
+                        "path": "blog.emptyText",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "No blogs"
+                      }
+                    ]
+                  },
+                  {
+                    "name": "Products",
+                    "values": [
+                      {
+                        "name": "show products",
+                        "note": "",
+                        "path": "blog.show.products",
+                        "type": "tc_checkbox",
+                        "translatable": false,
+                        "value": true
+                      },
+                      {
+                        "name": "title",
+                        "note": "",
+                        "path": "blog.products.title",
+                        "type": "tc_input",
+                        "translatable": false,
+                        "value": "From shop"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "currentLang": null
+      },
+      "current": {
+        "translates": [
+          {
+            "language": "FR",
+            "properties": [
+              {
+                "name": "header_top.message",
+                "value": "Livraison gratuite pour toutes les commandes de 99 dollars."
+              },
+              {
+                "name": "header.search_placeholder",
+                "value": "Recherche"
+              },
+              {
+                "name": "header.categories.title",
+                "value": "Nos catégories"
+              },
+              {
+                "name": "header.categories.buttonText",
+                "value": "Catégories"
+              },
+              {
+                "name": "header.wishlist.text",
+                "value": "Souhaits"
+              },
+              {
+                "name": "header.cart.text",
+                "value": "Panier"
+              },
+              {
+                "name": "footer.description",
+                "value": " Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+              },
+              {
+                "name": "footer.payment.title",
+                "value": "Modes de paiement acceptés"
+              },
+              {
+                "name": "footer.socialmedia.title",
+                "value": "Suivez-nous"
+              },
+              {
+                "name": "footer.menu.title",
+                "value": "Catégories"
+              },
+              {
+                "name": "home.main.title",
+                "value": "Magasin de shopping et grands magasins."
+              },
+              {
+                "name": "home.main.description",
+                "value": "Faire du shopping est un passe-temps relaxant pour moi, ce qui est parfois préoccupant pour l'équilibre bancaire."
+              },
+              {
+                "name": "home.main.shopNow",
+                "value": "Magasinez"
+              },
+              {
+                "name": "home.categories.title",
+                "value": "Découvrez nos catégories phares"
+              },
+              {
+                "name": "home.products1.title",
+                "value": "Les meilleures offres pour vous !"
+              },
+              {
+                "name": "home.products2.title",
+                "value": "Produits populaires de la semaine"
+              },
+              {
+                "name": "home.posts.title",
+                "value": "Nos articles"
+              },
+              {
+                "name": "home.posts.buttonText",
+                "value": "Plus d'articles"
+              },
+              {
+                "name": "home.products3.title",
+                "value": "Les produits les plus vendus"
+              },
+              {
+                "name": "home.products4.title",
+                "value": "Produits en vedette"
+              }
+            ]
+          },
+          {
+            "language": "AR",
+            "properties": [
+              {
+                "name": "header_top.message",
+                "value": "شحن مجاني لجميع الطلبات بقيمة 99 دولار"
+              },
+              {
+                "name": "header.search_placeholder",
+                "value": "بحث"
+              },
+              {
+                "name": "header.categories.title",
+                "value": "فئاتنا"
+              },
+              {
+                "name": "header.categories.buttonText",
+                "value": " فئاتنا"
+              },
+              {
+                "name": "header.wishlist.text",
+                "value": "قائمة الرغبات"
+              },
+              {
+                "name": "header.cart.text",
+                "value": "السلة"
+              },
+              {
+                "name": "footer.description",
+                "value": "أميت مينيم موليت نون ديسيرانت أولامكو اسيت ألكوا دولور دو أميت سينت. فيليت أوفيسيا كونسيكوات دويس أنيم فيليت موليت."
+              },
+              {
+                "name": "footer.payment.title",
+                "value": "طرق الدفع المقبولة"
+              },
+              {
+                "name": "footer.socialmedia.title",
+                "value": "تابِعنا"
+              },
+              {
+                "name": "footer.menu.title",
+                "value": "فئاتنا"
+              },
+              {
+                "name": "home.main.title",
+                "value": "متجر تسوق ومحل سلع عامة"
+              },
+              {
+                "name": "home.main.description",
+                "value": "التسوق هواية مريحة بالنسبة لي، وهذا يشكل أحيانًا إزعاجًا لرصيد البنك."
+              },
+              {
+                "name": "home.main.shopNow",
+                "value": "تسوّق الآن"
+              },
+              {
+                "name": "home.categories.title",
+                "value": "تسوّق أفضل فئاتنا"
+              },
+              {
+                "name": "home.products1.title",
+                "value": "أفضل العروض لك اليوم"
+              },
+              {
+                "name": "home.products2.title",
+                "value": "المنتجات الشائعة هذا الأسبوع"
+              },
+              {
+                "name": "home.posts.title",
+                "value": "منشوراتنا"
+              },
+              {
+                "name": "home.posts.buttonText",
+                "value": "المزيد من المنشورات"
+              },
+              {
+                "name": "home.products3.title",
+                "value": "المنتجات الأكثر مبيعًا"
+              },
+              {
+                "name": "home.products4.title",
+                "value": "منتجاتنا المميزة"
+              }
+            ]
+          }
+        ],
+        "header_top": {
+          "header_color": {
+            "background": [
+              "#003d29"
+            ],
+            "color": "#ffffff"
+          },
+          "phone": "001234567890",
+          "message": "Free Shipping for all Order of $99",
+          "show": {
+            "phone": true,
+            "message": true,
+            "language": true,
+            "currency": true
+          }
+        },
+        "header": {
+          "logo": "64af021ce81e2618cd1f217f",
+          "menu": {
+            "header_menu": "64af0fe4e81e2618cd1f2185",
+            "mobile_menu": "64ccd1f88589fc1baa1425fd"
+          },
+          "search_placeholder": "Search",
+          "show": {
+            "menu": true,
+            "search": true,
+            "cart": true,
+            "categoriesMenu": true,
+            "wishlist": true
+          },
+          "color": {
+            "background": "",
+            "text": "#000000"
+          },
+          "collections": null,
+          "categories": {
+            "title": "Our Categories",
+            "buttonText": "Categories"
+          },
+          "wishlist": {
+            "text": "wishlist"
+          },
+          "cart": {
+            "text": "Cart"
+          }
+        },
+        "colors": {
+          "primaryColor": "#003d29",
+          "secondaryColor": "#786b5e"
+        },
+        "footer": {
+          "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+          "payment": {
+            "visa": true,
+            "mastercard": true,
+            "paypal": true,
+            "applepay": true,
+            "amazonpay": true,
+            "googlepay": true,
+            "title": "Accepted Payments"
+          },
+          "socialmedia": {
+            "title": "Follow Us",
+            "url": {
+              "facebook": "",
+              "instagram": "https://www.instagram.com/",
+              "twitter": "https://twitter.com/",
+              "youtube": "https://www.youtube.com/",
+              "linkedin": "https://www.linkedin.com/",
+              "whatsapp": "https://web.whatsapp.com/"
+            }
+          },
+          "menu": {
+            "menu": "64ccc94e8589fc1baa1425bd",
+            "title": "Categories"
+          },
+          "title": "Shopopia"
+        },
+        "home": {
+          "main": {
+            "title": "Shopping And Department Store.",
+            "description": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.",
+            "background": {
+              "image": "64aff050e81e2618cd1f24dd"
+            },
+            "shopNow": "Shop now"
+          },
+          "show": {
+            "main": true,
+            "categories": true,
+            "products1": true,
+            "products2": true,
+            "posts": true,
+            "products3": true,
+            "products4": true
+          },
+          "categories": {
+            "collections": [
+              "64b11e99e81e2618cd1f283d",
+              "64b11e81e81e2618cd1f2836",
+              "64b11e5be81e2618cd1f282f",
+              "64b11e3fe81e2618cd1f2828",
+              "64b11d3de81e2618cd1f2821",
+              "64b11cffe81e2618cd1f281a"
+            ],
+            "title": "Shop Our Top Categories",
+            "textColor": ""
+          },
+          "products1": {
+            "title": "Today's Best Deals For You!",
+            "products": [
+              "64b50c0544c69b1916a4befd",
+              "64b50ba944c69b1916a4becc",
+              "64b50d9e44c69b1916a4bfad"
+            ]
+          },
+          "products2": {
+            "title": "Weekly Popular Products",
+            "products": null
+          },
+          "posts": {
+            "title": "Our Posts",
+            "buttonText": "more posts"
+          },
+          "products3": {
+            "title": "Most Selling Products",
+            "products": null
+          },
+          "products4": {
+            "title": "Featured products",
+            "products": null
+          }
+        },
+        "shop": {
+          "title": "Our Best Products For You !"
+        },
+        "product": {
+          "show": {
+            "addToCart": true,
+            "buyNow": true,
+            "related": true,
+            "leftItems": true,
+            "freeDelivery": true,
+            "returnDelivery": true
+          },
+          "addToCart": {
+            "text": "Add To Cart"
+          },
+          "buyNow": {
+            "text": "Buy Now"
+          },
+          "itemsLeft": {
+            "color": "#ea580c"
+          },
+          "freeDelivery": {
+            "text": "Free Delivery",
+            "description": "Free 30 days Delivery Return"
+          },
+          "returnDelivery": {
+            "text": "Return Delivery",
+            "description": "Free 30 days Delivery Return"
+          }
+        },
+        "error": {
+          "title": "Page not found :/",
+          "description": "We are sorry, but the page you requested was not found",
+          "homeButton": "Back Home",
+          "customPicture": false,
+          "picture": null
+        },
+        "cart": {
+          "text": {
+            "title": "Shopping Cart",
+            "empty": "Your cart is empty!",
+            "backToShop": "Back To Shop",
+            "checkout": "Checkout"
+          },
+          "show": {
+            "backToShop": true
+          }
+        },
+        "wishlist": {
+          "text": {
+            "title": "My Wishlist",
+            "empty": "Your wishlist is empty!",
+            "backToShop": "Back To Shop",
+            "addToCart": "All To Cart"
+          },
+          "show": {
+            "backToShop": true,
+            "addToCart": true
+          }
+        },
+        "thanks": {
+          "title": "Thanks",
+          "description": "Thank you for your order",
+          "backToShop": "Back to shop"
+        },
+        "post": {
+          "show": {
+            "related": true,
+            "creator": true,
+            "date": true
+          },
+          "related": {
+            "title": "Related posts",
+            "allPosts": "All Posts"
+          },
+          "creator": {
+            "title": "by:"
+          }
+        },
+        "blog": {
+          "title": "Our latest posts",
+          "emptyText": "No blogs",
+          "show": {
+            "products": true
+          },
+          "products": {
+            "title": "From shop"
+          }
+        }
+      }
+    }
+        
+  }

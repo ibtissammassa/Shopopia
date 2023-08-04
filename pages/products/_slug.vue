@@ -1,10 +1,11 @@
 <template>
-  <div class="py-6 px-10 gap-y-4 flex flex-col" v-if="item">
-    <h4 class="pl-9 text-sm text-gray-500 py-3"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
+  <div class="py-6 lg:px-10 gap-y-4 flex flex-col" v-if="item">
+    <h4 v-if="$store.state.language.code=='AR'" class="pl-9 text-sm text-gray-500 py-3"> <span class="text-black">{{ item.name }}</span> / <nuxt-link to="/products">Products</nuxt-link> / <nuxt-link to="/">Home</nuxt-link></h4>
+    <h4 v-else class="pl-9 text-sm text-gray-500 py-3"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
     
-    <div class="pl-9 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl items-center justify-center gap-y-7 w-full px-6">
+    <div class="pl-9 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl gap-y-7 items-start w-full px-6">
       
-      <div class="flex flex-col-reverse gap-x-4 gap-y-3 w-7/12">
+      <div class="flex flex-col-reverse gap-x-4 gap-y-3 lg:w-7/12 w-full relative">
         <div v-if="variant" class="flex gap-y-3 gap-x-3 ">
           <div @click="setImage(i)" :class="image.src == img.src ? 'border-slate-200 bg-slate-200' : 'opacity-70 bg-slate-100'" class="rounded-xl border shadow-lg bg-slate-100 cursor-pointer w-2/12 " v-for="(img,i) in item.images" :key="i">
             <img class="w-full px-1" :src="img.src" alt="">
@@ -17,6 +18,8 @@
         <div class="w-full bg-slate-200 rounded-xl border-slate-200 border shadow-lg cursor-zoom-in p-8">
           <img class="w-full zoom" :src="image ? image.src : item.images[0].src" alt="">
         </div>
+        <svg v-if="$store.state.wishlist.find(i=>i._id==item._id)" @click.stop="removeFromWishlist" fill="red" class="bg-red-200 rounded-full absolute p-2 top-4 hover:bg-red-300 right-4" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" id="heart"><path d="M349.6 64c-36.4 0-70.718 16.742-93.6 43.947C233.117 80.742 198.8 64 162.4 64 97.918 64 48 114.221 48 179.095c0 79.516 70.718 143.348 177.836 241.694L256 448l30.164-27.211C393.281 322.442 464 258.61 464 179.095 464 114.221 414.082 64 349.6 64zm-80.764 329.257l-4.219 3.873-8.617 7.773-8.616-7.772-4.214-3.869c-50.418-46.282-93.961-86.254-122.746-121.994C92.467 236.555 80 208.128 80 179.095c0-22.865 8.422-43.931 23.715-59.316C118.957 104.445 139.798 96 162.4 96c26.134 0 51.97 12.167 69.11 32.545L256 157.661l24.489-29.116C297.63 108.167 323.465 96 349.6 96c22.603 0 43.443 8.445 58.686 23.778C423.578 135.164 432 156.229 432 179.095c0 29.033-12.467 57.459-40.422 92.171-28.784 35.74-72.325 75.709-122.742 121.991z"></path></svg>
+        <svg v-else @click.stop="addToWishlist" class="rounded-full absolute  bg-white p-2 top-4 hover:bg-red-300 right-4" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 512 512" id="heart"><path d="M349.6 64c-36.4 0-70.718 16.742-93.6 43.947C233.117 80.742 198.8 64 162.4 64 97.918 64 48 114.221 48 179.095c0 79.516 70.718 143.348 177.836 241.694L256 448l30.164-27.211C393.281 322.442 464 258.61 464 179.095 464 114.221 414.082 64 349.6 64zm-80.764 329.257l-4.219 3.873-8.617 7.773-8.616-7.772-4.214-3.869c-50.418-46.282-93.961-86.254-122.746-121.994C92.467 236.555 80 208.128 80 179.095c0-22.865 8.422-43.931 23.715-59.316C118.957 104.445 139.798 96 162.4 96c26.134 0 51.97 12.167 69.11 32.545L256 157.661l24.489-29.116C297.63 108.167 323.465 96 349.6 96c22.603 0 43.443 8.445 58.686 23.778C423.578 135.164 432 156.229 432 179.095c0 29.033-12.467 57.459-40.422 92.171-28.784 35.74-72.325 75.709-122.742 121.991z"></path></svg>
       </div>
 
       <div class="flex flex-col gap-y-4 justify-center lg:w-1/2 w-full">
@@ -49,7 +52,8 @@
                   In Cart!
           </button>
         </div>
-
+        <AppLoader placement="AFTER_ADD_TO_CART"/>
+        <AppLoader placement="REPLACE_BUYNOW"/>
         <div v-if="showFreeDelivery || showReturnDelivery" class="rounded-xl border-slate-200 border-2">
           <div v-if="showFreeDelivery" class="border-b flex flex-col py-4 px-3 gap-y-0">
             <div class="flex items-center gap-x-3">
@@ -78,12 +82,10 @@
       </button>
     </div>
 
-    <div>
+    <div class="px-4">
       <ProductDescription v-if="description" :product="item"/>
       <ProductReviews :product="item" v-if="reviews"/>
     </div>
-    <AppLoader placement="AFTER_ADD_TO_CART"/>
-    <AppLoader placement="REPLACE_BUYNOW"/>
     <Upsell :item="item.upsell"/>
     <RelatedProducts :item="item" v-if="showRelated"/>
   </div>
@@ -188,6 +190,12 @@ export default {
             }
             this.quantitySelected(this.item.quantity.value);
             this.instock = variant.instock;
+        },
+        addToWishlist(){
+            this.$tools.call('ADD_TO_WISHLIST', this.item);
+        },
+        removeFromWishlist(){
+            this.$tools.call('REMOVE_FROM_WISHLIST', this.item);
         },
     },
 

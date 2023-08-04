@@ -1,9 +1,9 @@
 <template>
-  <div class="px-16 py-8 flex flex-col">
+  <div class="lg:px-16 py-8 flex flex-col items-center">
     <collectionsBar :category="category"/>
     <h2 class="text-2xl font-bold pl-6 mt-5">Our {{ category }} Products !</h2>
     <div v-if="products">
-      <div v-if="products.length>0" class="grid grid-cols-4">
+      <div v-if="products.length>0" class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
           <productCard v-for="item in products" :key="item.id" :item="item"/>
       </div>
       <div v-else class="flex justify-center items-center flex-col gap-y-3 py-16">

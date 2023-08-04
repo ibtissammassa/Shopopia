@@ -2,10 +2,10 @@
     <div>
         <AppLoader placement="BEFORE_FOOTER"></AppLoader>
         <footer >
-            <div class="lg:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col gap-y-3">
-                <div :class="$store.state.language.code=='AR' ? 'md:flex-row-reverse' : 'md:flex-row'" class="flex gap-y-4 w-full gap-x-10 flex-col">
+            <div class="lg:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col gap-y-4">
+                <div :class="$store.state.language.code=='AR' ? 'md:flex-row-reverse' : 'md:flex-row'" class="flex gap-y-4 w-full gap-x-16 flex-col">
                     <div class="flex flex-col gap-y-6 pt-6 md:w-2/5">
-                        <h1 class="font-bold text-primary text-4xl">{{ $settings.footer.title }}</h1>
+                        <h1 class="font-bold text-primary text-2xl md:text-4xl">{{ $settings.footer.title }}</h1>
                         <p class="text-sm text-gray-700">{{ description }}</p>
                         <div class="flex flex-col gap-y-4" :class="$store.state.language.code=='AR' ? 'items-end' : ''">
                             <h3>{{ title }}</h3>
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gap-y-3 flex flex-col pt-8">
+                    <div class="gap-y-3 flex flex-col pt-9">
                         <h3 @click="toggleMenu" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                         </svg></h3>
@@ -48,7 +48,8 @@ export default {
     data(){
         return{
             description : this.$settings.footer.description,
-            showmenu: false,
+            windowWidth: 0,
+            showmenu: (this.windowWidth < 768)?false:true,
             title: this.$settings.footer.payment.title,
             titlemedia: this.$settings.footer.socialmedia.title,
             payments:[
@@ -117,12 +118,22 @@ export default {
             ]
         }
     },
+    mounted() {
+        this.getWindowWidth();
+        window.addEventListener('resize', this.getWindowWidth);
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.getWindowWidth);
+    },
     methods:{
         toggleMenu(){
             this.showmenu = !this.showmenu;
-        }
-    },
-    
+        },
+        getWindowWidth() {
+            this.windowWidth = window.innerWidth;
+            this.showmenu = (this.windowWidth < 768)?false:true
+        },
+    },   
 }
 </script>
 
