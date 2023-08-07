@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div v-else class="flex justify-center items-center flex-col py-7">
-                <p class="text-xl text-gray-800">No Reviews</p>
+                <p class="text-xl text-gray-800">{{ $settings.product.reviews.noReviews }}</p>
             </div>
         </div>
         <loading v-else/>

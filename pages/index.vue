@@ -57,7 +57,11 @@
           this.items4 = await this.getProducts(filter);
         }
 
-        this.posts = await this.getPosts();
+        if(this.$settings.home.posts.items){
+          this.posts = this.$settings.home.posts.items;
+        }else{
+          this.posts = await this.getPosts(filter);
+        }
     },
     methods: {
         async getProducts(filter){

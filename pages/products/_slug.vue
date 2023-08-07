@@ -48,7 +48,7 @@
                   {{ addToCartText }}
           </button>
           <button @click.stop="removeFromCart" v-else-if="showAddToCart && addedToCart" class="hover:bg-slate-300 hover-color-primary ease-in duration-400 w-32 text-white font-bold border-secondary bg-secondary text-base py-2 px-2.5 border-2 rounded-full">
-                  In Cart!
+                  {{ $settings.product.inCart.text }}
           </button>
         </div>
         <AppLoader placement="AFTER_ADD_TO_CART"/>
@@ -74,10 +74,10 @@
 
     <div class="flex justify-center gap-x-2">
       <button @click="showDescription" :class="description ? 'text-white bg-primary' : '' " class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
-          Description
+          {{ $settings.product.description.button }}
       </button>
       <button @click="showReviews" :class="reviews ? 'text-white bg-primary' : '' " class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
-          Reviews
+          {{ $settings.product.reviews.button }}
       </button>
     </div>
 
