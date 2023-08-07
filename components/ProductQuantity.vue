@@ -1,14 +1,14 @@
 <template>
     <div class="flex items-center" :class="showItemsLeft ? 'w-full gap-x-4' : ''">
         <div class="flex items-center text-center ">
-            <button @click="inc(-1)" class="border-b border-t border-l border-primary rounded-bl-full rounded-tl-full py-2 px-4">-</button>
+            <button @click="inc(-1)" class="border-b border-t border-primary py-2 px-4" :class="$store.state.language.code == 'AR' ? 'rounded-br-full rounded-tr-full border-r' : 'rounded-bl-full rounded-tl-full border-l'">-</button>
             <div class="flex">
                 <label class="relative border-primary border-t  border-b py-2 h-full">
                     <span class="md:px-5 md:py-4 px-4 py-1 text-xs text-center ">{{ value }}</span>
                     <input :min="quantity.min" :max="quantity.instock" class="md:px-2 text-center absolute outline-none inset-0 bg-opacity-0 w-full h-full" v-model="value" type="number">
                 </label>
             </div>
-            <button @click="inc(1)" class="border-b border-t border-r border-primary rounded-br-full rounded-tr-full py-2 px-4 ">+</button>
+            <button @click="inc(1)" class="border-b border-t border-primary py-2 px-4 " :class="$store.state.language.code == 'AR' ? 'rounded-bl-full rounded-tl-full border-l' : 'rounded-br-full rounded-tr-full border-r'">+</button>
         </div>
         <div v-if="showItemsLeft" class="text-sm md:text-base">
             Only <span :style="`color:${itemsLeftColor}`">{{ quantity.instock }} items</span> left! Don't miss it.

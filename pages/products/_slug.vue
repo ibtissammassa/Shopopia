@@ -1,7 +1,6 @@
 <template>
   <div class="py-6 lg:px-10 gap-y-4 flex flex-col" v-if="item">
-    <h4 v-if="$store.state.language.code=='AR'" class="pl-9 text-sm text-gray-500 py-3"> <span class="text-black">{{ item.name }}</span> / <nuxt-link to="/products">Products</nuxt-link> / <nuxt-link to="/">Home</nuxt-link></h4>
-    <h4 v-else class="pl-9 text-sm text-gray-500 py-3"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/products">Products</nuxt-link> / <span class="text-black">{{ item.name }}</span></h4>
+    <h4 class="pl-9 text-sm py-3 text-gray-900"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/shop">Products</nuxt-link> / <span class="text-gray-500">{{ item.name }}</span></h4>
     
     <div class="pl-9 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl gap-y-7 items-start w-full px-6">
       

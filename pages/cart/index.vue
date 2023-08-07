@@ -16,7 +16,7 @@
     </div>
     <loading v-else/>
     <div class="flex justify-between">
-        <nuxt-link v-if="showBackToShop" to="/products">
+        <nuxt-link v-if="showBackToShop" to="/shop">
             <button class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-32 text-primary font-bold border-primary text-sm py-2 px-2.5 border-2 rounded-full">
                 {{ backToShop }}
             </button>

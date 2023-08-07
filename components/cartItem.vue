@@ -1,12 +1,12 @@
 <template>
     <div class="flex md:items-center md:justify-between flex-col md:flex-row justify-center gap-y-3">
-        <div class="flex items-center md:justify-center md:gap-x-5 justify-start gap-x-6">
+        <nuxt-link :to="`/products/${item.slug}`" class="flex items-center md:justify-center md:gap-x-5 justify-start gap-x-6">
             <img width="90" height="80" class="rounded-xl border bg-slate-100" :src="item.image" alt="">
             <div>
                 <h4 class="font-medium text-lg lg:text-xl">{{ item.name }}</h4>
                 <p class="text-gray-700 text-xs lg:text-sm">{{ item.description }}</p>
             </div>
-        </div>
+        </nuxt-link>
         <div class="flex items-center justify-between md:gap-x-10">
            <ProductQuantity :showItemsLeft="showItemsLeft" @quantitySelected="quantitySelected" :quantity="item.quantity"/>
             <div class="flex flex-col justify-center items-center">
