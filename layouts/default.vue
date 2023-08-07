@@ -1,5 +1,5 @@
 <template>
-    <div :class="$store.state.language.code=='AR' ? 'text-right' : ''">
+    <div>
         <component :is="'style'">
             :root{ 
               --primaryColor: {{ primaryColor }};
@@ -15,6 +15,14 @@
 
 <script>
 export default {
+    head(){
+      return{
+        htmlAttrs: {
+                lang: this.$store.state.language.code,
+                dir: this.$store.state.language.code == 'AR' ? 'rtl' : 'ltr'
+            }
+      }
+    },
     data(){
         return{
             logo_src: this.$settings.header.logo.src,

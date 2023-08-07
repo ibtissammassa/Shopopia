@@ -3,11 +3,11 @@
         <AppLoader placement="BEFORE_FOOTER"></AppLoader>
         <footer >
             <div class="lg:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col gap-y-4">
-                <div :class="$store.state.language.code=='AR' ? 'md:flex-row-reverse' : 'md:flex-row'" class="flex gap-y-4 w-full gap-x-16 flex-col">
+                <div class="flex md:flex-row gap-y-4 w-full gap-x-16 flex-col">
                     <div class="flex flex-col gap-y-6 pt-6 md:w-2/5">
                         <h1 class="font-bold text-primary text-2xl md:text-4xl">{{ $settings.footer.title }}</h1>
                         <p class="text-sm text-gray-700">{{ description }}</p>
-                        <div class="flex flex-col gap-y-4" :class="$store.state.language.code=='AR' ? 'items-end' : ''">
+                        <div class="flex flex-col gap-y-4">
                             <h3>{{ title }}</h3>
                             <div class="grid grid-cols-3 w-2/3 h-24 mt-4 gap-3">
                                 <div :class="item.show ? 'block' : 'hidden'" v-for="item in payments" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="58" height="40">
