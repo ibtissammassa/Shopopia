@@ -20,7 +20,7 @@
             </div>
         </nuxt-link>
         <p class="text-gray-700 text-xs">{{ item.seo.description }}</p>
-        <button v-if="!addedToCart" @click.stop="addToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-1/2 text-primary font-bold border-primary md:text-sm text-xs py-2 px-2.5 border-2 rounded-full items-end">
+        <button v-if="!addedToCart" @click="addToCart" class="my-2 hover-bg-primary hover-color-white ease-in duration-400 w-1/2 text-primary font-bold border-primary md:text-sm text-xs py-2 px-2.5 border-2 rounded-full items-end">
                 {{ $settings.productCard.addToCart }}
         </button>
         <button v-if="addedToCart" @click.stop="removeFromCart" class="hover-color-primary my-2 bg-secondary ease-in duration-400 w-1/2 text-white font-bold md:text-sm text-xs py-2 px-2.5 border-2 rounded-full border-secondary hover:bg-slate-300">

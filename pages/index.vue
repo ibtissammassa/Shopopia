@@ -32,35 +32,47 @@
         }
     },
     async fetch(){
-      const filter = { status: 'PUBLISH',limit: 3 };
-        if(this.$settings.home.products1.products){
+      let filter = { status: 'PUBLISH',limit: 4 };
+        if(this.$settings.home.products1.collections.length > 0){
+          filter['collections._id-in'] = this.$settings.home.products1.collections.map(c=>c._id);
+          this.items1 = await this.getProducts(filter);
+        }else if(this.$settings.home.products1.products){
             this.items1 = this.$settings.home.products1.products;
         }else{
             this.items1 = await this.getProducts(filter);
         }
 
-        if(this.$settings.home.products2.products){
+        if(this.$settings.home.products2.collections.length > 0){
+          filter['collections._id-in'] = this.$settings.home.products2.collections.map(c=>c._id);
+          this.items2 = await this.getProducts(filter);
+        }else if(this.$settings.home.products2.products){
           this.items2 = this.$settings.home.products2.products;
         }else{
           this.items2 = await this.getProducts(filter);
         }
 
-        if(this.$settings.home.products3.products){
+        if(this.$settings.home.products3.collections.length > 0){
+          filter['collections._id-in'] = this.$settings.home.products3.collections.map(c=>c._id);
+          this.items3 = await this.getProducts(filter);
+        }else if(this.$settings.home.products3.products){
           this.items3 = this.$settings.home.products3.products;
         }else{
           this.items3 = await this.getProducts(filter);
         }
 
-        if(this.$settings.home.products4.products){
+        if(this.$settings.home.products4.collections.length > 0){
+          filter['collections._id-in'] = this.$settings.home.products4.collections.map(c=>c._id);
+          this.items4 = await this.getProducts(filter);
+        }else if(this.$settings.home.products4.products){
           this.items4 = this.$settings.home.products4.products;
         }else{
           this.items4 = await this.getProducts(filter);
         }
 
-        if(this.$settings.home.posts.items){
+        if(this.$settings.home.posts.items.length > 0){
           this.posts = this.$settings.home.posts.items;
         }else{
-          this.posts = await this.getPosts(filter);
+          this.posts = await this.getPosts();
         }
     },
     methods: {
