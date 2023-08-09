@@ -1,7 +1,7 @@
 <template>
-    <nuxt-link :to="`/shop/${item.slug}`" class="cursor-pointer overflow-hidden flex justify-center md:h-64 rounded-xl relative">
-        <img :src="item.image.src" class="zoom w-full rounded-2xl">
-        <h4 class="font-medium text-2xl mt-6 absolute" :style="`color:${textColor}`">{{ item.name }}</h4>
+    <nuxt-link :to="item.childrens.length > 0 ? `/collections/${item.slug}` : `/shop/${item.slug}`" class="cursor-pointer overflow-hidden flex justify-center md:h-64 rounded-xl relative text-center">
+        <img :src="item.image.src" class="zoom w-full rounded-2xl object-cover">
+        <h4 class="font-medium text-base mt-6 absolute bg-gray-700 rounded-full p-3 px-3.5" :style="`color:${textColor}`">{{ item.name }}</h4>
     </nuxt-link>  
 </template>
 

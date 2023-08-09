@@ -3,7 +3,7 @@
     <h3 class="text-lg pb-3 font-medium">{{ title }}</h3>
     <hr>
     <div class="grid grid-cols-2 gap-x-16 gap-y-7 py-6" v-if="items.length">
-        <nuxt-link :to="`/shop/${item.slug}`" v-for="item in items" :key="item.id" class="flex bg-slate-100 items-center gap-x-5 rounded-lg overflow-hidden " >
+        <nuxt-link :to="item.childrens.length > 0 ? `/collections/${item.slug}` : `/shop/${item.slug}`" v-for="item in items" :key="item.id" class="flex bg-slate-100 items-center gap-x-5 rounded-lg overflow-hidden " >
             <img width="50" height="40" :src="item.image.src" alt="">
             <div class="">
                 <h4 class="font-medium hover:text-blue-600 text-lg">{{ item.name }}</h4>

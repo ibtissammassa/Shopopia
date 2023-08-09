@@ -1,8 +1,13 @@
 <template>
   <div class="lg:px-16 py-8 flex flex-col items-center">
-    <collectionsBar :category="category"/>
+    <collectionsBar :category="slug"/>
     <h2 class="text-2xl font-bold pl-6 mt-5">{{ this.$settings.shop.title }}</h2>
-    <div v-if="products">
+    <div v-if="categories && categories.length > 0" class="pt-8 pb-10 px-6 md:px-16 lg:px-10 gap-y-5 flex flex-col justify-center">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-x-5 justify-center">
+        <Category v-for="item in categories" :key="item.id" :item="item"/>
+      </div>
+    </div>
+    <div v-else-if="products">
       <div v-if="products.length>0" class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
           <productCard v-for="item in products" :key="item.id" :item="item"/>
       </div>
@@ -24,13 +29,25 @@
 export default {
     data(){
         return{
-            category: this.$route.params.slug,
+            slug:this.$route.params.slug,
+            category: null,
             products:null,
+            categories: [],
         }
     },
     async fetch(){
-        const category = await this.getCategory();
-        this.products = await this.getProducts(category);
+        const { slug } = this.$route.params;
+        try{
+            const { data } = await this.$storeino.collections.get({ slug: this.$route.params.slug});
+            this.category = data;
+            if(this.category.childrens.length > 0){
+              const { data : { results } } = await this.$storeino.collections.search({ parent: data._id });
+              this.categories = results;
+            }
+        }catch(e){
+            console.log({e});
+          }
+        this.products = await this.getProducts(this.category);
     },
     methods: {
         async getProducts(category){
@@ -45,15 +62,6 @@ export default {
             console.log({e});
           }
         },
-        async getCategory(){
-            const { slug } = this.$route.params;
-            try{
-                const { data } = await this.$storeino.collections.get({slug})
-                return data;
-            }catch(e){
-                console.log({e});
-          }
-        }
     }
 }
 </script>
