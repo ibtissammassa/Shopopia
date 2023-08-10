@@ -1,6 +1,6 @@
 <template>
     <div class="p-5 cursor-pointer flex flex-col gap-y-2 w-full" >
-        <div class="relative rounded-xl w-full bg-slate-100 mb-2 items-center justify-center flex">
+        <div class="relative rounded-xl w-full bg-slate-100 mb-2 items-center justify-center flex h-3/4 overflow-hidden">
             <nuxt-link :to="`/products/${item.slug}`">
                 <img class="zoom" :src="item.images.length > 0 ? item.images[0].src : null" alt="">
             </nuxt-link>
