@@ -25,7 +25,7 @@ export default {
     methods:{
       async searchData(){
             console.log(this.search);
-            this.$router.push({ path: '/products', query: { search: this.search }});
+            this.$router.push({ path: '/shop', query: { search: this.search }});
         }
     }
 }

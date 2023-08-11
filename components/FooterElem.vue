@@ -2,7 +2,7 @@
     <div>
         <AppLoader placement="BEFORE_FOOTER"></AppLoader>
         <footer >
-            <div class="lg:px-16 px-6 py-10 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col gap-y-4">
+            <div class="lg:px-16 px-6 py-8 flex w-full justify-between border-t bg-slate-50 border-slate-50 flex-col gap-y-5">
                 <div class="flex md:flex-row gap-y-4 w-full gap-x-16 flex-col">
                     <div class="flex flex-col gap-y-6 pt-6 md:w-2/5">
                         <h1 class="font-bold text-primary text-2xl md:text-4xl">{{ $settings.footer.title }}</h1>
@@ -43,8 +43,8 @@
                     <h3>{{ titlemedia }}</h3>
                     <div class="flex justify-start gap-x-2">
                         <div v-for="item in socials" :key="item.name" class="bg-white rounded-xl border-2 flex justify-center items-center" width="7" height="7" :class="!item.url.length>0 ? 'hidden' : ''">
-                            <nuxt-link class="w-full" :to="item.url">
-                                <img class="p-2" :src="item.img">
+                            <nuxt-link class="w-2/3" :to="item.url">
+                                <img class="p-1" :src="item.img">
                             </nuxt-link>
                         </div>
                     </div>
