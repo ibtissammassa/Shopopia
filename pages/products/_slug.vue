@@ -35,7 +35,7 @@
         <h3 class="font-bold text-3xl md:text-5xl">{{ !variant ? item.price.salePrice : variant.price.salePrice}}<span class="text-sm">{{ $store.state.currency.symbol }}</span></h3>
         
         <hr>
-        <productVariants v-if="variant" :options="item.options" :variants="item.variants" @selected="variantSelected"/>
+        <productVariants v-if="variant" :images="item.images" :options="item.options" :variants="item.variants" @selected="variantSelected"/>
         <hr>
         <ProductQuantity :showItemsLeft="showItemsLeft" v-if="(showAddToCart || showBuyNow) && !addedToCart" @quantitySelected="quantitySelected" :quantity="quantity"/>
         
@@ -177,6 +177,7 @@ export default {
         },
         setImage(i){
           this.image = this.$tools.copy(this.item.images[i]);
+          this.variantSelected(this.item.variants[i]);
         },
         variantSelected(variant) {
             this.variant = variant;

@@ -3,7 +3,7 @@
     <collectionsBar :category="slug"/>
     <div v-if="item" class="pb-10 px-6 md:px-16 lg:px-10 gap-y-8 flex flex-col justify-center">
       <h2 class="text-2xl md:text-3xl font-bold">{{ item.name }} :</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-x-5 justify-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 lg:gap-x-5 justify-center">
         <Category v-for="item in items" :key="item.id" :item="item"/>
       </div>
     </div>

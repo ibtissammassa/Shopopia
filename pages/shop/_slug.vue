@@ -7,7 +7,7 @@
         <div v-if="products.length>0" class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
             <productCard v-for="item in products" :key="item.id" :item="item"/>
         </div>
-        <div v-else class="flex justify-center items-center flex-col gap-y-3 py-16">
+        <div v-else class="flex items-center flex-col gap-y-3 py-16">
             <p class="text-xl text-gray-800">{{ $settings.shop.noProducts.title }}</p>
             <p class="text-sm text-gray-600">{{ $settings.shop.noProducts.description }}</p>
         </div>

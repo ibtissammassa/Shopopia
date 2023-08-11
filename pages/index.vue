@@ -7,6 +7,7 @@
     <HomeProducts v-if="showProducts3" :title="title3" :items="items3"/>
     <HomeProducts v-if="showProducts4" :title="title4" :items="items4"/>
     <HomePosts v-if="showPosts" :title="titlepost" :items="posts" />
+    <HomeServices v-if="showServices"/>
   </div>
 </template>
 
@@ -28,7 +29,8 @@
             items4:[],
             posts:[],
             showPosts: this.$settings.home.show.posts,
-            titlepost: this.$settings.home.posts.title
+            titlepost: this.$settings.home.posts.title,
+            showServices: this.$settings.home.show.services
         }
     },
     async fetch(){
