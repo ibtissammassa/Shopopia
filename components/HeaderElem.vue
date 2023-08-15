@@ -2,7 +2,7 @@
     <div>
         <AppLoader placement="BEFORE_HEADER"></AppLoader>
         <header class="relative" v-click-outside="onClickOutside" :style="`background-color: ${backgroundColor}; color:${textColor}`">
-            <div class="border-slate-200 border-b flex items-center px-5 md:px-10 py-2 justify-between">
+            <div class="border-slate-200 border-b flex items-center px-5  md:px-10 py-2 justify-between">
                 <div>
                     <nuxt-link to="/">
                         <img :src="logo_src" class="h-14 w-36 lg:h-16 lg:w-44">

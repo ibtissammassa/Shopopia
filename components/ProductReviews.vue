@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div v-if="reviews">
-            <div v-if="reviews.length>0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div v-if="!$store.state.apps.find(a=>a.placement.indexOf('REPLACE_REVIEWS') >= 0)">
+            <div v-if="reviews && reviews.length>0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div v-for="item in reviews" :key="item.id" class="rounded-xl border-slate-300 border shadow-lg p-3 flex flex-col gap-y-3">
                     <div class="flex gap-x-5 items-center">
                         <img class="h-16 w-18 rounded-xl border-slate-200 bg-slate-200" v-for="(image, i) in item.images" :key="i" :src="image" alt="">
@@ -17,11 +17,11 @@
                     <p class="text-gray-900 text-sm">{{ item.content }}</p>
                 </div>
             </div>
-            <div v-else class="flex justify-center items-center flex-col py-7">
+            <div v-else-if="reviews && reviews.length==0" class="flex justify-center items-center flex-col py-7">
                 <p class="text-xl text-gray-800">{{ $settings.product.reviews.noReviews }}</p>
             </div>
+            <loading v-else/>
         </div>
-        <loading v-else/>
         <AppLoader placement="REPLACE_REVIEWS"></AppLoader>
     </div>
 </template>

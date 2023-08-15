@@ -1,5 +1,6 @@
 <template>
   <div class="py-6 lg:px-10 gap-y-4 flex flex-col" v-if="item">
+    <meta itemprop="productID" :content="item._id" />
     <h4 class="pl-9 text-sm py-3 text-gray-900"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/shop">Products</nuxt-link> / <span class="text-gray-500">{{ item.name }}</span></h4>
     
     <div class="pl-9 flex lg:flex-row flex-col lg:gap-x-14 rounded-xl gap-y-7 items-start w-full px-6">
@@ -85,7 +86,10 @@
       <ProductDescription v-if="description" :product="item"/>
       <ProductReviews :product="item" v-if="reviews"/>
     </div>
-    <Upsell :item="item.upsell"/>
+    <div class="mt-4">
+      <h2 class="text-2xl font-bold mb-2 pl-8">{{ $settings.product.upsells.title }}</h2>
+      <Upsell :item="item.upsell"/>
+    </div>
     <RelatedProducts :item="item" v-if="showRelated"/>
   </div>
   <loading v-else/>
@@ -117,6 +121,9 @@ export default {
             reviews: false
         }
     },
+    head() {
+            return this.seo();
+        },
     async fetch() {
         const { slug } = this.$route.params;
         try{
@@ -142,6 +149,39 @@ export default {
         },
     },
     methods: {
+      seo() {
+                if (!this.item) {  return; }
+                return {
+                    title: (this.item.seo.title || this.item.name) + ' - ' + this.$settings.store_name,
+                    meta: [
+                        { hid: "product:price:amount", property: "product:price:amount", content: this.item ? this.item.price.salePrice : 0 },
+                        { hid: "productID", itemprop: "productID", content: this.item._id || 'productID' },
+                        { hid: "description", name: "description", content: this.item.seo.description || this.item.description || this.$settings.store_description },
+                        { hid: 'keywords', name: 'keywords', content: (this.item.seo.keywords.length > 0 ? this.item.seo.keywords || [] : this.$settings.store_keywords || []).join(',') },
+                        { hid: "og:image", property: "og:image", content: this.item && this.item.images && this.item.images.length > 0 ? this.item.images[0].src : this.$store.state.defaults.image },
+                        { hid: "name", itemprop: "name", content: this.item ? this.item.name : 'article' },
+                        { hid: "priceCurrency", itemprop: "priceCurrency", content: this.$store.state.currency.code },
+                        { hid: "url", itemprop: "url", content: this.$store.state.seo.url },
+                        { hid: "price", itemprop: "price", content: this.item && this.item ? this.item.price.salePrice : 0 },
+                        { hid: "robots", name: "robots", content: (this.$settings && this.$settings.store_indexing) || (this.item && this.item.seo && !this.item.seo.hide) ? "index" : "noindex" },
+                        { hid: "og:site_name", property: "og:site_name", content: this.$settings ? this.$settings.store_name  : "Online Store" },
+                        { hid: "og:title", property: "og:title", content: this.item && this.item.seo && this.item.seo.title ? this.item.seo.title : this.item && this.item ? this.item.name : 'Online Store' },
+                        { hid: "og:type", property: "og:type", content: "article" },
+                        { hid: "og:url", property: "og:url", content: this.$store.state.seo.url },
+                        { hid: "og:description", property: "og:description", content: this.item && this.item.seo ? this.item.seo.description : "description" },
+                        { hid: "apple-mobile-web-app-status-bar-style", property: "apple-mobile-web-app-status-bar-style", content: "black" },
+                        { hid: "apple-mobile-web-app-capable", property: "apple-mobile-web-app-capable", content: "yes" },
+                        { hid: "product:plural_title", property: "product:plural_title", content: this.item && this.item ? this.item.name : 'article' },
+                        { hid: "product:price:currency", property: "product:price:currency", content: this.$store.state.currency.code },
+                        { hid: "twitter:card", property: "twitter:card", content: "summary" },
+                        { hid: "twitter:site", property: "twitter:site", content: this.$settings ? this.$settings.store_name : "Online Store" },
+                        { hid: "twitter:title", property: "twitter:title", content: this.item && this.item.seo && this.item.seo.title ? this.item.seo.title : this.item && this.item ? this.item.name : 'Online Store' },
+                        { hid: "twitter:description", property: "twitter:description", content: this.item && this.item.seo ? this.item.seo.description : "description" },
+                        { hid: "twitter:image", property: "twitter:image", content: this.item && this.item.images && this.item.images.length > 0 ? this.item.images[0].src : this.$store.state.defaults.image },
+                        { hid: "twitter:url", property: "twitter:url", content: this.$store.state.seo.url },
+                    ]
+                };
+            },
       quantitySelected(quantity){
             this.item.quantity.value = quantity;
         },

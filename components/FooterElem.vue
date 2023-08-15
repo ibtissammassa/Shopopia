@@ -23,19 +23,19 @@
                             <h3 @click="toggleMenu(1)" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title1 }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg></h3>
-                            <nuxt-link :class="showmenu1?'block':'hidden'" class="hover-color-primary transform md:block" :to="item.url" v-for="item in $settings.footer.menu.menu1.items" :key="item.id">{{ item.text }}</nuxt-link>
+                            <nuxt-link :class="showmenu1?'':'hidden'" class="hover-color-primary transform" :to="item.url" v-for="item in $settings.footer.menu.menu1.items" :key="item.id">{{ item.text }}</nuxt-link>
                         </div>
                         <div class="gap-y-3 flex flex-col pt-9">
                             <h3 @click="toggleMenu(2)" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title2 }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg></h3>
-                            <nuxt-link :class="showmenu2?'block':'hidden'" class="hover-color-primary transform md:block" :to="item.url" v-for="item in $settings.footer.menu.menu2.items" :key="item.id">{{ item.text }}</nuxt-link>
+                            <nuxt-link :class="showmenu2?'':'hidden'" class="hover-color-primary transform" :to="item.url" v-for="item in $settings.footer.menu.menu2.items" :key="item.id">{{ item.text }}</nuxt-link>
                         </div>
                         <div class="gap-y-3 flex flex-col pt-9">
                             <h3 @click="toggleMenu(3)" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title3 }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg></h3>
-                            <nuxt-link :class="showmenu3?'block':'hidden'" class="hover-color-primary transform md:block" :to="item.url" v-for="item in $settings.footer.menu.menu3.items" :key="item.id">{{ item.text }}</nuxt-link>
+                            <nuxt-link :class="showmenu3?'':'hidden'" class="hover-color-primary transform" :to="item.url" v-for="item in $settings.footer.menu.menu3.items" :key="item.id">{{ item.text }}</nuxt-link>
                         </div>
                     </div>
                 </div>
@@ -158,9 +158,9 @@ export default {
         },
         getWindowWidth() {
             this.windowWidth = window.innerWidth;
-            this.showmenu1= (this.windowWidth < 768)?false:true;
-            this.showmenu2= (this.windowWidth < 768)?false:true;
-            this.showmenu3= (this.windowWidth < 768)?false:true;
+            this.showmenu1 = (this.windowWidth < 768)?false:true;
+            this.showmenu2 = (this.windowWidth < 768)?false:true;
+            this.showmenu3 = (this.windowWidth < 768)?false:true;
         },
     },   
 }

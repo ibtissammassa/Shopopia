@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link :to="item.url" class="rounded-xl border border-slate-100 bg-slate-50 shadow-sm items-center justify-center flex p-5 px-6 h-full gap-x-1.5">
+    <nuxt-link :to="item.url" class="rounded-xl border border-slate-100 bg-slate-50 shadow-sm items-center justify-center text-center md:text-left flex flex-col md:flex-row gap-y-2 p-5 px-6 h-full gap-x-1.5">
         <div class="w-1/3">
             <img class="w-fit" :src="item.img" alt="">
         </div>

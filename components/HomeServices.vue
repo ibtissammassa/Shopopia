@@ -1,7 +1,7 @@
 <template>
     <div class="md:px-10 px-6 py-7 gap-y-4 flex flex-col justify-center">
         <h2 class="text-2xl md:text-3xl font-bold">{{ title }}</h2>
-        <div class="grid md:grid-cols-4 gap-3 grid-cols-2">
+        <div class="grid lg:grid-cols-4 gap-3 grid-cols-2">
             <ServiceCart v-for="item in items" :key="item.title" :item="item"/>
         </div>
     </div>
