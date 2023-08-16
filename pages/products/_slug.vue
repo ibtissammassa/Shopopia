@@ -87,7 +87,7 @@
       <ProductReviews :product="item" v-if="reviews"/>
     </div>
     <div class="mt-4">
-      <h2 class="text-2xl font-bold mb-2 pl-8">{{ $settings.product.upsells.title }}</h2>
+      <h2 v-if="item.upsell" class="text-2xl font-bold mb-2 pl-8">{{ $settings.product.upsells.title }}</h2>
       <Upsell :item="item.upsell"/>
     </div>
     <RelatedProducts :item="item" v-if="showRelated"/>
