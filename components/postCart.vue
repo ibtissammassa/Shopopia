@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/posts/${item.slug}`" class="border-slate-100 border-2 rounded-xl cursor-pointer flex flex-col h-full">
+  <nuxt-link :to="`/posts/${item.slug}`" class="rounded-xl cursor-pointer flex flex-col h-full">
     <div class="w-full overflow-hidden rounded-xl h-2/3">
       <img class="zoom object-cover w-full h-full" :src="item.image.url" alt="">
     </div>

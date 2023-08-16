@@ -1,7 +1,7 @@
 <template>
     <div class="flex lg:flex-row flex-col">
         <div v-if="show.sidebar && sidebar" class="lg:w-1/3 px-8 lg:pt-5 lg:border-r flex flex-col gap-y-2 w-full z-50 bg-white h-full">
-            <div class="lg:hidden flex justify-between py-5 border-b mb-2">
+            <div class="lg:hidden flex justify-between items-center py-5 border-b mb-2">
                 <div class="flex items-center gap-x-1.5">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M10 14L4 5V3h16v2l-6 9v6l-4 2z"/></g></svg>
                     <h3 class="text-lg">Filter products</h3>
@@ -16,7 +16,7 @@
                             <input :disabled="item.childrens.length>0 == 1" class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(item.slug) >= 0" @change="setParams($event, 'collections.slug-in', item.slug)" :id="item.slug" type="checkbox"/>
                             <label class="cursor-pointer text-sm capitalize text-gray-800" :for="item.slug">{{ item.name }}</label>
                         </div>
-                        <div v-if="item.childrens.length >0" class="flex flex-col gap-y-2 pl-5 py-2">
+                        <div v-if="item.childrens.length >0 && childrens.length >0" class="flex flex-col gap-y-2 pl-5 py-2">
                             <div v-for="(child, i) in childrens[item.slug]" :key="i">
                                 <div class="flex items-center gap-x-1">
                                     <input class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(child.slug) >= 0" @change="setParams($event, 'collections.slug-in', child.slug)" :id="child.slug" type="checkbox"/>
@@ -39,7 +39,7 @@
             </div>
             <div v-if="show.sizes" class="flex flex-col gap-y-4">
                 <h3 class="font-bold text-lg">{{ titles.sizes }}</h3>
-                <div v-if="filters && filters.sizes" class="grid lg:grid-cols-5 grid-cols-12">
+                <div v-if="filters && filters.sizes" class="grid lg:grid-cols-5 md:grid-cols-12 grid-cols-7">
                    <div v-for="(item, i) in filters.sizes" :key="i" class="flex items-center m-0.5  text-center rounded-md" :class="params['options.values.value1'] && params['options.values.value1'].indexOf(item.value1) >= 0 ? 'bg-primary text-white' : 'bg-gray-200' ">
                         <input hidden :id="item.value1" :checked="params['options.values.value1'] && params['options.values.value1'].indexOf(item.value1) >= 0" @change="setParams($event, 'options.values.value1', item.value1)" type="checkbox"/>
                         <label class="cursor-pointer px-2" :for="item.value1">{{ item.value1 }}</label>
@@ -50,7 +50,7 @@
             </div>
             <div v-if="show.colors" class="flex flex-col gap-y-4">
                 <h3 class="font-bold text-lg">{{ titles.colors }}</h3>
-                <div v-if="filters && filters.colors" class="grid lg:grid-cols-6 grid-cols-12">
+                <div v-if="filters && filters.colors" class="grid lg:grid-cols-6 md:grid-cols-12 grid-cols-7">
                     <div v-for="(item, i) in filters.colors" :key="i" class="flex items-center my-0.5 color-option" :class="params['options.values.value1'] && params['options.values.value1'].indexOf(item.value1) >= 0 ? 'active' : '' ">
                         <input hidden :id="item.value1" :checked="params['options.values.value1'] && params['options.values.value1'].indexOf(item.value1) >= 0" @change="setParams($event, 'options.values.value1', item.value1)" type="checkbox"/>
                         <label class="cursor-pointer rounded-full" :style="`background-color:${item.value2}`" :for="item.value1" :aria-label="item.value1"></label>
@@ -91,15 +91,12 @@
                        <svg class="w-4 h-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M10 14L4 5V3h16v2l-6 9v6l-4 2z"/></g></svg>
                         <p>Filter Products</p>
                     </button>
-                    <button class="text-sm flex gap-x-1">
-                        <p>Sort By</p>
-                        <svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
+                    <select class="outline-none cursor-pointer bg-slate-100" v-model="params.sort">
+                        <option class="p-5" v-for="(sort,i) in sorts" :key="i" :value="sort.field">{{ sort.name }}</option>
+                    </select>
                 </div>
                 <div v-if="products">
-                    <div v-if="products.length>0" class="grid lg:grid-cols-3 grid-cols-2">
+                    <div v-if="products.length>0" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
                         <productCard v-for="item in products" :key="item.id" :item="item"/>
                     </div>
                     <div v-else class="flex items-center flex-col gap-y-3 py-16">
@@ -121,15 +118,25 @@ export default {
             show:this.$settings.shop.show,
             windowWidth: 0,
             sidebar:(this.windowWidth < 1024)?false:true,
-            products:[],
-            collections:[],
+            products:null,
+            collections:null,
             childrens:{},
-            brands: [],
+            brands: null,
             filters: null,
             query: {},
             param: [],
             params: {search: this.$route.query.search, 'collections.slug-in': [], sort: { createdAt: -1 } },
             lastParams: {search: this.$route.query.search, 'collections.slug-in': [], sort: { createdAt: -1 } },
+            sorts: [
+                { field: { 'price.salePrice': 1 }, name: 'price asc' },
+                { field: { 'price.salePrice': -1 }, name: 'price desc' },
+                { field: { 'review.rating': -1 }, name: 'rating desc' },
+                { field: { 'review.rating': 1 }, name: 'rating_asc '},
+                { field: { 'name': 1 }, name: 'name_asc' },
+                { field: { 'name': -1 }, name: 'name_desc' },
+                { field: { createdAt: -1 }, name: 'newest' },
+                { field: { createdAt: 1 }, name: 'oldest' }
+            ],
         }
     },
     mounted() {

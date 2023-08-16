@@ -6,7 +6,7 @@
                 <PostCart v-for="item in posts" :key="item.id" :item="item"/> 
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-end px-8">
             <nuxt-link :to="`/blog`" class=" text-center zoom ease-in duration-300 w-28 font-semibold border-gray-300 text-sm py-2 px-1 border rounded-full mb-4 bg-gray-200 text-gray-600">
                 {{ allPostsText }}
             </nuxt-link>

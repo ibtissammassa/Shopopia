@@ -1,8 +1,14 @@
 <template>
-    <div class="mt-14">
-        <h2 class="text-2xl font-bold mb-2 md:pl-8 pl-10">{{ title }}</h2>
-        <div class="grid md:grid-cols-4 grid-cols-2">
-            <ProductCard v-for="item in products" :key="item.id" :item="item"/> 
+    <div>
+        <h2 class="font-bold text-lg">{{ title }}</h2>
+        <div class="flex flex-col gap-y-2 py-3">
+            <nuxt-link :to="`/products/${item.slug}`" v-for="item in products" :key="item.id" class="rounded-xl border-gray-300 border p-3 flex items-center lg:justify-center justify-start gap-x-5">
+                <img width="60" height="60" class="rounded-xl border bg-slate-100" :src="item.images.length > 0 ? item.images[0].src : null" alt="">
+                <div>
+                    <h4 class="font-medium text-base">{{ item.name }}</h4>
+                    <p class="text-gray-700 text-xs ">{{ item.description }}</p>
+                </div>
+            </nuxt-link>
         </div>
   </div>
 </template>
@@ -17,7 +23,7 @@ export default {
     },
     async fetch(){
         try{
-                const { data } = await this.$storeino.products.search({limit: 4});
+                const { data } = await this.$storeino.products.search({limit: 5});
                 this.products = data.results;
             }catch(e){
                 console.log({e});
