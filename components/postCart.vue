@@ -3,7 +3,8 @@
     <div class="w-full overflow-hidden rounded-xl h-2/3">
       <img class="zoom object-cover w-full h-full" :src="item.image.url" alt="">
     </div>
-    <div class="py-3 flex flex-col gap-y-2">
+    <div class="py-3 flex flex-col gap-y-1">
+      <p class="italic">{{ item.createdAt.slice(0, 10) }}</p>
       <h3 class="font-bold text-lg">{{ item.title }}</h3>
       <p class="text-gray-700 text-sm">{{ item.excerpt }}</p>
     </div>

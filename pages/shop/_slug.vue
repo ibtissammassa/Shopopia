@@ -1,6 +1,6 @@
 <template>
     <div class="flex lg:flex-row flex-col">
-        <div v-if="show.sidebar && sidebar" class="lg:w-1/3 px-8 lg:pt-5 lg:border-r flex flex-col gap-y-2 w-full z-50 bg-white h-full">
+        <div v-if="show.sidebar && sidebar" class="lg:w-1/4 px-8 lg:pt-5 lg:border-r flex flex-col gap-y-2 w-full z-40 bg-white h-full">
             <div class="lg:hidden flex justify-between items-center py-5 border-b mb-2">
                 <div class="flex items-center gap-x-1.5">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g><path d="M0 0h24v24H0z" fill="none"/><path d="M10 14L4 5V3h16v2l-6 9v6l-4 2z"/></g></svg>
@@ -16,7 +16,7 @@
                             <input :disabled="item.childrens.length>0 == 1" class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(item.slug) >= 0" @change="setParams($event, 'collections.slug-in', item.slug)" :id="item.slug" type="checkbox"/>
                             <label class="cursor-pointer text-sm capitalize text-gray-800" :for="item.slug">{{ item.name }}</label>
                         </div>
-                        <div v-if="item.childrens.length >0 && childrens.length >0" class="flex flex-col gap-y-2 pl-5 py-2">
+                        <div v-if="item.childrens.length >0 && !childrensloading" class="flex flex-col gap-y-2 pl-5 py-2">
                             <div v-for="(child, i) in childrens[item.slug]" :key="i">
                                 <div class="flex items-center gap-x-1">
                                     <input class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(child.slug) >= 0" @change="setParams($event, 'collections.slug-in', child.slug)" :id="child.slug" type="checkbox"/>
@@ -42,7 +42,7 @@
                 <div v-if="filters && filters.sizes" class="grid lg:grid-cols-5 md:grid-cols-12 grid-cols-7">
                    <div v-for="(item, i) in filters.sizes" :key="i" class="flex items-center m-0.5  text-center rounded-md" :class="params['options.values.value1'] && params['options.values.value1'].indexOf(item.value1) >= 0 ? 'bg-primary text-white' : 'bg-gray-200' ">
                         <input hidden :id="item.value1" :checked="params['options.values.value1'] && params['options.values.value1'].indexOf(item.value1) >= 0" @change="setParams($event, 'options.values.value1', item.value1)" type="checkbox"/>
-                        <label class="cursor-pointer px-2" :for="item.value1">{{ item.value1 }}</label>
+                        <label class="cursor-pointer text-sm px-3" :for="item.value1">{{ item.value1 }}</label>
                     </div> 
                 </div>
                 <loading v-else/>
@@ -121,6 +121,7 @@ export default {
             products:null,
             collections:null,
             childrens:{},
+            childrensloading:true,
             brands: null,
             filters: null,
             query: {},
@@ -128,14 +129,14 @@ export default {
             params: {search: this.$route.query.search, 'collections.slug-in': [], sort: { createdAt: -1 } },
             lastParams: {search: this.$route.query.search, 'collections.slug-in': [], sort: { createdAt: -1 } },
             sorts: [
-                { field: { 'price.salePrice': 1 }, name: 'price asc' },
-                { field: { 'price.salePrice': -1 }, name: 'price desc' },
-                { field: { 'review.rating': -1 }, name: 'rating desc' },
-                { field: { 'review.rating': 1 }, name: 'rating_asc '},
-                { field: { 'name': 1 }, name: 'name_asc' },
-                { field: { 'name': -1 }, name: 'name_desc' },
-                { field: { createdAt: -1 }, name: 'newest' },
-                { field: { createdAt: 1 }, name: 'oldest' }
+                { field: { 'price.salePrice': 1 }, name: this.$settings.shop.sort.price_asc },
+                { field: { 'price.salePrice': -1 }, name: this.$settings.shop.sort.price_desc },
+                { field: { 'review.rating': -1 }, name: this.$settings.shop.sort.rating_desc },
+                { field: { 'review.rating': 1 }, name: this.$settings.shop.sort.rating_asc},
+                { field: { 'name': 1 }, name: this.$settings.shop.sort.name_asc },
+                { field: { 'name': -1 }, name: this.$settings.shop.sort.name_desc },
+                { field: { createdAt: -1 }, name: this.$settings.shop.sort.newest },
+                { field: { createdAt: 1 }, name: this.$settings.shop.sort.oldest }
             ],
         }
     },
@@ -169,11 +170,12 @@ export default {
         this.collections = await this.getCollections();
         this.filters = await this.getFilters();
         this.brands =  await this.getBrands();
+        this.childrensloading = true;
         for (let i = 0; i < this.collections.length; i++) {
             if(this.collections[i].childrens.length>0){
                 this.childrens[`${this.collections[i].slug}`] = await this.getChildrens(this.collections[i].childrens);
             }
-        }
+        }this.childrensloading = false;
     },
     watch:{
         async "$route.query.search"(){

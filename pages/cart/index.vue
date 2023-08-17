@@ -29,7 +29,7 @@
               </nuxt-link>
           </div>
         </div>
-        <div v-if="upsells.length > 0" class="px-8">
+        <div v-if="upsells.length > 0" class="px-4">
             <h2 class="text-2xl font-bold mb-2 pl-8">{{ text.upsellsTitle }}</h2>
             <div class="flex flex-wrap" v-if="upsells.length > 0">
                 <template v-for="(upsell, i) in upsells">
