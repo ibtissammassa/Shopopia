@@ -19,7 +19,7 @@ export default {
             description: this.$settings.home.main.description.text,
             showBanner: this.$settings.home.show.main,
             transformImg :this.$store.state.language.code=='AR' ? `transform: scaleX(-1);` : ``
-
+            
         }
     }
 }

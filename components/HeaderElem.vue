@@ -4,8 +4,9 @@
         <header class="relative" v-click-outside="onClickOutside" :style="`background-color: ${backgroundColor}; color:${textColor}`">
             <div class="border-slate-200 border-b flex items-center px-5  md:px-10 py-3 justify-between">
                 <div>
-                    <nuxt-link v-if="$settings.header.logo" to="/">
-                        <img :src="$settings.header.logo.src" class="h-14 w-36 lg:h-16 lg:w-44">
+                    <nuxt-link to="/">
+                        <img v-if="this.$settings.header.logo" :src="this.$settings.header.logo.src" class="h-14 w-36 lg:h-16 lg:w-44">
+                        <img v-else src="../assets/images/logo.png" class="h-14 w-36 lg:h-16 lg:w-44">
                     </nuxt-link>
                 </div>
                 <div v-if="showMenu" class="gap-x-6 hidden lg:flex">
