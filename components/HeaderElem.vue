@@ -2,10 +2,10 @@
     <div>
         <AppLoader placement="BEFORE_HEADER"></AppLoader>
         <header class="relative" v-click-outside="onClickOutside" :style="`background-color: ${backgroundColor}; color:${textColor}`">
-            <div class="border-slate-200 border-b flex items-center px-5  md:px-10 py-2 justify-between">
+            <div class="border-slate-200 border-b flex items-center px-5  md:px-10 py-3 justify-between">
                 <div>
-                    <nuxt-link to="/">
-                        <img :src="logo_src" class="h-14 w-36 lg:h-16 lg:w-44">
+                    <nuxt-link v-if="$settings.header.logo" to="/">
+                        <img :src="$settings.header.logo.src" class="h-14 w-36 lg:h-16 lg:w-44">
                     </nuxt-link>
                 </div>
                 <div v-if="showMenu" class="gap-x-6 hidden lg:flex">
@@ -15,8 +15,8 @@
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                         </svg>
                     </button>
-                    <div v-for="item in menu" :key="item.id" class="py-2">
-                        <nuxt-link :to="item.url">{{item.text}}</nuxt-link>
+                    <div v-if="menu" class="gap-x-6 hidden lg:flex">
+                        <nuxt-link v-for="item in menu.items" :key="item.id" :to="item.url" class="py-2">{{item.text}}</nuxt-link>
                     </div>
                 </div>
                 <SearchBar class="hidden lg:block" v-if="showSearch" :search_placeholder="search_placeholder"/>
@@ -52,12 +52,10 @@
 
 <script>
 export default {
-    props:['logo_src'],
     data(){
         return{
-            showLogo: this.$settings.header.show.logo,
             showMenu: this.$settings.header.show.menu,
-            menu: this.$settings.header.menu.header_menu.items,
+            menu: this.$settings.header.menu.header_menu,
             showSearch: this.$settings.header.show.search,
             search_placeholder: this.$settings.header.search_placeholder,
             showWishlist: this.$settings.header.show.wishlist,

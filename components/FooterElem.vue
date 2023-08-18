@@ -19,19 +19,19 @@
                         </div>
                     </div>
                     <div class="flex gap-x-24 gap-y-1 flex-col md:flex-row">
-                        <div class="gap-y-3 flex flex-col pt-9">
+                        <div v-if="$settings.footer.menu.menu1" class="gap-y-3 flex flex-col pt-9">
                             <h3 @click="toggleMenu(1)" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title1 }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg></h3>
                             <nuxt-link :class="showmenu1?'':'hidden'" class="hover-color-primary transform" :to="item.url" v-for="item in $settings.footer.menu.menu1.items" :key="item.id">{{ item.text }}</nuxt-link>
                         </div>
-                        <div class="gap-y-3 flex flex-col pt-9">
+                        <div v-if="$settings.footer.menu.menu2" class="gap-y-3 flex flex-col pt-9">
                             <h3 @click="toggleMenu(2)" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title2 }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg></h3>
                             <nuxt-link :class="showmenu2?'':'hidden'" class="hover-color-primary transform" :to="item.url" v-for="item in $settings.footer.menu.menu2.items" :key="item.id">{{ item.text }}</nuxt-link>
                         </div>
-                        <div class="gap-y-3 flex flex-col pt-9">
+                        <div v-if="$settings.footer.menu.menu3" class="gap-y-3 flex flex-col pt-9">
                             <h3 @click="toggleMenu(3)" class="flex gap-x-1 items-center cursor-pointer">{{ $settings.footer.menu.title3 }}<svg class="-mr-1 h-4 w-4 text-black" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                             </svg></h3>

@@ -1,0 +1,3381 @@
+{
+    "team": {
+        "_id": "5f21374a175b5e8e309be827",
+        "name": "DEVELOPMENT",
+        "url": "https://market.storeino.com/storeino/"
+    },
+    "config": {
+        "schema": {
+            "fields": {
+                "products": [
+                    "name",
+                    "slug",
+                    "images",
+                    "price",
+                    "variants",
+                    "outStock",
+                    "type",
+                    "quantity",
+                    "tags",
+                    "collections.name",
+                    "collections.slug",
+                    "collections.image",
+                    "translates"
+                ],
+                "collections": [
+                    "name",
+                    "slug",
+                    "image",
+                    "translates",
+                    "childrens"
+                ],
+                "images": [
+                    "src",
+                    "title"
+                ],
+                "menus": [],
+                "pages": [],
+                "brands": []
+            },
+            "ids": {
+                "collections": [
+                    "64b11e5be81e2618cd1f282f",
+                    "64b11e3fe81e2618cd1f2828",
+                    "64b11d3de81e2618cd1f2821",
+                    "64b11cffe81e2618cd1f281a",
+                    "64b11e99e81e2618cd1f283d",
+                    "64b11e81e81e2618cd1f2836",
+                    "64b11e5be81e2618cd1f282f",
+                    "64b11e3fe81e2618cd1f2828",
+                    "64b11d3de81e2618cd1f2821",
+                    "64b11cffe81e2618cd1f281a"
+                ],
+                "products": [
+                    "64b50cb244c69b1916a4bf39",
+                    "64b50c3d44c69b1916a4bf15",
+                    "64b50c0544c69b1916a4befd",
+                    "64b50ba944c69b1916a4becc",
+                    "64b50d6244c69b1916a4bf98",
+                    "64b50d2344c69b1916a4bf7e",
+                    "64b50ceb44c69b1916a4bf5a",
+                    "64b50c0544c69b1916a4befd",
+                    "64b6643a44c69b1916a4c382",
+                    "64b663ec44c69b1916a4c35f",
+                    "64b50e4c44c69b1916a4c010",
+                    "64b50e1944c69b1916a4bffb",
+                    "64b50d9e44c69b1916a4bfad",
+                    "64b6649c44c69b1916a4c39f",
+                    "64b50e4c44c69b1916a4c010",
+                    "64b50d6244c69b1916a4bf98",
+                    "64b50d2344c69b1916a4bf7e",
+                    "64b50c3d44c69b1916a4bf15"
+                ],
+                "images": [
+                    "64af021ce81e2618cd1f217f",
+                    "64aff050e81e2618cd1f24dd"
+                ],
+                "menus": [
+                    "64af0fe4e81e2618cd1f2185",
+                    "64ccd1f88589fc1baa1425fd",
+                    "64ccc94e8589fc1baa1425bd",
+                    "64ccc94e8589fc1baa1425bd",
+                    "64ccc94e8589fc1baa1425bd"
+                ],
+                "pages": [],
+                "brands": []
+            }
+        },
+        "settings": {
+            "tabs": [
+                {
+                    "name": "Global",
+                    "sections": [
+                        {
+                            "name": "header_top",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "header_color",
+                                    "values": [
+                                        {
+                                            "name": "background",
+                                            "note": "",
+                                            "path": "header_top.header_color.background",
+                                            "type": "tc_gradient",
+                                            "translatable": false,
+                                            "value": [
+                                                "#003d29"
+                                            ],
+                                            "notes": "003d29"
+                                        },
+                                        {
+                                            "name": "color",
+                                            "note": "",
+                                            "path": "header_top.header_color.color",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#ffffff"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "phone",
+                                    "values": [
+                                        {
+                                            "name": "phone",
+                                            "note": "",
+                                            "path": "header_top.phone",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "0123456789",
+                                            "inputType": "number"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "message",
+                                    "values": [
+                                        {
+                                            "name": "message",
+                                            "note": "",
+                                            "path": "header_top.message",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Free Shipping for all Order of $99",
+                                            "translate": "Free Shipping for all Order of $99"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "enabled disabled",
+                                    "values": [
+                                        {
+                                            "name": "show phone",
+                                            "note": "",
+                                            "path": "header_top.show.phone",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show message",
+                                            "note": "",
+                                            "path": "header_top.show.message",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show language",
+                                            "note": "",
+                                            "path": "header_top.show.language",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show currency",
+                                            "note": "",
+                                            "path": "header_top.show.currency",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "header",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "logo",
+                                    "values": [
+                                        {
+                                            "name": "logo",
+                                            "note": "",
+                                            "path": "header.logo",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": "64af021ce81e2618cd1f217f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "menu",
+                                    "values": [
+                                        {
+                                            "name": "header menu",
+                                            "note": "",
+                                            "path": "header.menu.header_menu",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": "64af0fe4e81e2618cd1f2185"
+                                        },
+                                        {
+                                            "name": "mobile menu",
+                                            "note": "",
+                                            "path": "header.menu.mobile_menu",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": "64ccd1f88589fc1baa1425fd"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Search",
+                                    "values": [
+                                        {
+                                            "name": "search placeholder",
+                                            "note": "",
+                                            "path": "header.search_placeholder",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Search",
+                                            "translate": "Search"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "enabled disabled",
+                                    "values": [
+                                        {
+                                            "name": "show menu",
+                                            "note": "",
+                                            "path": "header.show.menu",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show search",
+                                            "note": "",
+                                            "path": "header.show.search",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "cart",
+                                            "note": "",
+                                            "path": "header.show.cart",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "header color",
+                                    "values": [
+                                        {
+                                            "name": "background color",
+                                            "note": "",
+                                            "path": "header.color.background",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#ffffff"
+                                        },
+                                        {
+                                            "name": "text color",
+                                            "note": "",
+                                            "path": "header.color.text",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#000000"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Categories",
+                                    "values": [
+                                        {
+                                            "name": "show categories",
+                                            "note": "",
+                                            "path": "header.show.categoriesMenu",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "categories",
+                                            "note": "",
+                                            "path": "header.collections",
+                                            "type": "tc_collection",
+                                            "translatable": false,
+                                            "value": [
+                                                "64b11e5be81e2618cd1f282f",
+                                                "64b11e3fe81e2618cd1f2828",
+                                                "64b11d3de81e2618cd1f2821",
+                                                "64b11cffe81e2618cd1f281a"
+                                            ]
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "header.categories.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Our Categories",
+                                            "translate": "Our Categories"
+                                        },
+                                        {
+                                            "name": "button",
+                                            "note": "",
+                                            "path": "header.categories.buttonText",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Categories",
+                                            "translate": "Categories"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "whishlist",
+                                    "values": [
+                                        {
+                                            "name": "show wishlist",
+                                            "note": "",
+                                            "path": "header.show.wishlist",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "header.wishlist.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "wishlist",
+                                            "translate": "wishlist"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Cart",
+                                    "values": [
+                                        {
+                                            "name": "show cart",
+                                            "note": "",
+                                            "path": "header.show.cart",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "header.cart.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Cart",
+                                            "translate": "Cart"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Colors",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "primary color",
+                                    "values": [
+                                        {
+                                            "name": "primaryColor",
+                                            "note": "",
+                                            "path": "colors.primaryColor",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#003d29",
+                                            "notes": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "secondary color",
+                                    "values": [
+                                        {
+                                            "name": "secondary color",
+                                            "note": "",
+                                            "path": "colors.secondaryColor",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#786b5e",
+                                            "notes": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "footer",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "description",
+                                    "values": [
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "footer.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+                                            "translate": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Payments",
+                                    "values": [
+                                        {
+                                            "name": "Visa",
+                                            "note": "",
+                                            "path": "footer.payment.visa",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Mastercard",
+                                            "note": "",
+                                            "path": "footer.payment.mastercard",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Paypal",
+                                            "note": "",
+                                            "path": "footer.payment.paypal",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Apple Pay",
+                                            "note": "",
+                                            "path": "footer.payment.applepay",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Amazon Pay",
+                                            "note": "",
+                                            "path": "footer.payment.amazonpay",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Google Pay",
+                                            "note": "",
+                                            "path": "footer.payment.googlepay",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "payments title",
+                                            "note": "",
+                                            "path": "footer.payment.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Accepted Payments",
+                                            "translate": "Accepted Payments"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "social media",
+                                    "values": [
+                                        {
+                                            "name": "social media title",
+                                            "note": "",
+                                            "path": "footer.socialmedia.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Follow Us",
+                                            "translate": "Follow Us"
+                                        },
+                                        {
+                                            "name": "Facebook",
+                                            "note": "",
+                                            "path": "footer.socialmedia.url.facebook",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": ""
+                                        },
+                                        {
+                                            "name": "Instagram",
+                                            "note": "",
+                                            "path": "footer.socialmedia.url.instagram",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://www.instagram.com/"
+                                        },
+                                        {
+                                            "name": "Twitter",
+                                            "note": "",
+                                            "path": "footer.socialmedia.url.twitter",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://twitter.com/"
+                                        },
+                                        {
+                                            "name": "Youtube",
+                                            "note": "",
+                                            "path": "footer.socialmedia.url.youtube",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://www.youtube.com/"
+                                        },
+                                        {
+                                            "name": "Linkedin",
+                                            "note": "",
+                                            "path": "footer.socialmedia.url.linkedin",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://www.linkedin.com/"
+                                        },
+                                        {
+                                            "name": "Whatsapp",
+                                            "note": "",
+                                            "path": "footer.socialmedia.url.whatsapp",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://web.whatsapp.com/"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Footer Menu",
+                                    "values": [
+                                        {
+                                            "name": "Footer Menu 1",
+                                            "note": "",
+                                            "path": "footer.menu.menu1",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": "64ccc94e8589fc1baa1425bd"
+                                        },
+                                        {
+                                            "name": "menu 1 title",
+                                            "note": "",
+                                            "path": "footer.menu.title1",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Categories",
+                                            "translate": "Categories"
+                                        },
+                                        {
+                                            "name": "Footer Menu 2",
+                                            "note": "",
+                                            "path": "footer.menu.menu2",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": "64ccc94e8589fc1baa1425bd"
+                                        },
+                                        {
+                                            "name": "menu 2 title",
+                                            "note": "",
+                                            "path": "footer.menu.title2",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Useful links",
+                                            "translate": "Useful links"
+                                        },
+                                        {
+                                            "name": "Footer Menu 3",
+                                            "note": "",
+                                            "path": "footer.menu.menu3",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": "64ccc94e8589fc1baa1425bd"
+                                        },
+                                        {
+                                            "name": "menu 3 title",
+                                            "note": "",
+                                            "path": "footer.menu.title3",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Infomation",
+                                            "translate": "Infomation"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "footer.title",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "Shopopia"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Copyright",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "footer.copyright.text",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "Copyright © 2023. All rights reserved. storeino.com"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "pushable": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Home",
+                    "sections": [
+                        {
+                            "name": "main section",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.main.title.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Shopping And Department Store.",
+                                            "translate": "Shopping And Department Store."
+                                        },
+                                        {
+                                            "name": "title color",
+                                            "note": "",
+                                            "path": "home.main.title.color",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#003d29"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "description",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.main.description.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.",
+                                            "translate": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance."
+                                        },
+                                        {
+                                            "name": "color",
+                                            "note": "",
+                                            "path": "home.main.description.color",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#000000"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "background",
+                                    "values": [
+                                        {
+                                            "name": "background image",
+                                            "note": "",
+                                            "path": "home.main.background.image",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": "64aff050e81e2618cd1f24dd"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "button",
+                                    "values": [
+                                        {
+                                            "name": "button text",
+                                            "note": "",
+                                            "path": "home.main.shopNow.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Shop now",
+                                            "translate": "Shop now"
+                                        },
+                                        {
+                                            "name": "button backround color",
+                                            "note": "",
+                                            "path": "home.main.shopNow.color.bg",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#003d29"
+                                        },
+                                        {
+                                            "name": "button text color",
+                                            "note": "",
+                                            "path": "home.main.shopNow.color.text",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#ffffff"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show main section",
+                                    "values": [
+                                        {
+                                            "name": "show main section",
+                                            "note": "",
+                                            "path": "home.show.main",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Categories",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "collections",
+                                    "values": [
+                                        {
+                                            "name": "collections",
+                                            "note": "",
+                                            "path": "home.categories.collections",
+                                            "type": "tc_collection",
+                                            "value": [
+                                                "64b11e99e81e2618cd1f283d",
+                                                "64b11e81e81e2618cd1f2836",
+                                                "64b11e5be81e2618cd1f282f",
+                                                "64b11e3fe81e2618cd1f2828",
+                                                "64b11d3de81e2618cd1f2821",
+                                                "64b11cffe81e2618cd1f281a"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "home.categories.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Shop Our Top Categories",
+                                            "translate": "Shop Our Top Categories"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "color",
+                                    "values": [
+                                        {
+                                            "name": "text color",
+                                            "note": "",
+                                            "path": "home.categories.textColor",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#ffffff"
+                                        },
+                                        {
+                                            "name": "background color",
+                                            "note": "",
+                                            "path": "home.categories.backgroundColor",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#06563b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show categories section",
+                                    "values": [
+                                        {
+                                            "name": "show categories",
+                                            "note": "",
+                                            "path": "home.show.categories",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Products section 1",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.products1.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Today's Best Deals For You!",
+                                            "translate": "Today's Best Deals For You!"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "products",
+                                    "values": [
+                                        {
+                                            "name": "products",
+                                            "note": "",
+                                            "path": "home.products1.products",
+                                            "type": "tc_product",
+                                            "translatable": false,
+                                            "value": [
+                                                "64b50cb244c69b1916a4bf39",
+                                                "64b50c3d44c69b1916a4bf15",
+                                                "64b50c0544c69b1916a4befd",
+                                                "64b50ba944c69b1916a4becc"
+                                            ]
+                                        },
+                                        {
+                                            "name": "collections",
+                                            "note": "",
+                                            "path": "home.products1.collections",
+                                            "type": "tc_collection",
+                                            "translatable": false,
+                                            "value": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show products section 1",
+                                    "values": [
+                                        {
+                                            "name": "products section 1",
+                                            "note": "",
+                                            "path": "home.show.products1",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": [
+                                                false
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Products section 2",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.products2.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Weekly Popular Products",
+                                            "translate": "Weekly Popular Products"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "products",
+                                    "values": [
+                                        {
+                                            "name": "products",
+                                            "note": "",
+                                            "path": "home.products2.products",
+                                            "type": "tc_product",
+                                            "translatable": false,
+                                            "value": [
+                                                "64b50d6244c69b1916a4bf98",
+                                                "64b50d2344c69b1916a4bf7e",
+                                                "64b50ceb44c69b1916a4bf5a",
+                                                "64b50c0544c69b1916a4befd"
+                                            ]
+                                        },
+                                        {
+                                            "name": "collections",
+                                            "note": "",
+                                            "path": "home.products2.collections",
+                                            "type": "tc_collection",
+                                            "translatable": false,
+                                            "value": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show products section 2",
+                                    "values": [
+                                        {
+                                            "name": "products section 2",
+                                            "note": "",
+                                            "path": "home.show.products2",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Posts section",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.posts.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Our Posts",
+                                            "translate": "Our Posts"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show posts section",
+                                    "values": [
+                                        {
+                                            "name": "posts section",
+                                            "note": "",
+                                            "path": "home.show.posts",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "button",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.posts.buttonText",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "more posts",
+                                            "translate": "more posts"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "posts",
+                                    "values": [
+                                        {
+                                            "name": "posts",
+                                            "note": "",
+                                            "path": "home.posts.items",
+                                            "type": "tc_pages",
+                                            "translatable": false,
+                                            "value": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Products section 3",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.products3.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Most Selling Products",
+                                            "translate": "Most Selling Products"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "products",
+                                    "values": [
+                                        {
+                                            "name": "products",
+                                            "note": "",
+                                            "path": "home.products3.products",
+                                            "type": "tc_product",
+                                            "translatable": false,
+                                            "value": [
+                                                "64b6643a44c69b1916a4c382",
+                                                "64b663ec44c69b1916a4c35f",
+                                                "64b50e4c44c69b1916a4c010",
+                                                "64b50e1944c69b1916a4bffb",
+                                                "64b50d9e44c69b1916a4bfad"
+                                            ]
+                                        },
+                                        {
+                                            "name": "collections",
+                                            "note": "",
+                                            "path": "home.products3.collections",
+                                            "type": "tc_collection",
+                                            "translatable": false,
+                                            "value": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show products section 3",
+                                    "values": [
+                                        {
+                                            "name": "products section 3",
+                                            "note": "",
+                                            "path": "home.show.products3",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Products section 4",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "home.products4.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Featured products",
+                                            "translate": "Featured products"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "products",
+                                    "values": [
+                                        {
+                                            "name": "products",
+                                            "note": "",
+                                            "path": "home.products4.products",
+                                            "type": "tc_product",
+                                            "translatable": false,
+                                            "value": [
+                                                "64b6649c44c69b1916a4c39f",
+                                                "64b50e4c44c69b1916a4c010",
+                                                "64b50d6244c69b1916a4bf98",
+                                                "64b50d2344c69b1916a4bf7e",
+                                                "64b50c3d44c69b1916a4bf15"
+                                            ]
+                                        },
+                                        {
+                                            "name": "collections",
+                                            "note": "",
+                                            "path": "home.products4.collections",
+                                            "type": "tc_collection",
+                                            "translatable": false,
+                                            "value": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show products section 4",
+                                    "values": [
+                                        {
+                                            "name": "products section 4",
+                                            "note": "",
+                                            "path": "home.show.products4",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Product Cart",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "buttons",
+                                    "values": [
+                                        {
+                                            "name": "add to cart text",
+                                            "note": "",
+                                            "path": "productCard.addToCart",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Add to cart",
+                                            "translate": "Add to cart"
+                                        },
+                                        {
+                                            "name": "added to cart text",
+                                            "note": "",
+                                            "path": "productCard.inCart",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "In cart !",
+                                            "translate": "In cart !"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Services Section",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Services",
+                                    "values": [
+                                        {
+                                            "name": "show services",
+                                            "note": "",
+                                            "path": "home.show.services",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "home.services.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Our Services",
+                                            "translate": "Our Services"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "FREE SHIPPING",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "home.services.shipping.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "FREE SHIPPING",
+                                            "translate": "FREE SHIPPING"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "home.services.shipping.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Free shipping on all order above $100",
+                                            "translate": "Free shipping on all order above $100"
+                                        },
+                                        {
+                                            "name": "Url",
+                                            "note": "",
+                                            "path": "home.services.shipping.url",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "#"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "SUPPORT 24/7",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "home.services.support.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "SUPPORT 24/7",
+                                            "translate": "SUPPORT 24/7"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "home.services.support.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Contact us 24 hours a day, 7 days a week",
+                                            "translate": "Contact us 24 hours a day, 7 days a week"
+                                        },
+                                        {
+                                            "name": "url",
+                                            "note": "",
+                                            "path": "home.services.support.url",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "#"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "30 DAYS RETURN",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "home.services.return.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "30 DAYS RETURN",
+                                            "translate": "30 DAYS RETURN"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "home.services.return.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Simply return it within 30 days for an exchange.",
+                                            "translate": "Simply return it within 30 days for an exchange."
+                                        },
+                                        {
+                                            "name": "url",
+                                            "note": "",
+                                            "path": "home.services.return.url",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "#"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "100% PAYMENT SECURE",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "home.services.payment.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "100% PAYMENT SECURE",
+                                            "translate": "100% PAYMENT SECURE"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "home.services.payment.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "We ensure secure payment",
+                                            "translate": "We ensure secure payment"
+                                        },
+                                        {
+                                            "name": "url",
+                                            "note": "",
+                                            "path": "home.services.payment.url",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "#"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "shop",
+                    "sections": [
+                        {
+                            "name": "Sidebar",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Display",
+                                    "values": [
+                                        {
+                                            "name": "Show sidebar",
+                                            "note": "",
+                                            "path": "shop.show.sidebar",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Collections",
+                                    "values": [
+                                        {
+                                            "name": "show collections",
+                                            "note": "",
+                                            "path": "shop.show.collections",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "shop.sidebar.titles.collections",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Collections"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Prices",
+                                    "values": [
+                                        {
+                                            "name": "show prices",
+                                            "note": "",
+                                            "path": "shop.show.prices",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "shop.sidebar.titles.prices",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Prices"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Sizes",
+                                    "values": [
+                                        {
+                                            "name": "show sizes",
+                                            "note": "",
+                                            "path": "shop.show.sizes",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "shop.sidebar.titles.sizes",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Sizes"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Colors",
+                                    "values": [
+                                        {
+                                            "name": "show colors",
+                                            "note": "",
+                                            "path": "shop.show.colors",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "shop.sidebar.titles.colors",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Colors"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Tags",
+                                    "values": [
+                                        {
+                                            "name": "show tags",
+                                            "note": "",
+                                            "path": "shop.show.tags",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "shop.sidebar.titles.tags",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Tags"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Brands",
+                                    "values": [
+                                        {
+                                            "name": "show brands",
+                                            "note": "",
+                                            "path": "shop.show.brands",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "shop.sidebar.titles.brands",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Brands"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Shop",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Sort by",
+                                    "values": [
+                                        {
+                                            "name": "Newest",
+                                            "note": "",
+                                            "path": "shop.sort.newest",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Newest"
+                                        },
+                                        {
+                                            "name": "Oldest",
+                                            "note": "",
+                                            "path": "shop.sort.oldest",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Oldest"
+                                        },
+                                        {
+                                            "name": "Name A-Z",
+                                            "note": "",
+                                            "path": "shop.sort.name_asc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Name (A-Z)"
+                                        },
+                                        {
+                                            "name": "Name Z-A",
+                                            "note": "",
+                                            "path": "shop.sort.name_desc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Name (Z-A)"
+                                        },
+                                        {
+                                            "name": "Price Asc",
+                                            "note": "",
+                                            "path": "shop.sort.price_asc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Price (low to high)"
+                                        },
+                                        {
+                                            "name": "Price Desc",
+                                            "note": "",
+                                            "path": "shop.sort.price_desc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Price (high to low)"
+                                        },
+                                        {
+                                            "name": "Rating Asc",
+                                            "note": "",
+                                            "path": "shop.sort.rating_asc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Rating (low to high)"
+                                        },
+                                        {
+                                            "name": "Rating Desc",
+                                            "note": "",
+                                            "path": "shop.sort.rating_desc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Rating (high to low)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "product page",
+                    "sections": [
+                        {
+                            "name": "Product Page Details",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Add To Cart",
+                                    "values": [
+                                        {
+                                            "name": "show",
+                                            "note": "",
+                                            "path": "product.show.addToCart",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "product.addToCart.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Add To Cart",
+                                            "translate": "Add To Cart"
+                                        },
+                                        {
+                                            "name": "in cart  text",
+                                            "note": "",
+                                            "path": "product.inCart.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "In Cart!",
+                                            "translate": "In Cart!"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Buy Now",
+                                    "values": [
+                                        {
+                                            "name": "show",
+                                            "note": "",
+                                            "path": "product.show.buyNow",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "product.buyNow.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Buy Now",
+                                            "translate": "Buy Now"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Related Products",
+                                    "values": [
+                                        {
+                                            "name": "show",
+                                            "note": "",
+                                            "path": "product.show.related",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "product.related.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Related Products",
+                                            "translate": "Related Products"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Items left",
+                                    "values": [
+                                        {
+                                            "name": "show",
+                                            "note": "",
+                                            "path": "product.show.leftItems",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "color",
+                                            "note": "",
+                                            "path": "product.itemsLeft.color",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#ea580c",
+                                            "notes": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Delivery",
+                                    "values": [
+                                        {
+                                            "name": "show Free Delivery",
+                                            "note": "",
+                                            "path": "product.show.freeDelivery",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show Return Delivery",
+                                            "note": "",
+                                            "path": "product.show.returnDelivery",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Free Delivery text",
+                                            "note": "",
+                                            "path": "product.freeDelivery.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Free Delivery",
+                                            "translate": "Free Delivery"
+                                        },
+                                        {
+                                            "name": "Return Delivery text",
+                                            "note": "",
+                                            "path": "product.returnDelivery.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Return Delivery",
+                                            "translate": "Return Delivery"
+                                        },
+                                        {
+                                            "name": "Free Delivery description",
+                                            "note": "",
+                                            "path": "product.freeDelivery.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Free 30 days Delivery Return",
+                                            "translate": "Free 30 days Delivery Return"
+                                        },
+                                        {
+                                            "name": "Return Delivery description",
+                                            "note": "",
+                                            "path": "product.returnDelivery.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Free 30 days Delivery Return",
+                                            "translate": "Free 30 days Delivery Return"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "upsells",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "product.upsells.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Special offer for you",
+                                            "translate": "Special offer for you"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "description",
+                                    "values": [
+                                        {
+                                            "name": "button text",
+                                            "note": "",
+                                            "path": "product.description.button",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Description",
+                                            "translate": "Description"
+                                        },
+                                        {
+                                            "name": "no description text",
+                                            "note": "",
+                                            "path": "product.description.noDescription",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "No Description",
+                                            "translate": "No Description"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Reviews",
+                                    "values": [
+                                        {
+                                            "name": "button text",
+                                            "note": "",
+                                            "path": "product.reviews.button",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Reviews",
+                                            "translate": "Reviews"
+                                        },
+                                        {
+                                            "name": "no reviews text",
+                                            "note": "",
+                                            "path": "product.reviews.noReviews",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "No Reviews",
+                                            "translate": "No Reviews"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "404 page",
+                    "sections": [
+                        {
+                            "name": "404 page",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "text",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "error.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Page not found :/",
+                                            "translate": "Page not found :/"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "error.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "We are sorry, but the page you requested was not found",
+                                            "translate": "We are sorry, but the page you requested was not found"
+                                        },
+                                        {
+                                            "name": "home button",
+                                            "note": "",
+                                            "path": "error.homeButton",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Back Home",
+                                            "translate": "Back Home"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "picture",
+                                    "values": [
+                                        {
+                                            "name": "customize 404 picture ?",
+                                            "note": "",
+                                            "path": "error.customPicture",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": false
+                                        },
+                                        {
+                                            "name": "if yes , your 404 picture :",
+                                            "note": "",
+                                            "path": "error.picture",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "cart page",
+                    "sections": [
+                        {
+                            "name": "Cart",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Text",
+                                    "values": [
+                                        {
+                                            "name": "Title",
+                                            "note": "",
+                                            "path": "cart.text.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Shopping Cart",
+                                            "translate": "Shopping Cart"
+                                        },
+                                        {
+                                            "name": "Empty text",
+                                            "note": "",
+                                            "path": "cart.text.empty",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Your cart is empty!",
+                                            "translate": "Your cart is empty!"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Buttons",
+                                    "values": [
+                                        {
+                                            "name": "back to shop",
+                                            "note": "",
+                                            "path": "cart.text.backToShop",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Back To Shop",
+                                            "translate": "Back To Shop"
+                                        },
+                                        {
+                                            "name": "checkout",
+                                            "note": "",
+                                            "path": "cart.text.checkout",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Checkout",
+                                            "translate": "Checkout"
+                                        },
+                                        {
+                                            "name": "Show back to shop",
+                                            "note": "",
+                                            "path": "cart.show.backToShop",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Upsell",
+                                    "values": [
+                                        {
+                                            "name": "show upsell",
+                                            "note": "",
+                                            "path": "cart.show.upsell",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "cart.text.upsellsTitle",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Special offer for you"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "wishlist page",
+                    "sections": [
+                        {
+                            "name": "wishlist",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Text",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "wishlist.text.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "My Wishlist",
+                                            "translate": "My Wishlist"
+                                        },
+                                        {
+                                            "name": "empty text",
+                                            "note": "",
+                                            "path": "wishlist.text.empty",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Your wishlist is empty!",
+                                            "translate": "Your wishlist is empty!"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "buttons",
+                                    "values": [
+                                        {
+                                            "name": "back to shop",
+                                            "note": "",
+                                            "path": "wishlist.text.backToShop",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Back To Shop",
+                                            "translate": "Back To Shop"
+                                        },
+                                        {
+                                            "name": "show back to shop",
+                                            "note": "",
+                                            "path": "wishlist.show.backToShop",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "add to cart",
+                                            "note": "",
+                                            "path": "wishlist.text.addToCart",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "All To Cart",
+                                            "translate": "All To Cart"
+                                        },
+                                        {
+                                            "name": "show add to cart",
+                                            "note": "",
+                                            "path": "wishlist.show.addToCart",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "thank you page",
+                    "sections": [
+                        {
+                            "name": "Thanks Text",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Thanks Text",
+                                    "values": [
+                                        {
+                                            "name": "Title",
+                                            "note": "",
+                                            "path": "thanks.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Thanks",
+                                            "translate": "Thanks"
+                                        },
+                                        {
+                                            "name": "Description",
+                                            "note": "",
+                                            "path": "thanks.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Thank you for your order",
+                                            "translate": "Thank you for your order"
+                                        },
+                                        {
+                                            "name": "Back to Shop Text",
+                                            "note": "",
+                                            "path": "thanks.backToShop",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Back to shop",
+                                            "translate": "Back to shop"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Post Page",
+                    "sections": [
+                        {
+                            "name": "Post Details",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Related Posts",
+                                    "values": [
+                                        {
+                                            "name": "Show related posts",
+                                            "note": "",
+                                            "path": "post.show.related",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "post.related.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Related posts",
+                                            "translate": "Related posts"
+                                        },
+                                        {
+                                            "name": "All posts text",
+                                            "note": "",
+                                            "path": "post.related.allPosts",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "All Posts",
+                                            "translate": "All Posts"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Creator details",
+                                    "values": [
+                                        {
+                                            "name": "show creator",
+                                            "note": "",
+                                            "path": "post.show.creator",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show created date",
+                                            "note": "",
+                                            "path": "post.show.date",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "text",
+                                            "note": "",
+                                            "path": "post.creator.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "by:",
+                                            "translate": "by:"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Share Buttons",
+                                    "values": [
+                                        {
+                                            "name": "display",
+                                            "note": "",
+                                            "path": "post.show.share",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Share Buttons Title",
+                                            "note": "",
+                                            "path": "post.share.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Share"
+                                        },
+                                        {
+                                            "name": "show whatsapp",
+                                            "note": "",
+                                            "path": "post.show.whatsapp",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show facebook",
+                                            "note": "",
+                                            "path": "post.show.facebook",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show twitter",
+                                            "note": "",
+                                            "path": "post.show.twitter",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show linkedin",
+                                            "note": "",
+                                            "path": "post.show.linkedin",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Blog Page",
+                    "sections": [
+                        {
+                            "name": "Blog details",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Posts",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "blog.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Our latest posts",
+                                            "translate": "Our latest posts"
+                                        },
+                                        {
+                                            "name": "Empty Text",
+                                            "note": "",
+                                            "path": "blog.emptyText",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "No blogs",
+                                            "translate": "No blogs"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Sort by",
+                                    "values": [
+                                        {
+                                            "name": "Newest",
+                                            "note": "",
+                                            "path": "blog.sort.newest",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Newest"
+                                        },
+                                        {
+                                            "name": "Oldest",
+                                            "note": "",
+                                            "path": "blog.sort.oldest",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Oldest"
+                                        },
+                                        {
+                                            "name": "Name A-Z",
+                                            "note": "",
+                                            "path": "blog.sort.name_asc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Name (A-Z)"
+                                        },
+                                        {
+                                            "name": "Name Z-A",
+                                            "note": "",
+                                            "path": "blog.sort.name_desc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Name (Z-A)"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Sidebar",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "Display",
+                                    "values": [
+                                        {
+                                            "name": "show sidebar",
+                                            "note": "",
+                                            "path": "blog.show.sidebar",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Categories",
+                                    "values": [
+                                        {
+                                            "name": "show categories",
+                                            "note": "",
+                                            "path": "blog.show.categories",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "Categories Title",
+                                            "note": "",
+                                            "path": "blog.categories.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Categories"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Products",
+                                    "values": [
+                                        {
+                                            "name": "show products",
+                                            "note": "",
+                                            "path": "blog.show.products",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "blog.products.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "From shop"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "currentLang": null
+        },
+        "current": {
+            "translates": [
+                {
+                    "language": "FR",
+                    "properties": [
+                        {
+                            "name": "header_top.message",
+                            "value": "Livraison gratuite pour toutes les commandes de 99 dollars."
+                        },
+                        {
+                            "name": "header.search_placeholder",
+                            "value": "Recherche"
+                        },
+                        {
+                            "name": "header.categories.title",
+                            "value": "Nos catégories"
+                        },
+                        {
+                            "name": "header.categories.buttonText",
+                            "value": "Catégories"
+                        },
+                        {
+                            "name": "header.wishlist.text",
+                            "value": "Souhaits"
+                        },
+                        {
+                            "name": "header.cart.text",
+                            "value": "Panier"
+                        },
+                        {
+                            "name": "footer.description",
+                            "value": " Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit."
+                        },
+                        {
+                            "name": "footer.payment.title",
+                            "value": "Modes de paiement acceptés"
+                        },
+                        {
+                            "name": "footer.socialmedia.title",
+                            "value": "Suivez-nous"
+                        },
+                        {
+                            "name": "footer.menu.title1",
+                            "value": "Catégories"
+                        },
+                        {
+                            "name": "footer.menu.title2",
+                            "value": "Liens utiles"
+                        },
+                        {
+                            "name": "footer.menu.title3",
+                            "value": "Infomation"
+                        },
+                        {
+                            "name": "home.main.title.text",
+                            "value": "Magasin de shopping et grands magasins."
+                        },
+                        {
+                            "name": "home.main.description.text",
+                            "value": "Faire du shopping est un passe-temps relaxant pour moi, ce qui est parfois préoccupant pour l'équilibre bancaire."
+                        },
+                        {
+                            "name": "home.main.shopNow.text",
+                            "value": "Magasinez"
+                        },
+                        {
+                            "name": "home.categories.title",
+                            "value": "Découvrez nos catégories phares"
+                        },
+                        {
+                            "name": "home.products1.title",
+                            "value": "Les meilleures offres pour vous !"
+                        },
+                        {
+                            "name": "home.products2.title",
+                            "value": "Produits populaires de la semaine"
+                        },
+                        {
+                            "name": "home.posts.title",
+                            "value": "Nos articles"
+                        },
+                        {
+                            "name": "home.posts.buttonText",
+                            "value": "Plus d'articles"
+                        },
+                        {
+                            "name": "home.products3.title",
+                            "value": "Les produits les plus vendus"
+                        },
+                        {
+                            "name": "home.products4.title",
+                            "value": "Produits en vedette"
+                        },
+                        {
+                            "name": "productCard.addToCart",
+                            "value": " Ajouter au panier"
+                        },
+                        {
+                            "name": "productCard.inCart",
+                            "value": "Dans le panier !"
+                        },
+                        {
+                            "name": "home.services.title",
+                            "value": "Nos services"
+                        },
+                        {
+                            "name": "home.services.shipping.title",
+                            "value": "Livraison gratuite"
+                        },
+                        {
+                            "name": "home.services.shipping.description",
+                            "value": "Livraison gratuite pour toutes les commandes supérieures à 100 dollars"
+                        },
+                        {
+                            "name": "home.services.support.title",
+                            "value": "Assistance 24/7"
+                        },
+                        {
+                            "name": "home.services.support.description",
+                            "value": "Contactez-nous 24 heures sur 24, 7 jours sur 7"
+                        },
+                        {
+                            "name": "home.services.return.title",
+                            "value": "Retour sous 30 jours"
+                        },
+                        {
+                            "name": "home.services.return.description",
+                            "value": "Il vous suffit de le retourner dans les 30 jours pour un échange."
+                        },
+                        {
+                            "name": "home.services.payment.title",
+                            "value": "Paiement sécurisé à 100%"
+                        },
+                        {
+                            "name": "home.services.payment.description",
+                            "value": "Nous assurons un paiement sécurisé"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.collections",
+                            "value": "Collections"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.prices",
+                            "value": "Prix"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.sizes",
+                            "value": "Tailles"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.colors",
+                            "value": "Couleurs"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.tags",
+                            "value": "Tags"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.brands",
+                            "value": "Marques"
+                        },
+                        {
+                            "name": "shop.sort.newest",
+                            "value": "Nouveautés"
+                        },
+                        {
+                            "name": "shop.sort.oldest",
+                            "value": "Les plus anciens"
+                        },
+                        {
+                            "name": "shop.sort.name_asc",
+                            "value": "Nom (A-Z)"
+                        },
+                        {
+                            "name": "shop.sort.name_desc",
+                            "value": "Nom (Z-A)"
+                        },
+                        {
+                            "name": "shop.sort.price_asc",
+                            "value": "Prix (du plus bas au plus élevé)"
+                        },
+                        {
+                            "name": "shop.sort.price_desc",
+                            "value": "Prix (du plus élevé au plus bas)"
+                        },
+                        {
+                            "name": "shop.sort.rating_asc",
+                            "value": "Note (de la plus basse à la plus élevée)"
+                        },
+                        {
+                            "name": "shop.sort.rating_desc",
+                            "value": "Note (de la plus élevée à la plus basse)"
+                        },
+                        {
+                            "name": "product.addToCart.text",
+                            "value": "Ajouter au panier"
+                        },
+                        {
+                            "name": "product.inCart.text",
+                            "value": "Dans le panier"
+                        },
+                        {
+                            "name": "product.buyNow.text",
+                            "value": "Acheter maintenant"
+                        },
+                        {
+                            "name": "product.related.title",
+                            "value": "Produits similaires"
+                        },
+                        {
+                            "name": "product.freeDelivery.text",
+                            "value": "Livraison gratuite"
+                        },
+                        {
+                            "name": "product.returnDelivery.text",
+                            "value": "Retour gratuit"
+                        },
+                        {
+                            "name": "product.freeDelivery.description",
+                            "value": "Livraison gratuite pour les retours pendant 30 jours"
+                        },
+                        {
+                            "name": "product.returnDelivery.description",
+                            "value": "Livraison gratuite pour les retours pendant 30 jours"
+                        },
+                        {
+                            "name": "product.upsells.title",
+                            "value": "Offre spéciale pour vous"
+                        },
+                        {
+                            "name": "product.description.button",
+                            "value": "Description"
+                        },
+                        {
+                            "name": "product.description.noDescription",
+                            "value": "Pas de description"
+                        },
+                        {
+                            "name": "product.reviews.button",
+                            "value": "Avis"
+                        },
+                        {
+                            "name": "product.reviews.noReviews",
+                            "value": "Aucun avis"
+                        },
+                        {
+                            "name": "error.title",
+                            "value": "Page non trouvée :/"
+                        },
+                        {
+                            "name": "error.description",
+                            "value": "Nous sommes désolés, mais la page que vous avez demandée n'a pas été trouvée."
+                        },
+                        {
+                            "name": "error.homeButton",
+                            "value": "page d'accueil"
+                        },
+                        {
+                            "name": "cart.text.title",
+                            "value": "Panier d'achat"
+                        },
+                        {
+                            "name": "cart.text.empty",
+                            "value": "Votre panier est vide !"
+                        },
+                        {
+                            "name": "cart.text.backToShop",
+                            "value": "Retour à la boutique"
+                        },
+                        {
+                            "name": "cart.text.checkout",
+                            "value": "Procéder au paiement"
+                        },
+                        {
+                            "name": "cart.text.upsellsTitle",
+                            "value": "Offre spéciale pour vous"
+                        },
+                        {
+                            "name": "wishlist.text.title",
+                            "value": "Ma liste de souhaits"
+                        },
+                        {
+                            "name": "wishlist.text.empty",
+                            "value": "Votre liste de souhaits est vide !"
+                        },
+                        {
+                            "name": "wishlist.text.backToShop",
+                            "value": "Retour à la boutique"
+                        },
+                        {
+                            "name": "wishlist.text.addToCart",
+                            "value": "Tout au panier"
+                        },
+                        {
+                            "name": "thanks.title",
+                            "value": "Merci"
+                        },
+                        {
+                            "name": "thanks.description",
+                            "value": "Merci pour votre commande"
+                        },
+                        {
+                            "name": "thanks.backToShop",
+                            "value": "Retour à la boutique"
+                        },
+                        {
+                            "name": "post.related.title",
+                            "value": "Articles similaires"
+                        },
+                        {
+                            "name": "post.related.allPosts",
+                            "value": "Tous les articles"
+                        },
+                        {
+                            "name": "post.creator.title",
+                            "value": "par:"
+                        },
+                        {
+                            "name": "post.share.title",
+                            "value": "Partager"
+                        },
+                        {
+                            "name": "blog.title",
+                            "value": "Nos derniers articles"
+                        },
+                        {
+                            "name": "blog.emptyText",
+                            "value": "Aucun blog"
+                        },
+                        {
+                            "name": "blog.sort.newest",
+                            "value": "Nouveautés"
+                        },
+                        {
+                            "name": "blog.sort.oldest",
+                            "value": "Les plus anciens"
+                        },
+                        {
+                            "name": "blog.sort.name_asc",
+                            "value": "Nom (A-Z)"
+                        },
+                        {
+                            "name": "blog.sort.name_desc",
+                            "value": "Nom (Z-A)"
+                        },
+                        {
+                            "name": "blog.categories.title",
+                            "value": "Catégories"
+                        },
+                        {
+                            "name": "blog.products.title",
+                            "value": "Depuis la boutique"
+                        }
+                    ]
+                },
+                {
+                    "language": "AR",
+                    "properties": [
+                        {
+                            "name": "header_top.message",
+                            "value": "شحن مجاني لجميع الطلبات بقيمة 99 دولار"
+                        },
+                        {
+                            "name": "header.search_placeholder",
+                            "value": "بحث"
+                        },
+                        {
+                            "name": "header.categories.title",
+                            "value": "فئاتنا"
+                        },
+                        {
+                            "name": "header.categories.buttonText",
+                            "value": " فئاتنا"
+                        },
+                        {
+                            "name": "header.wishlist.text",
+                            "value": "قائمة الرغبات"
+                        },
+                        {
+                            "name": "header.cart.text",
+                            "value": "السلة"
+                        },
+                        {
+                            "name": "footer.description",
+                            "value": "أميت مينيم موليت نون ديسيرانت أولامكو اسيت ألكوا دولور دو أميت سينت. فيليت أوفيسيا كونسيكوات دويس أنيم فيليت موليت."
+                        },
+                        {
+                            "name": "footer.payment.title",
+                            "value": "طرق الدفع المقبولة"
+                        },
+                        {
+                            "name": "footer.socialmedia.title",
+                            "value": "تابِعنا"
+                        },
+                        {
+                            "name": "footer.menu.title1",
+                            "value": "فئاتنا"
+                        },
+                        {
+                            "name": "footer.menu.title2",
+                            "value": "روابط مفيدة"
+                        },
+                        {
+                            "name": "footer.menu.title3",
+                            "value": "معلومات"
+                        },
+                        {
+                            "name": "home.main.title.text",
+                            "value": "متجر تسوق ومحل سلع عامة"
+                        },
+                        {
+                            "name": "home.main.description.text",
+                            "value": "التسوق هواية مريحة بالنسبة لي، وهذا يشكل أحيانًا إزعاجًا لرصيد البنك."
+                        },
+                        {
+                            "name": "home.main.shopNow.text",
+                            "value": "تسوّق الآن"
+                        },
+                        {
+                            "name": "home.categories.title",
+                            "value": "تسوّق أفضل فئاتنا"
+                        },
+                        {
+                            "name": "home.products1.title",
+                            "value": "أفضل العروض لك اليوم"
+                        },
+                        {
+                            "name": "home.products2.title",
+                            "value": "المنتجات الشائعة هذا الأسبوع"
+                        },
+                        {
+                            "name": "home.posts.title",
+                            "value": "منشوراتنا"
+                        },
+                        {
+                            "name": "home.posts.buttonText",
+                            "value": "المزيد من المنشورات"
+                        },
+                        {
+                            "name": "home.products3.title",
+                            "value": "المنتجات الأكثر مبيعًا"
+                        },
+                        {
+                            "name": "home.products4.title",
+                            "value": "منتجاتنا المميزة"
+                        },
+                        {
+                            "name": "productCard.addToCart",
+                            "value": "أضف إلى السلة"
+                        },
+                        {
+                            "name": "productCard.inCart",
+                            "value": "في السلة"
+                        },
+                        {
+                            "name": "home.services.title",
+                            "value": "خدماتنا"
+                        },
+                        {
+                            "name": "home.services.shipping.title",
+                            "value": "شحن مجاني"
+                        },
+                        {
+                            "name": "home.services.shipping.description",
+                            "value": "شحن مجاني لجميع الطلبات التي تزيد عن 100 دولار"
+                        },
+                        {
+                            "name": "home.services.support.title",
+                            "value": "دعم على مدار الساعة"
+                        },
+                        {
+                            "name": "home.services.support.description",
+                            "value": "تواصل معنا على مدار اليوم 24 ساعة، 7 أيام في الأسبوع"
+                        },
+                        {
+                            "name": "home.services.return.title",
+                            "value": "إرجاع خلال 30 يومًا"
+                        },
+                        {
+                            "name": "home.services.return.description",
+                            "value": "قم بالعودة ببساطة خلال 30 يومًا للحصول على تبديل"
+                        },
+                        {
+                            "name": "home.services.payment.title",
+                            "value": "دفع آمن بنسبة 100%"
+                        },
+                        {
+                            "name": "home.services.payment.description",
+                            "value": "نحن نضمن دفع آمن"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.collections",
+                            "value": "الفئات"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.prices",
+                            "value": "الأسعار"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.sizes",
+                            "value": "المقاسات"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.colors",
+                            "value": "الألوان"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.tags",
+                            "value": "العلامات"
+                        },
+                        {
+                            "name": "shop.sidebar.titles.brands",
+                            "value": "العلامات التجارية"
+                        },
+                        {
+                            "name": "shop.sort.newest",
+                            "value": "الأحدث"
+                        },
+                        {
+                            "name": "shop.sort.oldest",
+                            "value": "الأقدم"
+                        },
+                        {
+                            "name": "shop.sort.name_asc",
+                            "value": "الاسم (أ-ي)"
+                        },
+                        {
+                            "name": "shop.sort.name_desc",
+                            "value": "الاسم (ي-أ)"
+                        },
+                        {
+                            "name": "shop.sort.price_asc",
+                            "value": "السعر (من الأدنى إلى الأعلى)"
+                        },
+                        {
+                            "name": "shop.sort.price_desc",
+                            "value": "السعر (من الأعلى إلى الأدنى)"
+                        },
+                        {
+                            "name": "shop.sort.rating_asc",
+                            "value": "التقييم (من الأدنى إلى الأعلى)"
+                        },
+                        {
+                            "name": "shop.sort.rating_desc",
+                            "value": "التقييم (من الأعلى إلى الأدنى)"
+                        },
+                        {
+                            "name": "product.addToCart.text",
+                            "value": "أضف إلى السلة"
+                        },
+                        {
+                            "name": "product.inCart.text",
+                            "value": "في السلة"
+                        },
+                        {
+                            "name": "product.buyNow.text",
+                            "value": "اشترِ الآن"
+                        },
+                        {
+                            "name": "product.related.title",
+                            "value": "المنتجات ذات الصلة"
+                        },
+                        {
+                            "name": "product.freeDelivery.text",
+                            "value": "توصيل مجاني"
+                        },
+                        {
+                            "name": "product.returnDelivery.text",
+                            "value": "توصيل الإرجاع"
+                        },
+                        {
+                            "name": "product.freeDelivery.description",
+                            "value": "توصيل مجاني للإرجاع خلال 30 يومًا"
+                        },
+                        {
+                            "name": "product.returnDelivery.description",
+                            "value": "توصيل مجاني للإرجاع خلال 30 يومًا"
+                        },
+                        {
+                            "name": "product.upsells.title",
+                            "value": "عرض خاص لك"
+                        },
+                        {
+                            "name": "product.description.button",
+                            "value": "وصف"
+                        },
+                        {
+                            "name": "product.description.noDescription",
+                            "value": "لا يوجد وصف "
+                        },
+                        {
+                            "name": "product.reviews.button",
+                            "value": "التقييمات"
+                        },
+                        {
+                            "name": "product.reviews.noReviews",
+                            "value": "لا توجد تقييمات"
+                        },
+                        {
+                            "name": "error.title",
+                            "value": "الصفحة غير موجودة :/"
+                        },
+                        {
+                            "name": "error.description",
+                            "value": "نعتذر، ولكن الصفحة التي طلبتها غير موجودة"
+                        },
+                        {
+                            "name": "error.homeButton",
+                            "value": "الصفحة الرئيسية"
+                        },
+                        {
+                            "name": "cart.text.title",
+                            "value": "سلة التسوق"
+                        },
+                        {
+                            "name": "cart.text.empty",
+                            "value": "سلتك فارغة"
+                        },
+                        {
+                            "name": "cart.text.backToShop",
+                            "value": "العودة للتسوق"
+                        },
+                        {
+                            "name": "cart.text.checkout",
+                            "value": "اتمام الشراء"
+                        },
+                        {
+                            "name": "cart.text.upsellsTitle",
+                            "value": "عرض خاص لك"
+                        },
+                        {
+                            "name": "wishlist.text.title",
+                            "value": "قائمة رغباتي"
+                        },
+                        {
+                            "name": "wishlist.text.empty",
+                            "value": "قائمة رغباتك فارغة"
+                        },
+                        {
+                            "name": "wishlist.text.backToShop",
+                            "value": "العودة للتسوق"
+                        },
+                        {
+                            "name": "wishlist.text.addToCart",
+                            "value": "الكل إلى السلة"
+                        },
+                        {
+                            "name": "thanks.title",
+                            "value": " شكراً"
+                        },
+                        {
+                            "name": "thanks.description",
+                            "value": "شكرًا لطلبك"
+                        },
+                        {
+                            "name": "thanks.backToShop",
+                            "value": "العودة للتسوق"
+                        },
+                        {
+                            "name": "post.related.title",
+                            "value": "المقالات ذات الصلة"
+                        },
+                        {
+                            "name": "post.related.allPosts",
+                            "value": "جميع المقالات"
+                        },
+                        {
+                            "name": "post.creator.title",
+                            "value": "بواسطة:"
+                        },
+                        {
+                            "name": "post.share.title",
+                            "value": "مشاركة"
+                        },
+                        {
+                            "name": "blog.title",
+                            "value": "أحدث مقالاتنا"
+                        },
+                        {
+                            "name": "blog.emptyText",
+                            "value": "لا يوجد مدوّنات"
+                        },
+                        {
+                            "name": "blog.sort.newest",
+                            "value": "الأحدث"
+                        },
+                        {
+                            "name": "blog.sort.oldest",
+                            "value": "الأقدم"
+                        },
+                        {
+                            "name": "blog.sort.name_asc",
+                            "value": "الاسم (أ-ي)"
+                        },
+                        {
+                            "name": "blog.sort.name_desc",
+                            "value": "الاسم (ي-أ)"
+                        },
+                        {
+                            "name": "blog.categories.title",
+                            "value": "التصنيفات"
+                        },
+                        {
+                            "name": "blog.products.title",
+                            "value": "من المتجر"
+                        }
+                    ]
+                }
+            ],
+            "header_top": {
+                "header_color": {
+                    "background": [
+                        "#003d29"
+                    ],
+                    "color": "#ffffff"
+                },
+                "phone": "0123456789",
+                "message": "Free Shipping for all Order of $99",
+                "show": {
+                    "phone": true,
+                    "message": true,
+                    "language": true,
+                    "currency": true
+                }
+            },
+            "header": {
+                "logo": "64af021ce81e2618cd1f217f",
+                "menu": {
+                    "header_menu": "64af0fe4e81e2618cd1f2185",
+                    "mobile_menu": "64ccd1f88589fc1baa1425fd"
+                },
+                "search_placeholder": "Search",
+                "show": {
+                    "menu": true,
+                    "search": true,
+                    "cart": true,
+                    "categoriesMenu": true,
+                    "wishlist": true
+                },
+                "color": {
+                    "background": "#ffffff",
+                    "text": "#000000"
+                },
+                "collections": [
+                    "64b11e5be81e2618cd1f282f",
+                    "64b11e3fe81e2618cd1f2828",
+                    "64b11d3de81e2618cd1f2821",
+                    "64b11cffe81e2618cd1f281a"
+                ],
+                "categories": {
+                    "title": "Our Categories",
+                    "buttonText": "Categories"
+                },
+                "wishlist": {
+                    "text": "wishlist"
+                },
+                "cart": {
+                    "text": "Cart"
+                }
+            },
+            "colors": {
+                "primaryColor": "#003d29",
+                "secondaryColor": "#786b5e"
+            },
+            "footer": {
+                "description": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+                "payment": {
+                    "visa": true,
+                    "mastercard": true,
+                    "paypal": true,
+                    "applepay": true,
+                    "amazonpay": true,
+                    "googlepay": true,
+                    "title": "Accepted Payments"
+                },
+                "socialmedia": {
+                    "title": "Follow Us",
+                    "url": {
+                        "facebook": "",
+                        "instagram": "https://www.instagram.com/",
+                        "twitter": "https://twitter.com/",
+                        "youtube": "https://www.youtube.com/",
+                        "linkedin": "https://www.linkedin.com/",
+                        "whatsapp": "https://web.whatsapp.com/"
+                    }
+                },
+                "menu": {
+                    "menu1": "64ccc94e8589fc1baa1425bd",
+                    "title1": "Categories",
+                    "menu2": "64ccc94e8589fc1baa1425bd",
+                    "title2": "Useful links",
+                    "menu3": "64ccc94e8589fc1baa1425bd",
+                    "title3": "Infomation"
+                },
+                "title": "Shopopia",
+                "copyright": {
+                    "text": "Copyright © 2023. All rights reserved. storeino.com"
+                }
+            },
+            "home": {
+                "main": {
+                    "title": {
+                        "text": "Shopping And Department Store.",
+                        "color": "#003d29"
+                    },
+                    "description": {
+                        "text": "Shopping is a bit of a relaxing hobby for me, which is sometimes troubling for the bank balance.",
+                        "color": "#000000"
+                    },
+                    "background": {
+                        "image": "64aff050e81e2618cd1f24dd"
+                    },
+                    "shopNow": {
+                        "text": "Shop now",
+                        "color": {
+                            "bg": "#003d29",
+                            "text": "#ffffff"
+                        }
+                    }
+                },
+                "show": {
+                    "main": true,
+                    "categories": true,
+                    "products1": [
+                        false
+                    ],
+                    "products2": true,
+                    "posts": true,
+                    "products3": true,
+                    "products4": true,
+                    "services": true
+                },
+                "categories": {
+                    "collections": [
+                        "64b11e99e81e2618cd1f283d",
+                        "64b11e81e81e2618cd1f2836",
+                        "64b11e5be81e2618cd1f282f",
+                        "64b11e3fe81e2618cd1f2828",
+                        "64b11d3de81e2618cd1f2821",
+                        "64b11cffe81e2618cd1f281a"
+                    ],
+                    "title": "Shop Our Top Categories",
+                    "textColor": "#ffffff",
+                    "backgroundColor": "#06563b"
+                },
+                "products1": {
+                    "title": "Today's Best Deals For You!",
+                    "products": [
+                        "64b50cb244c69b1916a4bf39",
+                        "64b50c3d44c69b1916a4bf15",
+                        "64b50c0544c69b1916a4befd",
+                        "64b50ba944c69b1916a4becc"
+                    ],
+                    "collections": []
+                },
+                "products2": {
+                    "title": "Weekly Popular Products",
+                    "products": [
+                        "64b50d6244c69b1916a4bf98",
+                        "64b50d2344c69b1916a4bf7e",
+                        "64b50ceb44c69b1916a4bf5a",
+                        "64b50c0544c69b1916a4befd"
+                    ],
+                    "collections": []
+                },
+                "posts": {
+                    "title": "Our Posts",
+                    "buttonText": "more posts",
+                    "items": []
+                },
+                "products3": {
+                    "title": "Most Selling Products",
+                    "products": [
+                        "64b6643a44c69b1916a4c382",
+                        "64b663ec44c69b1916a4c35f",
+                        "64b50e4c44c69b1916a4c010",
+                        "64b50e1944c69b1916a4bffb",
+                        "64b50d9e44c69b1916a4bfad"
+                    ],
+                    "collections": []
+                },
+                "products4": {
+                    "title": "Featured products",
+                    "products": [
+                        "64b6649c44c69b1916a4c39f",
+                        "64b50e4c44c69b1916a4c010",
+                        "64b50d6244c69b1916a4bf98",
+                        "64b50d2344c69b1916a4bf7e",
+                        "64b50c3d44c69b1916a4bf15"
+                    ],
+                    "collections": []
+                },
+                "services": {
+                    "title": "Our Services",
+                    "shipping": {
+                        "title": "FREE SHIPPING",
+                        "description": "Free shipping on all order above $100",
+                        "url": "#"
+                    },
+                    "support": {
+                        "title": "SUPPORT 24/7",
+                        "description": "Contact us 24 hours a day, 7 days a week",
+                        "url": "#"
+                    },
+                    "return": {
+                        "title": "30 DAYS RETURN",
+                        "description": "Simply return it within 30 days for an exchange.",
+                        "url": "#"
+                    },
+                    "payment": {
+                        "title": "100% PAYMENT SECURE",
+                        "description": "We ensure secure payment",
+                        "url": "#"
+                    }
+                }
+            },
+            "productCard": {
+                "addToCart": "Add to cart",
+                "inCart": "In cart !"
+            },
+            "shop": {
+                "show": {
+                    "sidebar": true,
+                    "collections": true,
+                    "prices": true,
+                    "sizes": true,
+                    "colors": true,
+                    "tags": true,
+                    "brands": true
+                },
+                "sidebar": {
+                    "titles": {
+                        "collections": "Collections",
+                        "prices": "Prices",
+                        "sizes": "Sizes",
+                        "colors": "Colors",
+                        "tags": "Tags",
+                        "brands": "Brands"
+                    }
+                },
+                "sort": {
+                    "newest": "Newest",
+                    "oldest": "Oldest",
+                    "name_asc": "Name (A-Z)",
+                    "name_desc": "Name (Z-A)",
+                    "price_asc": "Price (low to high)",
+                    "price_desc": "Price (high to low)",
+                    "rating_asc": "Rating (low to high)",
+                    "rating_desc": "Rating (high to low)"
+                }
+            },
+            "product": {
+                "show": {
+                    "addToCart": true,
+                    "buyNow": true,
+                    "related": true,
+                    "leftItems": true,
+                    "freeDelivery": true,
+                    "returnDelivery": true
+                },
+                "addToCart": {
+                    "text": "Add To Cart"
+                },
+                "inCart": {
+                    "text": "In Cart!"
+                },
+                "buyNow": {
+                    "text": "Buy Now"
+                },
+                "related": {
+                    "title": "Related Products"
+                },
+                "itemsLeft": {
+                    "color": "#ea580c"
+                },
+                "freeDelivery": {
+                    "text": "Free Delivery",
+                    "description": "Free 30 days Delivery Return"
+                },
+                "returnDelivery": {
+                    "text": "Return Delivery",
+                    "description": "Free 30 days Delivery Return"
+                },
+                "upsells": {
+                    "title": "Special offer for you"
+                },
+                "description": {
+                    "button": "Description",
+                    "noDescription": "No Description"
+                },
+                "reviews": {
+                    "button": "Reviews",
+                    "noReviews": "No Reviews"
+                }
+            },
+            "error": {
+                "title": "Page not found :/",
+                "description": "We are sorry, but the page you requested was not found",
+                "homeButton": "Back Home",
+                "customPicture": false,
+                "picture": null
+            },
+            "cart": {
+                "text": {
+                    "title": "Shopping Cart",
+                    "empty": "Your cart is empty!",
+                    "backToShop": "Back To Shop",
+                    "checkout": "Checkout",
+                    "upsellsTitle": "Special offer for you"
+                },
+                "show": {
+                    "backToShop": true,
+                    "upsell": true
+                }
+            },
+            "wishlist": {
+                "text": {
+                    "title": "My Wishlist",
+                    "empty": "Your wishlist is empty!",
+                    "backToShop": "Back To Shop",
+                    "addToCart": "All To Cart"
+                },
+                "show": {
+                    "backToShop": true,
+                    "addToCart": true
+                }
+            },
+            "thanks": {
+                "title": "Thanks",
+                "description": "Thank you for your order",
+                "backToShop": "Back to shop"
+            },
+            "post": {
+                "show": {
+                    "related": true,
+                    "creator": true,
+                    "date": true,
+                    "share": true,
+                    "whatsapp": true,
+                    "facebook": true,
+                    "twitter": true,
+                    "linkedin": true
+                },
+                "related": {
+                    "title": "Related posts",
+                    "allPosts": "All Posts"
+                },
+                "creator": {
+                    "title": "by:"
+                },
+                "share": {
+                    "title": "Share"
+                }
+            },
+            "blog": {
+                "title": "Our latest posts",
+                "emptyText": "No blogs",
+                "sort": {
+                    "newest": "Newest",
+                    "oldest": "Oldest",
+                    "name_asc": "Name (A-Z)",
+                    "name_desc": "Name (Z-A)"
+                },
+                "show": {
+                    "sidebar": true,
+                    "categories": true,
+                    "products": true
+                },
+                "categories": {
+                    "title": "Categories"
+                },
+                "products": {
+                    "title": "From shop"
+                }
+            }
+        }
+    },
+    "images": [
+        "https://storeno.b-cdn.net/stores/10-2021/1635522810596.png"
+    ],
+    "isActive": true,
+    "autoRenew": false,
+    "_id": "64ad498de81e2618cd1ef296",
+    "expiryDate": "2050-12-12T00:00:00.000Z",
+    "name": "Ibtissam's",
+    "url": "/themes/Ibtissam's",
+    "route": "Ibtissam's",
+    "defaults": [],
+    "paymentType": "yearly",
+    "payments": [],
+    "price": 22,
+    "description": "✔ Simple and easy theme to use ✔ Well presented and convertible store and product page ✔ SEO optimized ✔ Responsive to all devices",
+    "publicName": "Multipurpose Responsive E-commerce Template",
+    "storeId": "64ad485153e57422dfea1ecb",
+    "createdAt": "2023-07-11T12:22:37.963Z",
+    "updatedAt": "2023-08-17T09:39:55.099Z",
+    "__v": 0
+}

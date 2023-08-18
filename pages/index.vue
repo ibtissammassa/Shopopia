@@ -34,11 +34,11 @@
         }
     },
     async fetch(){
-      let filter = { status: 'PUBLISH',limit: 4 };
+      const filter = { status: 'PUBLISH',limit: 4 };
         if(this.$settings.home.products1.collections.length > 0){
           filter['collections._id-in'] = this.$settings.home.products1.collections.map(c=>c._id);
           this.items1 = await this.getProducts(filter);
-        }else if(this.$settings.home.products1.products){
+        }else if(this.$settings.home.products1.products.length > 0){
             this.items1 = this.$settings.home.products1.products;
         }else{
             this.items1 = await this.getProducts(filter);
@@ -47,7 +47,7 @@
         if(this.$settings.home.products2.collections.length > 0){
           filter['collections._id-in'] = this.$settings.home.products2.collections.map(c=>c._id);
           this.items2 = await this.getProducts(filter);
-        }else if(this.$settings.home.products2.products){
+        }else if(this.$settings.home.products2.products.length > 0){
           this.items2 = this.$settings.home.products2.products;
         }else{
           this.items2 = await this.getProducts(filter);
@@ -56,7 +56,7 @@
         if(this.$settings.home.products3.collections.length > 0){
           filter['collections._id-in'] = this.$settings.home.products3.collections.map(c=>c._id);
           this.items3 = await this.getProducts(filter);
-        }else if(this.$settings.home.products3.products){
+        }else if(this.$settings.home.products3.products.length > 0){
           this.items3 = this.$settings.home.products3.products;
         }else{
           this.items3 = await this.getProducts(filter);
@@ -65,7 +65,7 @@
         if(this.$settings.home.products4.collections.length > 0){
           filter['collections._id-in'] = this.$settings.home.products4.collections.map(c=>c._id);
           this.items4 = await this.getProducts(filter);
-        }else if(this.$settings.home.products4.products){
+        }else if(this.$settings.home.products4.products.length > 0){
           this.items4 = this.$settings.home.products4.products;
         }else{
           this.items4 = await this.getProducts(filter);
@@ -80,8 +80,8 @@
     methods: {
         async getProducts(filter){
           try{
-            const { data } = await this.$storeino.products.search(filter)
-            return data.results
+            const { data } = await this.$storeino.products.search(filter);
+            return data.results;
           }catch(e){
             console.log({e});
           }

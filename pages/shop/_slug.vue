@@ -11,18 +11,10 @@
             <div v-if="show.collections" class="flex flex-col gap-y-3">
                 <h3 class="font-bold text-lg">{{ titles.collections }}</h3>
                 <div v-if="collections" class="flex flex-col gap-y-2">
-                   <div v-for="(item, i) in collections" :key="i"  :class="!item.parent ? 'block' : 'hidden'">
+                   <div v-for="(item, i) in collections" :key="i"  :class="!item.childrens.length>0 ? 'block' : 'hidden'">
                         <div class="flex items-center gap-x-1">
-                            <input :disabled="item.childrens.length>0 == 1" class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(item.slug) >= 0" @change="setParams($event, 'collections.slug-in', item.slug)" :id="item.slug" type="checkbox"/>
+                            <input class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(item.slug) >= 0" @change="setParams($event, 'collections.slug-in', item.slug)" :id="item.slug" type="checkbox"/>
                             <label class="cursor-pointer text-sm capitalize text-gray-800" :for="item.slug">{{ item.name }}</label>
-                        </div>
-                        <div v-if="item.childrens.length >0 && !childrensloading" class="flex flex-col gap-y-2 pl-5 py-2">
-                            <div v-for="(child, i) in childrens[item.slug]" :key="i">
-                                <div class="flex items-center gap-x-1">
-                                    <input class="w-4 h-4 mx-1" :checked="params['collections.slug-in'] && params['collections.slug-in'].indexOf(child.slug) >= 0" @change="setParams($event, 'collections.slug-in', child.slug)" :id="child.slug" type="checkbox"/>
-                                    <label class="cursor-pointer text-sm capitalize text-gray-800" :for="child.slug">{{ child.name }}</label>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,8 +112,6 @@ export default {
             sidebar:(this.windowWidth < 1024)?false:true,
             products:null,
             collections:null,
-            childrens:{},
-            childrensloading:true,
             brands: null,
             filters: null,
             query: {},
@@ -170,12 +160,6 @@ export default {
         this.collections = await this.getCollections();
         this.filters = await this.getFilters();
         this.brands =  await this.getBrands();
-        this.childrensloading = true;
-        for (let i = 0; i < this.collections.length; i++) {
-            if(this.collections[i].childrens.length>0){
-                this.childrens[`${this.collections[i].slug}`] = await this.getChildrens(this.collections[i].childrens);
-            }
-        }this.childrensloading = false;
     },
     watch:{
         async "$route.query.search"(){
@@ -269,16 +253,6 @@ export default {
                 }else url += `${key}=${this.query[key]}`;
             }
             window.history.pushState({}, '', url);
-        },
-        async getChildrens(childrensIds){
-            let filter={};
-            filter['_id'] = childrensIds.map(c=>c);
-            try{
-                const { data } = await this.$storeino.collections.search(filter);
-                return data.results;
-            }catch(e){
-                console.log({e});
-            }
         }
     }
 }

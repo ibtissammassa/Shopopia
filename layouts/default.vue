@@ -7,7 +7,7 @@
             }
         </component>
         <headerTop/>
-        <HeaderElem :logo_src="logo_src"/>
+        <HeaderElem/>
         <Nuxt keep-alive/>
         <FooterElem/>
     </div>
@@ -25,7 +25,6 @@ export default {
     },
     data(){
         return{
-            logo_src: this.$settings.header.logo.src,
             primaryColor: this.$settings.colors.primaryColor,
             secondaryColor: this.$settings.colors.secondaryColor,
         }

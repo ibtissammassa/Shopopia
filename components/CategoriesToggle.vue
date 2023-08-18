@@ -4,7 +4,7 @@
     <hr>
     <div class="grid grid-cols-2 gap-x-16 gap-y-5 py-6" v-if="items.length">
         <nuxt-link :to="item.childrens.length > 0 ? `/collections/${item.slug}` : `/shop/${item.slug}`" v-for="item in items" :key="item.id" class="flex bg-slate-100 items-center gap-x-5 rounded-lg overflow-hidden " >
-            <img width="50" height="40" :src="item.image.src" alt="">
+            <img width="50" height="40" class="object-cover" :src="item.image.src" alt="">
             <div class="">
                 <h4 class="font-medium hover:text-blue-600 text-lg">{{ item.name }}</h4>
                 <p class="text-xs text-gray-500">{{ item.description }}</p>
@@ -25,12 +25,8 @@ export default {
     },
     async fetch(){
       try{
-          const filter = {};
           if(this.$settings.header.collections.length > 0){
             this.items = this.$settings.header.collections;
-          }else{
-            const { data } = await this.$storeino.collections.search(filter)
-            this.items = data.results;
           }
       }catch(e){
         console.log({e});
