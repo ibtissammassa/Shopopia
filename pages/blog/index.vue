@@ -2,7 +2,7 @@
   <div class="py-4">
     <h4 class="text-sm pb-2 pl-10 text-gray-900"><nuxt-link to="/">Home</nuxt-link> / <nuxt-link to="/blog" class="text-gray-500">Blog</nuxt-link></h4>
     <h3 class="text-4xl px-10 font-bold">{{ title }}</h3>
-    <div v-if="items" class="flex lg:flex-row-reverse flex-col">
+    <div class="flex lg:flex-row-reverse flex-col">
         <div v-if="sidebar && showsidebar" class="lg:w-1/3 px-7 lg:pt-5 flex flex-col gap-y-2 w-full z-50 bg-white h-fit">
             <div class="lg:hidden flex justify-between items-center py-5 border-b mb-2">
                 <div class="flex items-center gap-x-1.5">
@@ -35,15 +35,17 @@
                     <option class="p-5" v-for="(sort,i) in sorts" :key="i" :value="sort.field">{{ sort.name }}</option>
                 </select>
             </div>
-            <div v-if="items.length>0" class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
-                <postCart v-for="item in items" :key="item.id" :item="item"/>
+            <div v-if="!loading">
+                <div v-if="items.length>0" class="grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+                    <postCart v-for="item in items" :key="item.id" :item="item"/>
+                </div>
+                <div v-else class="flex justify-center items-center flex-col gap-y-3 py-16">
+                  <p class="text-sm text-gray-600">{{ emptyText }}</p>
+                </div>
             </div>
-            <div v-else class="flex justify-center items-center flex-col gap-y-3 py-16">
-              <p class="text-sm text-gray-600">{{ emptyText }}</p>
-            </div>
+            <loading v-else/>
         </div>
     </div>
-    <loading v-else/>
   </div>
 </template>
 
@@ -52,6 +54,7 @@ export default {
     data(){
         return{
             items: null,
+            loading:false,
             title: this.$settings.blog.title,
             emptyText: this.$settings.blog.emptyText,
             showProducts: this.$settings.blog.show.products,
@@ -103,11 +106,13 @@ export default {
             }
         },
         async getItems(){
+            this.loading = true;
             this.items = [];
             try{
                 this.lastParams = this.$tools.copy(this.params);
                 const { data } = await this.$storeino.pages.search(this.params);
-                this.items = data.results
+                this.items = data.results;
+                this.loading = false;
             }catch(e){
                 console.log({e});
             }
