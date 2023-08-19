@@ -37,6 +37,9 @@ export default {
       try{this.loading = true;
           if(this.$settings.header.collections.length > 0){
             this.items = this.$settings.header.collections;
+          }else{
+            const { data } = await this.$storeino.collections.search(filter)
+            this.items = data.results;
           }
           this.loading = false;
       }catch(e){
