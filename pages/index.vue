@@ -35,6 +35,7 @@
     },
     async fetch(){
       const filter = { status: 'PUBLISH',limit: 4 };
+      
         if(this.$settings.home.products1.collections.length > 0){
           filter['collections._id-in'] = this.$settings.home.products1.collections.map(c=>c._id);
           this.items1 = await this.getProducts(filter);

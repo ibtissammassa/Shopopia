@@ -23,7 +23,8 @@ export default {
     },
     async fetch(){
         try{
-                const { data } = await this.$storeino.products.search({limit: 5});
+                const filter = { status: 'PUBLISH',limit: 4 };
+                const { data } = await this.$storeino.products.search(filter);
                 this.products = data.results;
             }catch(e){
                 console.log({e});
